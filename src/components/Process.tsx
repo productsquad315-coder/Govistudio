@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 import FeatureCard from './FeatureCard';
 
 const processSteps = [
@@ -11,6 +12,11 @@ const processSteps = [
 ];
 
 const ProcessSection = () => {
+  const isMobile = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia?.('(max-width: 639px)').matches ?? false;
+  }, []);
+
   return (
     <section id="process" className="bg-[#0A0A0B] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden">
 
@@ -23,19 +29,19 @@ const ProcessSection = () => {
 
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            viewport={isMobile ? undefined : { once: true }}
             className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]"
           >
             From Idea to Production
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 10 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            viewport={isMobile ? undefined : { once: true }}
+            transition={isMobile ? undefined : { delay: 0.1 }}
             className="text-zinc-400 text-[16px] max-w-2xl mx-auto leading-relaxed"
           >
             Every system is built for real-world use — not demos.
@@ -44,55 +50,108 @@ const ProcessSection = () => {
 
         {/* ── Mock Pipeline UI (Hero FeatureCard) ── */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial={isMobile ? undefined : { opacity: 0, y: 40 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+          viewport={isMobile ? undefined : { once: true }}
+          transition={isMobile ? undefined : { duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-4xl mx-auto mb-16"
         >
-          <FeatureCard
-            title="Pipeline Deployments."
-            description="Track every stage of development in real-time."
-            className="h-auto pb-24" // Override height
-            mockUI={
-              <div className="w-full h-full flex flex-col p-6 bg-[#09090B]">
-                {/* Pipeline Stages */}
-                <div className="grid grid-cols-4 gap-3 mb-8">
-                  {['Discovery', 'Design', 'Development', 'Deployment'].map((stage, i) => (
-                    <div key={i} className={`text-center py-3 rounded-lg text-[10px] uppercase tracking-widest font-bold transition-all ${i === 2
-                        ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-[inset_0_0_15px_rgba(59,130,246,0.1)]'
-                        : i < 2
-                          ? 'bg-white/5 text-zinc-500 border border-white/5'
-                          : 'bg-black text-zinc-700 border border-white/[0.02]'
-                      }`}>
-                      {stage}
+          {/* Mobile: dedicated layout (prevents overlap + faster) */}
+          <div className="sm:hidden">
+            <div className="relative rounded-2xl border border-white/[0.08] bg-[#09090B] overflow-hidden">
+              <div className="p-5">
+                <div className="relative h-48 overflow-hidden rounded-xl border border-white/[0.06] bg-[#0F1117]">
+                  <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px]" />
+                  <div className="relative h-full w-full p-4">
+                    <div className="grid grid-cols-4 gap-2 mb-4">
+                      {['Disc', 'Design', 'Dev', 'Deploy'].map((stage, i) => (
+                        <div
+                          key={stage}
+                          className={`text-center py-2 rounded-md text-[9px] uppercase tracking-widest font-bold ${
+                            i === 2
+                              ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                              : 'bg-white/5 text-zinc-500 border border-white/5'
+                          }`}
+                        >
+                          {stage}
+                        </div>
+                      ))}
                     </div>
-                  ))}
+
+                    <div className="w-full h-1 bg-white/5 rounded-full mb-4 overflow-hidden">
+                      <div className="h-full w-[65%] bg-blue-500 rounded-full" />
+                    </div>
+
+                    <div className="rounded-lg border border-white/[0.05] bg-black/30 p-3 font-mono text-[10px] leading-relaxed text-zinc-500">
+                      <div className="flex gap-3">
+                        <span className="text-zinc-700">❯</span>
+                        <span className="text-blue-400/80">Deploying API core…</span>
+                      </div>
+                      <div className="flex gap-3 mt-2">
+                        <span className="text-zinc-700">❯</span>
+                        <span className="text-emerald-500/80">✓ Systems initialized</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 </div>
 
-                {/* Progress bar */}
-                <div className="w-full h-1 bg-white/5 rounded-full mb-10 overflow-hidden">
-                  <div className="h-full w-[65%] bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] rounded-full" />
-                </div>
-
-                {/* Terminal Log Output UI */}
-                <div className="bg-black/40 rounded-xl border border-white/[0.05] p-4 font-mono text-[11px] leading-relaxed text-zinc-500 relative overflow-hidden">
-                  <div className="flex gap-4 mb-2">
-                    <span className="text-zinc-700">❯</span>
-                    <span className="text-blue-400/80">Deploying API core...</span>
-                  </div>
-                  <div className="flex gap-4 mb-2">
-                    <span className="text-zinc-700">❯</span>
-                    <span className="text-emerald-500/80">✓ Systems initialized</span>
-                  </div>
-                  <div className="flex gap-4 mb-2 opacity-40">
-                    <span className="text-zinc-700">❯</span>
-                    <span className="text-zinc-500 animate-pulse">Running health checks...</span>
-                  </div>
+                <div className="mt-6">
+                  <h3 className="text-white text-xl font-semibold">Pipeline Deployments.</h3>
+                  <p className="mt-2 text-white/60 text-sm leading-relaxed">
+                    Track every stage of development in real-time.
+                  </p>
                 </div>
               </div>
-            }
-          />
+            </div>
+          </div>
+
+          {/* Desktop/tablet: existing FeatureCard */}
+          <div className="hidden sm:block">
+            <FeatureCard
+              title="Pipeline Deployments."
+              description="Track every stage of development in real-time."
+              className="h-auto pb-24" // Override height
+              mockUI={
+                <div className="w-full h-full flex flex-col p-6 bg-[#09090B]">
+                  {/* Pipeline Stages */}
+                  <div className="grid grid-cols-4 gap-3 mb-8">
+                    {['Discovery', 'Design', 'Development', 'Deployment'].map((stage, i) => (
+                      <div key={i} className={`text-center py-3 rounded-lg text-[10px] uppercase tracking-widest font-bold transition-all ${i === 2
+                          ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-[inset_0_0_15px_rgba(59,130,246,0.1)]'
+                          : i < 2
+                            ? 'bg-white/5 text-zinc-500 border border-white/5'
+                            : 'bg-black text-zinc-700 border border-white/[0.02]'
+                        }`}>
+                        {stage}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Progress bar */}
+                  <div className="w-full h-1 bg-white/5 rounded-full mb-10 overflow-hidden">
+                    <div className="h-full w-[65%] bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] rounded-full" />
+                  </div>
+
+                  {/* Terminal Log Output UI */}
+                  <div className="bg-black/40 rounded-xl border border-white/[0.05] p-4 font-mono text-[11px] leading-relaxed text-zinc-500 relative overflow-hidden">
+                    <div className="flex gap-4 mb-2">
+                      <span className="text-zinc-700">❯</span>
+                      <span className="text-blue-400/80">Deploying API core...</span>
+                    </div>
+                    <div className="flex gap-4 mb-2">
+                      <span className="text-zinc-700">❯</span>
+                      <span className="text-emerald-500/80">✓ Systems initialized</span>
+                    </div>
+                    <div className="flex gap-4 mb-2 opacity-40">
+                      <span className="text-zinc-700">❯</span>
+                      <span className="text-zinc-500 animate-pulse">Running health checks...</span>
+                    </div>
+                  </div>
+                </div>
+              }
+            />
+          </div>
         </motion.div>
 
         {/* Step Text explanations */}
@@ -100,11 +159,11 @@ const ProcessSection = () => {
           {processSteps.map((step, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="group"
+              initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              viewport={isMobile ? undefined : { once: true }}
+              transition={isMobile ? undefined : { delay: i * 0.15 }}
+              className="relative"
             >
               <span className="text-4xl font-extrabold text-white/5 block mb-4 group-hover:text-blue-500/20 transition-all duration-500">
                 {step.number}
