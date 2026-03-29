@@ -50,10 +50,10 @@ const ProcessSection = () => {
 
         {/* ── Mock Pipeline UI (Hero FeatureCard) ── */}
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 40 }}
-          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-          viewport={isMobile ? undefined : { once: true }}
-          transition={isMobile ? undefined : { duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-4xl mx-auto mb-16"
         >
           {/* Mobile/tablet: dedicated layout (prevents overlap + faster) */}
