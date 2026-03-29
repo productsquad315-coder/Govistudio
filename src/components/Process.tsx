@@ -56,8 +56,8 @@ const ProcessSection = () => {
           transition={isMobile ? undefined : { duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-4xl mx-auto mb-16"
         >
-          {/* Mobile: dedicated layout (prevents overlap + faster) */}
-          <div className="sm:hidden">
+          {/* Mobile/tablet: dedicated layout (prevents overlap + faster) */}
+          <div className="lg:hidden">
             <div className="relative rounded-2xl border border-white/[0.08] bg-[#09090B] overflow-hidden">
               <div className="p-5">
                 <div className="relative h-48 overflow-hidden rounded-xl border border-white/[0.06] bg-[#0F1117]">
@@ -106,8 +106,8 @@ const ProcessSection = () => {
             </div>
           </div>
 
-          {/* Desktop/tablet: existing FeatureCard */}
-          <div className="hidden sm:block">
+          {/* Desktop: existing FeatureCard */}
+          <div className="hidden lg:block">
             <FeatureCard
               title="Pipeline Deployments."
               description="Track every stage of development in real-time."
