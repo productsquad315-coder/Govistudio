@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}
+
+/* Premium glow pulse animation */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes beam-shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.3; }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-subtle 6s ease-in-out infinite;
+}
+
+.animate-beam {
+  animation: beam-shimmer 5s ease-in-out infinite;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.08);
+}
+
+/* ── Animated Gradient Border Glow ── */
+/* Wrap content in .glow-border > .glow-border-inner */
+@keyframes border-rotate {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glow-border {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 1px;
+  background: conic-gradient(from var(--angle), #1e1b4b, #3b82f6, #6366f1, #a855f7, #f97316, #3b82f6, #1e1b4b);
+  animation: border-rotate 6s linear infinite;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: conic-gradient(from var(--angle), transparent, #3b82f680, transparent, #6366f180, transparent, #f9731650, transparent);
+  animation: border-rotate 6s linear infinite;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.glow-border-inner {
+  background: #0a0a0a;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mock UI dark styles */
+.mock-ui {
+  background: #0c0c0c;
+  font-family: var(--font-geist-mono), 'Courier New', monospace;
+}
+
+.mock-ui-row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s;
+}
+
+.mock-ui-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.mock-ui-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.mock-ui-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ── Advanced SaaS Effects (Linear/Huly style) ── */
+@keyframes borderSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.border-sweep {
+  background: linear-gradient(
+    120deg,
+    rgba(0,212,255,0.8),
+    rgba(123,97,255,0.8),
+    rgba(255,122,0,0.8),
+    rgba(0,212,255,0.8)
+  );
+  background-size: 200% 200%;
+  animation: borderSweep 6s linear infinite;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* ── Huly Feature Card System ── */
+.feature-light {
+  background:
+    radial-gradient(600px circle at 20% -10%, rgba(255,140,0,0.35), transparent 60%),
+    radial-gradient(600px circle at 80% -10%, rgba(80,140,255,0.35), transparent 60%);
+}
+
+.feature-mask {
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(0,0,0,0.7) 70%,
+    rgba(0,0,0,0.95) 100%
+  );
+}
+
+.dot-grid {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* ── Premium Interaction Effects ── */
+@keyframes borderMove {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
+.gradient-border {
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8,
+    #f472b6,
+    #fb923c,
+    #38bdf8
+  );
+  background-size: 200%;
+  animation: borderMove 8s linear infinite;
+}
+
+.card-glow {
+  box-shadow:
+    0 0 40px rgba(120,140,255,0.15),
+    0 0 80px rgba(255,120,0,0.12);
+}
+
+/* ── Global Aurora Mesh Animations ── */
+@keyframes meshMove1 {
+  0%   { transform: translate(0px,  0px) scale(1); }
+  50%  { transform: translate(40px, -30px) scale(1.05); }
+  100% { transform: translate(0px,  0px) scale(1); }
+}
+
+@keyframes meshMove2 {
+  0%   { transform: translate(0px,  0px) scale(1); }
+  50%  { transform: translate(-50px, 30px) scale(1.08); }
+  100% { transform: translate(0px,  0px) scale(1); }
+}
+
+@keyframes meshMove3 {
+  0%   { transform: translate(0px,  0px) scale(1); }
+  50%  { transform: translate(30px,  50px) scale(0.95); }
+  100% { transform: translate(0px,  0px) scale(1); }
+}
+
+.animate-mesh-1 {
+  animation: meshMove1 22s ease-in-out infinite;
+}
+
+.animate-mesh-2 {
+  animation: meshMove2 28s ease-in-out infinite;
+}
+
+.animate-mesh-3 {
+  animation: meshMove3 18s ease-in-out infinite;
+}
+
+/* ── AI Feed Typography ── */
+.prose-invert h1 {
+  @apply text-white;
+}
+
+.prose-invert h2 {
+  @apply text-purple-400;
+}
+
+.prose-invert p {
+  @apply text-gray-400;
+}
+
+.prose-invert strong {
+  @apply text-white;
+}
+
+.prose-invert blockquote {
+  @apply border-l-2 border-purple-500 bg-white/[0.02] py-4 px-8 rounded-r-xl italic text-gray-300;
+}
+
+.prose-invert ul {
+  @apply list-disc list-inside space-y-2;
+}
+
+.prose-invert li {
+  @apply text-gray-300;
+}
+
+.prose-invert a {
+  @apply text-purple-400 underline decoration-purple-500/30 hover:decoration-purple-500 transition-all;
+}
+
+/* ── Blog Typography (Narrative) ── */
+.prose-blue h1, .prose-blue h2, .prose-blue h3 {
+  @apply text-white;
+}
+.prose-blue p {
+  @apply text-gray-300 leading-relaxed;
+}
+.prose-blue strong {
+  @apply text-blue-400;
+}
+.prose-blue blockquote {
+  @apply border-l-4 border-blue-600 bg-blue-500/5 py-6 px-8 italic text-blue-100 mb-12;
+}
+
+.prose-editorial h2,
+.prose-editorial h3 {
+  scroll-margin-top: 120px;
+}
+
+/* ── Solutions Typography (Service) ── */
+.prose-orange h2 {
+  @apply text-white tracking-tight font-bold opacity-100;
+}
+.prose-orange p {
+  @apply text-gray-400 text-lg leading-relaxed;
+}
+.prose-orange strong {
+  @apply text-orange-500;
+}
+.prose-orange ul {
+  @apply space-y-4 my-8;
+}
+.prose-orange li {
+  @apply flex items-start gap-3 text-gray-300 list-none;
+}

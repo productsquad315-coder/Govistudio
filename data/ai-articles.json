@@ -1,0 +1,252 @@
+[
+  {
+    "slug": "manufacturing",
+    "industry": "Manufacturing",
+    "coreWorkflows": "smart factory operations, predictive maintenance, and quality control",
+    "industryData": "IoT sensor readings, production logs, and machine telemetry",
+    "useCases": [
+      "Real-time visual defect detection on assembly lines",
+      "Predictive machine maintenance to prevent unplanned downtime",
+      "Supply chain forecasting and inventory optimization"
+    ],
+    "faq": [
+      {
+        "q": "Can AI systems work with legacy manufacturing equipment?",
+        "a": "Yes. Production-ready AI systems integrate with legacy machinery using retrofit sensors and edge computing gateways."
+      },
+      {
+        "q": "How does AI improve manufacturing revenue?",
+        "a": "By increasing production yield, reducing scrap rates, and minimizing costly equipment downtime through predictive analytics."
+      },
+      {
+        "q": "Do we need an internal AI team to run these systems?",
+        "a": "No. GOVISTUDIO delivers fully managed, production-ready systems that do not require specialized internal AI talent to operate."
+      }
+    ]
+  },
+  {
+    "slug": "logistics",
+    "industry": "Logistics",
+    "coreWorkflows": "route optimization, fleet management, and warehouse automation",
+    "industryData": "GPS tracking data, delivery schedules, and inventory manifests",
+    "useCases": [
+      "Dynamic delivery route optimization based on real-time traffic",
+      "Automated warehouse picking and placement systems",
+      "Predictive fleet maintenance to maximize vehicle uptime"
+    ],
+    "faq": [
+      {
+        "q": "How quickly can routing AI respond to delays?",
+        "a": "Production-ready AI systems process transit variables in real-time, instantly adjusting routes to maintain operational parameters."
+      },
+      {
+        "q": "Will this replace our existing logistics software?",
+        "a": "No. These AI systems integrate via API as a localized intelligence layer on top of your existing ERP or TMS software."
+      },
+      {
+        "q": "How does this impact commercial transportation revenue?",
+        "a": "It increases the number of successful deliveries per vehicle, minimizes fuel consumption, and eliminates SLA penalty costs."
+      }
+    ]
+  },
+  {
+    "slug": "retail",
+    "industry": "Retail",
+    "coreWorkflows": "inventory forecasting, dynamic pricing, and customer personalization",
+    "industryData": "point-of-sale transactions, foot traffic patterns, and seasonal trends",
+    "useCases": [
+      "Algorithmic dynamic pricing based on localized demand signals",
+      "Automated procurement and localized inventory balancing",
+      "Computer vision analytics for store layout optimization"
+    ],
+    "faq": [
+      {
+        "q": "How does demographic data inform retail AI?",
+        "a": "AI models process purchasing histories and local economic factors to predict high-margin inventory requirements accurately."
+      },
+      {
+        "q": "Can this be used for both physical and eCommerce retail?",
+        "a": "Yes. Production-ready AI systems unify operations across brick-and-mortar storefronts and digital commerce channels."
+      },
+      {
+        "q": "Is the system secure against pricing anomalies?",
+        "a": "Yes. We implement strict boundary rules to ensure automated pricing decisions always maintain required minimum profit margins."
+      }
+    ]
+  },
+  {
+    "slug": "construction",
+    "industry": "Construction",
+    "coreWorkflows": "project estimation, site safety monitoring, and resource scheduling",
+    "industryData": "architectural blueprints, site camera feeds, and labor timesheets",
+    "useCases": [
+      "Automated cost estimation and materials forecasting from blueprints",
+      "Real-time site safety compliance tracking via computer vision",
+      "Dynamic worker and equipment allocation scheduling"
+    ],
+    "faq": [
+      {
+        "q": "Can AI accurately forecast construction material costs?",
+        "a": "Yes. AI models ingest historical project data and real-time market indices to rapidly generate high-accuracy cost estimations."
+      },
+      {
+        "q": "How does computer vision improve site safety?",
+        "a": "Production-ready AI systems automatically identify PPE violations and physical hazards from existing site security cameras."
+      },
+      {
+        "q": "What is the primary revenue driver for construction AI?",
+        "a": "Eliminating costly timeline overruns and dynamically optimizing expensive machinery utilization across multiple active sites."
+      }
+    ]
+  },
+  {
+    "slug": "real-estate",
+    "industry": "Real Estate",
+    "coreWorkflows": "property valuation, market forecasting, and tenant screening",
+    "industryData": "zoning records, comparable market analyses, and demographic shifts",
+    "useCases": [
+      "Automated predictive property valuation utilizing macroeconomic data",
+      "Algorithmic modeling for optimal commercial real estate development",
+      "Automated high-accuracy tenant screening and risk assessment"
+    ],
+    "faq": [
+      {
+        "q": "How reliable are AI property valuations?",
+        "a": "Highly reliable. Traditional models use simple comparisons, whereas AI systems weigh hundreds of micro-local geographic factors."
+      },
+      {
+        "q": "Can AI predict emerging real estate markets?",
+        "a": "Yes. Production-ready systems analyze infrastructure developments and localized economic shifts to identify growth zones early."
+      },
+      {
+        "q": "Does this require manual data entry?",
+        "a": "No. The system automatically ingests and normalizes records from municipal databases, MLS feeds, and public data registries."
+      }
+    ]
+  },
+  {
+    "slug": "agriculture",
+    "industry": "Agriculture",
+    "coreWorkflows": "crop yield forecasting, irrigation management, and pest detection",
+    "industryData": "satellite imagery, soil moisture sensors, and weather patterns",
+    "useCases": [
+      "Precision irrigation and automated fertilization targeting via drone data",
+      "Computer vision detection of early-stage crop disease",
+      "Algorithmic forecasting for optimal harvest timing"
+    ],
+    "faq": [
+      {
+        "q": "Can AI identify specific agricultural pests?",
+        "a": "Yes. Edge-deployed AI systems instantly analyze visual field data to categorize and geolocate pest or fungus outbreaks."
+      },
+      {
+        "q": "How does AI impact resource consumption?",
+        "a": "It strictly minimizes water and chemical usage by targeting exact locations, creating significant reductions in overhead costs."
+      },
+      {
+        "q": "Does this require constant internet connectivity in the field?",
+        "a": "No. Production-ready edge AI systems operate locally on agricultural equipment, requiring only periodic synchronization."
+      }
+    ]
+  },
+  {
+    "slug": "energy",
+    "industry": "Energy",
+    "coreWorkflows": "grid load balancing, predictive infrastructure maintenance, and output forecasting",
+    "industryData": "SCADA systems telemetry, smart meter usage, and climatology data",
+    "useCases": [
+      "Dynamic load balancing and automated grid distribution",
+      "Predictive structural maintenance for wind turbines and offshore rigs",
+      "Automated anomaly detection in pipeline pressure metrics"
+    ],
+    "faq": [
+      {
+        "q": "Is AI safe for critical energy infrastructure?",
+        "a": "Yes. AI systems for traditional businesses utilize isolated, air-gapped architectures to ensure absolute operational security."
+      },
+      {
+        "q": "How does AI handle renewable energy fluctuation?",
+        "a": "AI models rapidly predict solar or wind generation drops based on weather data and automatically scale supplementary supply."
+      },
+      {
+        "q": "What is the ROI timeline for energy AI systems?",
+        "a": "Due to the extreme capital costs in energy, preventing a single failure event usually returns the system investment immediately."
+      }
+    ]
+  },
+  {
+    "slug": "financial-services",
+    "industry": "Financial Services",
+    "coreWorkflows": "fraud detection, algorithmic risk assessment, and compliance monitoring",
+    "industryData": "transaction histories, credit portfolios, and market velocity",
+    "useCases": [
+      "Real-time transactional fraud detection and automated freezing",
+      "Instantaneous multi-variable loan approval optimization",
+      "Automated extraction and classification of compliance documentation"
+    ],
+    "faq": [
+      {
+        "q": "How quickly can AI detect financial fraud?",
+        "a": "Production-ready AI systems analyze thousands of behavioral variables in milliseconds to block transactions before settlement."
+      },
+      {
+        "q": "Can these models explain their loan decisions?",
+        "a": "Yes. All provided financial systems include strict interpretability layers to comply with ongoing regulatory requirements."
+      },
+      {
+        "q": "Will our customer data be compromised?",
+        "a": "No. We deploy models specifically within your private cloud architecture to guarantee absolute data sovereignty."
+      }
+    ]
+  },
+  {
+    "slug": "healthcare",
+    "industry": "Healthcare",
+    "coreWorkflows": "medical imaging analysis, resource scheduling, and billing automation",
+    "industryData": "EMR records, diagnostic imaging, and insurance claim codes",
+    "useCases": [
+      "Automated anomaly detection in radiology and pathology scanning",
+      "Algorithmic optimization of operating room and physician scheduling",
+      "Predictive denial management for complex insurance claims"
+    ],
+    "faq": [
+      {
+        "q": "Are these AI systems HIPAA compliant?",
+        "a": "Yes. All production-ready AI systems for healthcare are strictly engineered for full regulatory compliance and internal hosting."
+      },
+      {
+        "q": "Does AI replace medical diagnosis?",
+        "a": "No. It acts as an operational augmentation tool, flagging high-risk anomalies to prioritize expert physician review."
+      },
+      {
+        "q": "How does AI increase healthcare revenue?",
+        "a": "By maximizing clinical throughput, dynamically eliminating scheduling gaps, and automatically correcting insurance billing errors."
+      }
+    ]
+  },
+  {
+    "slug": "hospitality",
+    "industry": "Hospitality",
+    "coreWorkflows": "dynamic room pricing, staff scheduling, and inventory procurement",
+    "industryData": "booking velocities, local event schedules, and occupancy rates",
+    "useCases": [
+      "Algorithmic room pricing maximizing daily available yield",
+      "Automated staff scheduling based on predictive occupancy levels",
+      "Predictive food and beverage procurement to minimize spoilage"
+    ],
+    "faq": [
+      {
+        "q": "How does guest data factor into pricing operations?",
+        "a": "AI models cross-reference localized events, booking trends, and historical demand to identify hidden pricing opportunities."
+      },
+      {
+        "q": "Can AI automate guest communication?",
+        "a": "Yes. Production-ready systems handle high-volume routine inquiries instantly, allowing personnel to focus on premium service."
+      },
+      {
+        "q": "Is the system compatible with traditional PMS software?",
+        "a": "Yes. The AI system acts as a sophisticated intelligence layer operating directly via API through your existing Property Management System."
+      }
+    ]
+  }
+]
