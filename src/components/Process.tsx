@@ -18,7 +18,7 @@ const ProcessSection = () => {
   }, []);
 
   return (
-    <section id="process" className="bg-[#0A0A0B] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden">
+    <section id="process" className="bg-[#0A0A0B] pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 lg:pb-24 relative overflow-hidden">
 
       {/* Subtle grid dot overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px] z-0 pointer-events-none" />
@@ -27,7 +27,7 @@ const ProcessSection = () => {
 
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 w-full">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <motion.h2
             initial={isMobile ? undefined : { opacity: 0, y: 20 }}
             whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const ProcessSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-4xl mx-auto mb-16"
+          className="w-full max-w-4xl mx-auto mb-8 sm:mb-12 lg:mb-16"
         >
           {/* Mobile/tablet: dedicated layout (prevents overlap + faster) */}
           <div className="lg:hidden">
@@ -155,7 +155,7 @@ const ProcessSection = () => {
         </motion.div>
 
         {/* Step Text explanations */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {processSteps.map((step, i) => (
             <motion.div
               key={i}
