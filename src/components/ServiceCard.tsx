@@ -14,6 +14,10 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
   const mouseY = useMotionValue(0)
 
   function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
+    if (typeof window !== "undefined") {
+      const isFinePointer = window.matchMedia?.("(pointer: fine)").matches ?? false
+      if (!isFinePointer) return
+    }
     const { left, top } = currentTarget.getBoundingClientRect()
     mouseX.set(clientX - left)
     mouseY.set(clientY - top)
@@ -27,7 +31,7 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
       >
         {/* Spotlight effect */}
         <motion.div
-          className="pointer-events-none absolute -inset-px rounded-[24px] opacity-0 group-hover:opacity-100 transition duration-500"
+          className="pointer-events-none absolute -inset-px rounded-[24px] opacity-0 group-hover:opacity-100 transition duration-500 hidden sm:block"
           style={{
             background: useTemplate`
               radial-gradient(
@@ -51,7 +55,7 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
                 <img
                   src={imageSrc}
                   alt=""
-                  className="absolute inset-0 h-full w-full object-cover brightness-[0.7] blur-[0.3px] scale-[1.02]"
+                  className="absolute inset-0 h-full w-full object-cover brightness-[0.7] blur-0 scale-100 sm:blur-[0.3px] sm:scale-[1.02]"
                   loading="lazy"
                   decoding="async"
                 />
