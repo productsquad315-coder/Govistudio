@@ -12,12 +12,12 @@ const processSteps = [
 
 const ProcessSection = () => {
   return (
-    <section id="process" className="bg-[#0A0A0B] pt-24 pb-24 relative overflow-hidden">
+    <section id="process" className="bg-[#0A0A0B] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden">
 
       {/* Subtle grid dot overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px] z-0 pointer-events-none" />
       {/* GPU glow for premium dark feel */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-transparent blur-[120px] opacity-40 pointer-events-none" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] sm:w-[700px] lg:w-[800px] h-[360px] sm:h-[460px] lg:h-[500px] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-transparent blur-[120px] opacity-40 pointer-events-none" />
 
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 w-full">
 
@@ -26,7 +26,7 @@ const ProcessSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]"
+            className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]"
           >
             From Idea to Production
           </motion.h2>

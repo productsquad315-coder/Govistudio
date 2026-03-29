@@ -28,7 +28,7 @@ export default function FeatureCard({
     <div className={`relative rounded-xl p-[1px] gradient-border ${className}`}>
       <div 
         onMouseMove={handleMove}
-        className="relative overflow-hidden rounded-[16px] bg-[#09090B] h-[420px] group border border-white/[0.03] shadow-2xl hover:scale-[1.01] transition-transform duration-500"
+        className="relative overflow-hidden rounded-[16px] bg-[#09090B] h-[360px] sm:h-[420px] group border border-white/[0.03] shadow-2xl hover:scale-[1.01] transition-transform duration-500"
       >
         {/* Mouse-follow spotlight glow */}
         <div

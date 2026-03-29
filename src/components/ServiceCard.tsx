@@ -20,10 +20,10 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
   }
 
   return (
-    <div className="relative w-full rounded-[26px] p-[2px] border-sweep shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)] transition-transform duration-300 hover:-translate-y-1">
+    <div className="relative w-full rounded-[22px] sm:rounded-[26px] p-[1px] sm:p-[2px] border-sweep shadow-none sm:shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)] transition-transform duration-300 hover:-translate-y-1">
       <motion.div
         onMouseMove={onMouseMove}
-        className="group relative bg-[#0F1115] text-white rounded-[24px] border border-white/10 p-6 sm:p-8 lg:p-10 overflow-hidden"
+        className="group relative bg-[#0F1115] text-white rounded-[20px] sm:rounded-[24px] border border-white/10 p-5 sm:p-8 lg:p-10 overflow-hidden"
       >
         {/* Spotlight effect */}
         <motion.div

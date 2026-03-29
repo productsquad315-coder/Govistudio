@@ -5,7 +5,7 @@ import FeatureCard from './FeatureCard';
 
 export default function Authority() {
   return (
-    <section id="authority" className="bg-[#F4F4F5] pt-24 pb-20 relative overflow-hidden">
+    <section id="authority" className="bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 relative overflow-hidden">
 
       {/* Seamless Grey Depth Overlay */}
       <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(1200px_circle_at_50%_-100px,rgba(0,0,0,0.045),transparent)] z-0" />
@@ -15,7 +15,7 @@ export default function Authority() {
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-[48px] font-bold tracking-tight text-default leading-[1.1] text-[#111827]"
+            className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-default leading-[1.1] text-[#111827]"
           >
             From Manual Workflows<br/>to Intelligent Systems
           </motion.h2>

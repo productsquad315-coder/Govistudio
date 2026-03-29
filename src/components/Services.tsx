@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import ServiceCard from './ServiceCard';
 
 const services = [
@@ -25,9 +26,17 @@ const services = [
 ];
 
 const Services = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
     <section
       id="services"
+      ref={containerRef}
       className="relative bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24"
     >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-32">
@@ -82,7 +91,8 @@ const Services = () => {
 
         {/* RIGHT: CARDS */}
         <div className="lg:col-span-7">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {/* Mobile/tablet: clean grid */}
+          <div className="grid grid-cols-1 gap-6 lg:hidden">
             {services.map((service) => (
               <ServiceCard
                 key={service.title}
@@ -92,6 +102,46 @@ const Services = () => {
                 imageSrc={service.imageSrc}
               />
             ))}
+          </div>
+
+          {/* Desktop: restore scroll-stacked presentation */}
+          <div className="hidden lg:block relative">
+            {services.map((service, i) => {
+              const start = i * 0.33;
+              const end = (i + 1) * 0.33;
+
+              const y = useTransform(scrollYProgress, [start, end], [0, -30]);
+              const x = useTransform(scrollYProgress, [start, end], [0, 15]);
+              const rotate = useTransform(scrollYProgress, [start, end], [0, 1]);
+              const scale = useTransform(scrollYProgress, [start, end], [1, 0.99]);
+              const opacity = useTransform(scrollYProgress, [start, end], [1, 0.9]);
+
+              return (
+                <motion.div
+                  key={service.title}
+                  style={{
+                    y,
+                    x,
+                    rotate,
+                    scale,
+                    opacity,
+                    zIndex: i + 1,
+                    position: "sticky",
+                    top: "180px",
+                  }}
+                  className="w-full h-fit py-[8vh]"
+                >
+                  <div className="group relative">
+                    <ServiceCard
+                      title={service.title}
+                      desc={service.desc}
+                      tags={service.tags}
+                      imageSrc={service.imageSrc}
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
