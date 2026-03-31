@@ -5,7 +5,7 @@ import {
   Process,
   FinalCTA,
 } from "@/components";
-import InsightsResources from "@/components/InsightsResources";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -40,50 +40,7 @@ export default function Home() {
 
       <FinalCTA />
 
-      <InsightsResources />
-
-      <footer className="py-16 border-t border-white/[0.06] bg-black">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="font-bold text-lg tracking-tight mb-4">
-                <span className="text-white">GOVI</span>
-                <span className="text-gray-500 ml-1 font-normal">STUDIO</span>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Systems that make businesses run better.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="/about" className="text-gray-500 hover:text-white transition-colors text-sm">About Us</a></li>
-                <li><a href="/use-cases" className="text-gray-500 hover:text-white transition-colors text-sm">Use Cases</a></li>
-                <li><a href="/blog" className="text-gray-500 hover:text-white transition-colors text-sm">Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Legal</h4>
-              <ul className="space-y-2">
-                <li><a href="/privacy" className="text-gray-500 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-gray-500 hover:text-white transition-colors text-sm">Terms</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Contact</h4>
-              <ul className="space-y-2">
-                <li><a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors text-sm">Schedule a Call</a></li>
-                <li><a href="mailto:hello@govistudio.com" className="text-gray-500 hover:text-white transition-colors text-sm">hello@govistudio.com</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-white/[0.06] text-center">
-            <p className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} GOVI STUDIO. AI Systems & Product Engineering.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

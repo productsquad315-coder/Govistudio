@@ -1,19 +1,22 @@
+import Link from 'next/link';
+
 interface UseCaseCardProps {
   title: string;
   problem: string;
   solution: string;
   impact: string;
   index: number;
+  slug: string;
 }
 
-export default function UseCaseCard({ title, problem, solution, impact, index }: UseCaseCardProps) {
+export default function UseCaseCard({ title, problem, solution, impact, index, slug }: UseCaseCardProps) {
   return (
-    <div className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-colors">
+    <Link href={`/use-cases/${slug}`} className="group block rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-colors">
       <div className="flex items-start gap-4 mb-6">
         <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
           <span className="text-blue-400 font-bold text-sm">{String(index + 1).padStart(2, '0')}</span>
         </div>
-        <h3 className="text-xl font-semibold text-white leading-tight">{title}</h3>
+        <h3 className="text-xl font-semibold text-white leading-tight group-hover:text-blue-400 transition-colors">{title}</h3>
       </div>
 
       <div className="space-y-5">
@@ -32,6 +35,10 @@ export default function UseCaseCard({ title, problem, solution, impact, index }:
           <p className="text-white text-[15px] leading-relaxed font-medium">{impact}</p>
         </div>
       </div>
-    </div>
+
+      <div className="mt-6 pt-4 border-t border-white/[0.06]">
+        <span className="text-sm text-gray-500 group-hover:text-white transition-colors">Learn more →</span>
+      </div>
+    </Link>
   );
 }
