@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getLatestBlogs, pickTopAiInsights, type BlogMeta } from '@/lib/content';
+import Logo from '@/components/Logo';
 
 export default function Footer() {
   const latest = getLatestBlogs(5);
@@ -16,13 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-12 mb-16">
           {/* Column 1: GOVISTUDIO */}
           <div className="space-y-4">
-            <Image
-              src="/assets/Govilogo2.jpeg"
-              alt="GOVI STUDIO"
-              className="h-8 w-auto"
-              width={120}
-              height={32}
-            />
+            <Logo href={null} showText={false} />
             <p className="text-sm leading-relaxed text-gray-500">
               GOVISTUDIO builds software-based AI systems for traditional businesses, focusing on automation, decision-making, and revenue-generating workflows.
             </p>
