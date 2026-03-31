@@ -45,13 +45,32 @@ export default async function BlogArticlePage({
     );
   }
 
-  // Extract the title (first line starting with #)
-  const lines = content.split('\n');
-  const titleLine = lines.find(l => l.startsWith('# '));
-  const title = titleLine ? titleLine.replace('# ', '').trim() : 'Blog Post';
-  
-  // Content for markdown should exclude the title line to avoid duplicate H1
-  const markdownContent = content.replace(/^# .*?\n/, '').trim();
+  // Basic frontmatter parsing (supports YAML frontmatter or simple key: value lines before the first heading)
+  const extractFrontmatter = (md: string) => {
+    const clean = md.replace(/\r\n/g, "\n").trim();
+    const frontmatter: Record<string, string> = {};
+    const lines = clean.split("\n");
+    let i = 0;
+    // Simple heuristic: look for key: value lines before the first # heading
+    for (; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith('#')) break;
+      const match = /^([\w-]+):\s*(.+)$/.exec(line);
+      if (match) {
+        frontmatter[match[1]] = match[2];
+      }
+    }
+    const contentStart = i;
+    return { frontmatter, contentStart, contentLines: lines.slice(contentStart).join("\n") };
+  };
+
+  const { frontmatter, contentLines } = extractFrontmatter(content);
+  const title = frontmatter.title ?? (() => {
+    const lines = content.split('\n');
+    const titleLine = lines.find(l => l.startsWith('# '));
+    return titleLine ? titleLine.replace('# ', '').trim() : 'Blog Post';
+  })();
+  const markdownContent = contentLines.replace(/^# .*?\n/, '').trim();
   const toc = extractToc(markdownContent);
   const readTimeMinutes = Math.max(1, Math.round(markdownContent.split(/\s+/).filter(Boolean).length / 220));
 
@@ -77,7 +96,42 @@ export default async function BlogArticlePage({
   };
 
   const subtitle = extractSubtitle(markdownContent);
+  const description = frontmatter.description ?? subtitle ?? '';
+  const author = frontmatter.author ?? 'GOVI Studio';
+  const publishedAt = frontmatter.publishedAt ?? new Date().toISOString().split('T')[0];
+  const updatedAt = frontmatter.updatedAt ?? publishedAt;
+  const category = frontmatter.category ?? 'AI Systems';
+  const tags = (frontmatter.tags ?? '').split(',').map(t => t.trim()).filter(Boolean);
+  const canonicalUrl = `https://govistudio.com/blog/${slug}`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": {
+      "@type": "Organization",
+      "name": author,
+      "url": "https://govistudio.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": author,
+      "url": "https://govistudio.com"
+    },
+    "datePublished": publishedAt,
+    "dateModified": updatedAt,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    },
+    "image": "https://govistudio.com/og-image.png",
+    "articleSection": category,
+    "keywords": tags.join(', '),
+    "wordCount": markdownContent.split(/\s+/).filter(Boolean).length,
+    "timeRequired": `PT${readTimeMinutes}M`
+  };
+  
   const getTldrBullets = (md: string) => {
     const match = /^##\s*(TL;?DR|TLDR)\s*\n([\s\S]*?)(\n##\s+|$)/im.exec(md);
     const sectionBody = match?.[2] ?? "";
@@ -140,24 +194,35 @@ export default async function BlogArticlePage({
     return undefined;
   };
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    author: {
-      "@type": "Organization",
-      name: "GOVI Studio",
-    },
-    keywords: ["AI systems", "automation", "business"],
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `/blog/${slug}`,
-    },
-    articleSection: sections.map((s) => s.title).filter(Boolean),
-  };
-
   return (
     <>
+      {/* SEO Meta Tags */}
+      <title>{title} | GOVI Studio</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={tags.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={canonicalUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="GOVI Studio" />
+      <meta property="og:image" content="https://govistudio.com/og-image.png" />
+      <meta property="article:author" content={author} />
+      <meta property="article:published_time" content={publishedAt} />
+      <meta property="article:modified_time" content={updatedAt} />
+      <meta property="article:section" content={category} />
+      {tags.map(tag => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://govistudio.com/og-image.png" />
+      <meta name="twitter:site" content="@govistudio" />
+      <meta name="twitter:creator" content="@govistudio" />
+
       <Script
         id="blog-article-jsonld"
         type="application/ld+json"
@@ -171,10 +236,14 @@ export default async function BlogArticlePage({
         toc={toc}
         showProgress
         meta={
-          <div className="flex items-center gap-4 text-xs font-mono text-gray-500 uppercase tracking-[0.2em]">
-            <span className="text-blue-400 font-bold">Strategy</span>
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-gray-500 uppercase tracking-[0.2em]">
+            <span className="text-blue-400 font-bold">{category}</span>
             <span className="opacity-20">/</span>
             <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {readTimeMinutes} Min Read</span>
+            <span className="opacity-20">/</span>
+            <span>{author}</span>
+            <span className="opacity-20">/</span>
+            <span>{publishedAt}</span>
           </div>
         }
       >
