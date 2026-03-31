@@ -6,6 +6,10 @@ export default function sitemap() {
   const urls = [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/blog`, lastModified: new Date() },
+    { url: `${baseUrl}/rss.xml`, lastModified: new Date() },
+    { url: `${baseUrl}/api/feed.json`, lastModified: new Date() },
+    { url: `${baseUrl}/ai`, lastModified: new Date() },
+    { url: `${baseUrl}/services`, lastModified: new Date() },
     ...posts.map(post => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(post.updatedAt),

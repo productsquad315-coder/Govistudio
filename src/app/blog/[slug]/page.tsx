@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Clock, Bot } from 'lucide-react';
 import ArticleLayout from '@/components/ArticleLayout';
 import { extractToc, slugify } from '@/lib/markdown';
+import { getAllPosts } from '@/lib/blog';
 
 export default async function BlogArticlePage({
   params,
@@ -407,6 +408,28 @@ export default async function BlogArticlePage({
             );
           })}
         </div>
+
+      {/* Related Posts */}
+      {(() => {
+        const allPosts = getAllPosts();
+        const related = allPosts.filter(p => p.slug !== slug && (p.category === category || p.tags.some(t => tags.includes(t)))).slice(0, 3);
+        if (!related.length) return null;
+        return (
+          <section className="mt-20">
+            <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {related.map(post => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:bg-white/[0.04] transition-colors">
+                  <span className="text-xs text-blue-400 font-mono uppercase tracking-wider">{post.category}</span>
+                  <h3 className="text-lg font-semibold text-white mt-2 group-hover:text-blue-400 transition-colors">{post.title}</h3>
+                  <p className="text-sm text-gray-500 mt-2 line-clamp-2">{post.description}</p>
+                  <span className="text-xs text-gray-600 mt-4 block">{post.publishedAt}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       <section className="mt-20 p-10 rounded-3xl border border-blue-500/20 bg-blue-500/[0.02] backdrop-blur-md relative overflow-hidden group" data-type="insight">
         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
