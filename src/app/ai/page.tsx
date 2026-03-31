@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Terminal, Zap, Database, Cpu } from 'lucide-react';
 import FeedCard from '@/components/FeedCard';
 import { getAllAiFeeds } from '@/lib/content';
+import Logo from '@/components/Logo';
 
 export default async function AIIndexPage() {
   const links = getAllAiFeeds();
@@ -24,10 +25,7 @@ export default async function AIIndexPage() {
 
       <nav className="fixed top-0 w-full z-50 px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="font-bold text-lg tracking-tight">
-            <span className="text-white">GOVI</span>
-            <span className="text-gray-500 ml-1 font-normal">STUDIO</span>
-          </Link>
+          <Logo />
           <div className="flex items-center gap-6">
             <Link href="/blog" className="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition-colors">
               Blog

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import UseCaseCard from '@/components/UseCaseCard';
 import { useCases } from '@/lib/useCases';
 import Footer from '@/components/Footer';
+import Logo from '@/components/Logo';
 
 export const metadata = {
   title: 'Use Cases | GOVI Studio',
@@ -12,10 +13,7 @@ export default function UseCasesPage() {
   return (
     <article className="min-h-screen bg-black text-white selection:bg-blue-500/30">
       <nav className="fixed top-0 w-full z-50 px-8 py-5 flex justify-between items-center backdrop-blur-2xl border-b border-white/[0.06] bg-black/60">
-        <Link href="/" className="font-bold text-xl tracking-tight">
-          <span className="text-white">GOVI</span>
-          <span className="text-gray-500 ml-1 font-normal">STUDIO</span>
-        </Link>
+        <Logo />
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-400 font-medium">
           <a href="/#services" className="hover:text-white transition-colors">Services</a>
           <a href="/#process" className="hover:text-white transition-colors">Process</a>

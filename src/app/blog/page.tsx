@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BookOpen, Rss } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { getAllPosts } from '@/lib/blog';
+import Logo from '@/components/Logo';
 
 export const metadata = {
   title: 'Blog | GOVI Studio',
@@ -20,10 +21,7 @@ export default async function BlogIndexPage() {
     <div className="min-h-screen bg-black text-white selection:bg-purple-500/30">
       <nav className="fixed top-0 w-full z-50 px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="font-bold text-lg tracking-tight">
-            <span className="text-white">GOVI</span>
-            <span className="text-gray-500 ml-1 font-normal">STUDIO</span>
-          </Link>
+          <Logo />
           <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-gray-500">
             <Link href="/ai" className="hover:text-white transition-colors">AI Feed</Link>
             <Link href="/rss.xml" className="flex items-center gap-1 hover:text-white transition-colors" target="_blank">

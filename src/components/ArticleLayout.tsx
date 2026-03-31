@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import type { TocItem } from "@/lib/markdown";
 import TableOfContents from "@/components/TableOfContents";
 import ReadingProgress from "@/components/ReadingProgress";
+import Logo from "@/components/Logo";
 
 export default function ArticleLayout({
   backHref,
@@ -30,13 +31,16 @@ export default function ArticleLayout({
 
       <nav className="fixed top-0 w-full z-50 px-6 lg:px-12 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link
-            href={backHref}
-            className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            {backLabel}
-          </Link>
+          <div className="flex items-center gap-6">
+            <Logo />
+            <Link
+              href={backHref}
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              {backLabel}
+            </Link>
+          </div>
           <div />
         </div>
       </nav>
