@@ -1,6 +1,5 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import ServiceCard from './ServiceCard';
 
@@ -28,11 +27,6 @@ const services = [
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
   return (
     <section
       id="services"
@@ -44,34 +38,18 @@ const Services = () => {
         {/* LEFT: STICKY HEADING */}
         <div className="lg:col-span-5 lg:sticky lg:top-40 h-fit space-y-8 lg:space-y-12 z-20">
           <div className="space-y-4 lg:space-y-6">
-            <motion.p
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-blue-600 text-[11px] font-bold uppercase tracking-[0.5em]"
-            >
+            <p className="animate-fade-in text-blue-600 text-[11px] font-bold uppercase tracking-[0.5em]">
               What We Build
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl sm:text-5xl lg:text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-zinc-900 leading-[1.05] -ml-1"
-            >
+            </p>
+            <h2 className="animate-fade-in-up animation-delay-100 text-4xl sm:text-5xl lg:text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-zinc-900 leading-[1.05] -ml-1">
               Your External AI<br />
               <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
                 Product Team.
               </span>
-            </motion.h2>
+            </h2>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="space-y-8"
-          >
+          <div className="animate-fade-in animation-delay-200 space-y-8">
             <p className="text-zinc-600 text-base sm:text-lg lg:text-xl leading-relaxed max-w-none lg:max-w-sm font-medium">
               We partner with companies to design and build intelligent systems. From early concept to production, we handle the entire process.
             </p>
@@ -86,62 +64,27 @@ const Services = () => {
                 <span className="text-sm font-semibold text-zinc-500 uppercase tracking-widest">We build systems that run inside your business.</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* RIGHT: CARDS */}
         <div className="lg:col-span-7">
           {/* Mobile/tablet: clean grid */}
-          <div className="grid grid-cols-1 gap-6 lg:hidden">
-            {services.map((service) => (
-              <ServiceCard
+          <div className="grid grid-cols-1 gap-6">
+            {services.map((service, i) => (
+              <div 
                 key={service.title}
-                title={service.title}
-                desc={service.desc}
-                tags={service.tags}
-                imageSrc={service.imageSrc}
-              />
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${i * 150}ms` }}
+              >
+                <ServiceCard
+                  title={service.title}
+                  desc={service.desc}
+                  tags={service.tags}
+                  imageSrc={service.imageSrc}
+                />
+              </div>
             ))}
-          </div>
-
-          {/* Desktop: restore scroll-stacked presentation */}
-          <div className="hidden lg:block relative">
-            {services.map((service, i) => {
-              const start = i * 0.33;
-              const end = (i + 1) * 0.33;
-
-              const y = useTransform(scrollYProgress, [start, end], [0, -30]);
-              const x = useTransform(scrollYProgress, [start, end], [0, 15]);
-              const rotate = useTransform(scrollYProgress, [start, end], [0, 1]);
-              const scale = useTransform(scrollYProgress, [start, end], [1, 0.99]);
-              const opacity = useTransform(scrollYProgress, [start, end], [1, 0.9]);
-
-              return (
-                <motion.div
-                  key={service.title}
-                  style={{
-                    y,
-                    x,
-                    rotate,
-                    scale,
-                    opacity,
-                    zIndex: i + 1,
-                    position: "sticky",
-                    top: "180px",
-                  }}
-                  className="w-full h-fit py-[8vh]"
-                >
-                  <div className="group relative">
-                    <ServiceCard
-                      title={service.title}
-                      desc={service.desc}
-                      tags={service.tags}
-                      imageSrc={service.imageSrc}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
 

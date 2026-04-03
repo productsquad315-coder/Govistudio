@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useMemo } from 'react';
 import FeatureCard from './FeatureCard';
 
@@ -28,24 +27,13 @@ const ProcessSection = () => {
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 w-full">
 
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <motion.h2
-            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-            viewport={isMobile ? undefined : { once: true }}
-            className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]"
-          >
+          <h2 className="animate-fade-in-up text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]">
             From Idea to Production
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={isMobile ? undefined : { opacity: 0, y: 10 }}
-            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-            viewport={isMobile ? undefined : { once: true }}
-            transition={isMobile ? undefined : { delay: 0.1 }}
-            className="text-zinc-400 text-[16px] max-w-2xl mx-auto leading-relaxed"
-          >
+          <p className="animate-fade-in animation-delay-100 text-zinc-400 text-[16px] max-w-2xl mx-auto leading-relaxed">
             Every system is built for real-world use — not demos.
-          </motion.p>
+          </p>
         </div>
 
         {/* ── Mock Pipeline UI (Hero FeatureCard) ── */}
@@ -151,20 +139,17 @@ const ProcessSection = () => {
         {/* Step Text explanations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {processSteps.map((step, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
-              viewport={isMobile ? undefined : { once: true }}
-              transition={isMobile ? undefined : { delay: i * 0.15 }}
-              className="relative"
+              className="relative animate-fade-in-up"
+              style={{ animationDelay: `${i * 150}ms` }}
             >
               <span className="text-4xl font-extrabold text-white/5 block mb-4 group-hover:text-blue-500/20 transition-all duration-500">
                 {step.number}
               </span>
               <h3 className="text-[18px] font-bold text-white mb-2">{step.title}</h3>
               <p className="text-zinc-400 leading-relaxed text-[14px]">{step.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
