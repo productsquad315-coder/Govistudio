@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0A0A0B] text-white py-24 flex flex-col items-center justify-center">
@@ -17,20 +15,18 @@ export default function Hero() {
         <div className="absolute w-full h-full bg-gradient-to-r from-cyan-500/30 via-purple-500/20 to-orange-500/30 blur-[120px] opacity-50" />
       </div>
 
-      {/* Minimal decorative nodes — static, no infinite animations */}
+      {/* Minimal decorative nodes — static */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.15] z-0 overflow-hidden">
         <svg className="absolute w-full h-full" viewBox="0 0 1200 800" fill="none">
-          <motion.path
+          <path
             d="M200 300 L600 400 L1000 350 M600 400 L600 700 M400 550 L600 400 L800 550"
             stroke="white"
             strokeWidth="0.5"
             strokeDasharray="4 4"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 1 }}
+            className="animate-fade-in animation-delay-700"
           />
         </svg>
-        {/* Static dots instead of infinite animations */}
+        {/* Static dots */}
         <div className="absolute left-[20%] top-[30%] w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
         <div className="absolute right-[20%] top-[40%] w-1.5 h-1.5 bg-purple-400 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
         <div className="absolute left-[40%] top-[70%] w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_10px_rgba(251,146,60,0.5)]" />
@@ -38,45 +34,30 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center mt-12 w-full">
         
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mb-6">
+        <div className="animate-fade-in animation-delay-200 mb-6">
           <span className="text-[13px] tracking-[0.2em] uppercase text-zinc-500 font-medium">GOVI STUDIO</span>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          className="text-[clamp(3.5rem,8vw,5.5rem)] font-bold tracking-tight text-white mb-6 leading-[1.05]"
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <h1 className="animate-fade-in-up animation-delay-300 text-[clamp(3.5rem,8vw,5.5rem)] font-bold tracking-tight text-white mb-6 leading-[1.05]">
           Build AI Systems<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400">That Drive Revenue.</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          className="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed"
-          initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-        >
+        <p className="animate-fade-in animation-delay-400 mt-6 text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
           We build production-ready AI systems that automate operations and unlock new revenue streams.
-        </motion.p>
+        </p>
 
-        <motion.div
-           className="mt-10 mb-10 flex flex-col items-center gap-4"
-           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}
-        >
+        <div className="animate-fade-in animation-delay-500 mt-10 mb-10 flex flex-col items-center gap-4">
            <a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-[15px] shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block">
              Schedule a Discovery Call
            </a>
            <div className="text-zinc-500 text-sm max-w-sm mx-auto text-center leading-relaxed">
              <p>30-min working session. No pitch. Just clarity.</p>
            </div>
-        </motion.div>
+        </div>
 
         {/* Mock UI */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 0.7, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-5xl mx-auto flex justify-center"
-        >
+        <div className="animate-scale-in animation-delay-700 w-full max-w-5xl mx-auto flex justify-center">
           <div className="relative w-full rounded-[18px] p-[2px] border-sweep shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)]">
             
             <div className="bg-[#0F1115] rounded-[16px] border border-white/10 overflow-hidden text-left relative z-10 h-[420px] md:h-auto flex flex-col">
@@ -146,7 +127,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useMotionValue, useTransform } from "framer-motion"
+import Image from 'next/image';
 
 interface ServiceCardProps {
   title: string
@@ -10,39 +10,9 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCardProps) {
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-
-  function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-    if (typeof window !== "undefined") {
-      const isFinePointer = window.matchMedia?.("(pointer: fine)").matches ?? false
-      if (!isFinePointer) return
-    }
-    const { left, top } = currentTarget.getBoundingClientRect()
-    mouseX.set(clientX - left)
-    mouseY.set(clientY - top)
-  }
-
   return (
     <div className="relative w-full rounded-[22px] sm:rounded-[26px] p-[1px] sm:p-[2px] border-sweep shadow-none sm:shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)] transition-transform duration-300 hover:-translate-y-1">
-      <motion.div
-        onMouseMove={onMouseMove}
-        className="group relative bg-[#0F1115] text-white rounded-[20px] sm:rounded-[24px] border border-white/10 p-5 sm:p-8 lg:p-10 overflow-hidden"
-      >
-        {/* Spotlight effect */}
-        <motion.div
-          className="pointer-events-none absolute -inset-px rounded-[24px] opacity-0 group-hover:opacity-100 transition duration-500 hidden sm:block"
-          style={{
-            background: useTemplate`
-              radial-gradient(
-                600px circle at ${mouseX}px ${mouseY}px,
-                rgba(56, 189, 248, 0.05),
-                transparent 80%
-              )
-            `,
-          }}
-        />
-
+      <div className="group relative bg-[#0F1115] text-white rounded-[20px] sm:rounded-[24px] border border-white/10 p-5 sm:p-8 lg:p-10 overflow-hidden">
         {/* Cinematic Noise overlay */}
         <div className="noise opacity-[0.03] z-0" />
 
@@ -51,13 +21,14 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
           <div className="relative h-48 sm:h-56 lg:h-[300px] flex items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.01] overflow-hidden">
             {imageSrc ? (
               <>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={imageSrc}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover brightness-[0.7] blur-0 scale-100 sm:blur-[0.3px] sm:scale-[1.02]"
+                  alt={title}
+                  fill
+                  className="object-cover brightness-[0.7]"
                   loading="lazy"
-                  decoding="async"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               </>
@@ -89,16 +60,7 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
 
         {/* Bottom ambient glow */}
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/[0.02] blur-[100px] rounded-full pointer-events-none group-hover:bg-blue-500/[0.05] transition-colors duration-1000" />
-      </motion.div>
+      </div>
     </div>
   )
-}
-
-// Helper for template strings with motion values
-function useTemplate(strings: TemplateStringsArray, ...values: any[]) {
-  return useTransform(values, (latestValues: unknown[]) => {
-    return strings.reduce((acc, str, i) => {
-      return acc + str + (latestValues[i] !== undefined ? latestValues[i] : "")
-    }, "")
-  })
 }

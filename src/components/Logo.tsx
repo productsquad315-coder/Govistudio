@@ -17,6 +17,7 @@ export default function Logo({ href = "/", className = "", showText = true }: Lo
         width={40}
         height={40}
         priority
+        quality={85}
       />
       {showText && (
         <div className="font-bold text-xl tracking-tight">

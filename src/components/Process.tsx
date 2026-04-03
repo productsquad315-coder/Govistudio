@@ -49,20 +49,14 @@ const ProcessSection = () => {
         </div>
 
         {/* ── Mock Pipeline UI (Hero FeatureCard) ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-4xl mx-auto mb-8 sm:mb-12 lg:mb-16"
-        >
+        <div className="animate-fade-in-up animation-delay-300 w-full max-w-4xl mx-auto mb-8 sm:mb-12 lg:mb-16">
           {/* Mobile/tablet: dedicated layout (prevents overlap + faster) */}
           <div className="lg:hidden">
             <div className="relative rounded-2xl border border-white/[0.08] bg-[#09090B] overflow-hidden">
               <div className="p-5">
-                <div className="relative h-48 overflow-hidden rounded-xl border border-white/[0.06] bg-[#0F1117]">
+                <div className="relative min-h-[280px] h-auto overflow-hidden rounded-xl border border-white/[0.06] bg-[#0F1117]">
                   <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px]" />
-                  <div className="relative h-full w-full p-4">
+                  <div className="relative h-full w-full p-4 pb-8">
                     <div className="grid grid-cols-4 gap-2 mb-4">
                       {['Disc', 'Design', 'Dev', 'Deploy'].map((stage, i) => (
                         <div
@@ -93,7 +87,7 @@ const ProcessSection = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
                 </div>
 
                 <div className="mt-6">
@@ -111,7 +105,7 @@ const ProcessSection = () => {
             <FeatureCard
               title="Pipeline Deployments."
               description="Track every stage of development in real-time."
-              className="h-auto pb-24" // Override height
+              className="h-auto pb-24"
               mockUI={
                 <div className="w-full h-full flex flex-col p-6 bg-[#09090B]">
                   {/* Pipeline Stages */}
@@ -152,7 +146,7 @@ const ProcessSection = () => {
               }
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Step Text explanations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
