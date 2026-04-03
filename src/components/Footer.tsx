@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-12 mb-16">
           {/* Column 1: GOVISTUDIO */}
           <div className="space-y-4">
-            <Logo href={null} showText={false} />
+            <Logo href="/" showText={false} />
             <p className="text-sm leading-relaxed text-gray-500">
               GOVISTUDIO builds software-based AI systems for traditional businesses, focusing on automation, decision-making, and revenue-generating workflows.
             </p>

@@ -1,13 +1,13 @@
-import {
-  Hero,
-  Authority,
-  Services,
-  Process,
-  FinalCTA,
-} from "@/components";
-import Footer from "@/components/Footer";
+import dynamic from 'next/dynamic';
 import Logo from "@/components/Logo";
 
+// Dynamic imports for below-fold components
+const Hero = dynamic(() => import("@/components/Hero"));
+const Authority = dynamic(() => import("@/components/Authority"));
+const Services = dynamic(() => import("@/components/Services"));
+const Process = dynamic(() => import("@/components/Process"));
+const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (
@@ -27,17 +27,10 @@ export default function Home() {
       </nav>
 
       <Hero />
-
-      {/* Proof / Credibility strip */}
-
-
       <Authority />
-
       <Services />
       <Process />
-
       <FinalCTA />
-
       <Footer />
     </main>
   );
