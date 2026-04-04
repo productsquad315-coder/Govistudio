@@ -32,7 +32,7 @@ export default function ArticleLayout({
       <nav className="fixed top-0 w-full z-50 px-6 lg:px-12 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <Logo />
+            <Logo showText={false} />
             <Link
               href={backHref}
               className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group"

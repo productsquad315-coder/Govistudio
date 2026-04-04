@@ -25,7 +25,7 @@ export default async function AIIndexPage() {
 
       <nav className="fixed top-0 w-full z-50 px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Logo />
+          <Logo showText={false} />
           <div className="flex items-center gap-6">
             <Link href="/blog" className="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition-colors">
               Blog
