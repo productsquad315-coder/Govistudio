@@ -8,7 +8,7 @@ const services = [
     title: "AI Automation Systems",
     desc: "Automate workflows using intelligent systems. Less manual work. More leverage.",
     tags: ["Lead Qualification", "Support Assistants", "Document Processing"],
-    imageSrc: "/assets/new-paths-01.png",
+    imageSrc: "/assets/7103b75b603e23539f701668b063b434.webp",
   },
   {
     title: "AI Product Development",
