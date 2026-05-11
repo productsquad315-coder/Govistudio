@@ -33,7 +33,7 @@ const Services = () => {
       ref={containerRef}
       className="relative bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24"
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-32">
 
         {/* LEFT: STICKY HEADING */}
         <div className="lg:col-span-5 lg:sticky lg:top-40 h-fit space-y-8 lg:space-y-12 z-20">
@@ -41,7 +41,7 @@ const Services = () => {
             <p className="animate-fade-in text-blue-600 text-[11px] font-bold uppercase tracking-[0.5em]">
               What We Build
             </p>
-            <h2 className="animate-fade-in-up animation-delay-100 text-4xl sm:text-5xl lg:text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-zinc-900 leading-[1.05] -ml-1">
+            <h2 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl lg:text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-zinc-900 leading-[1.05] -ml-1">
               Your External AI<br />
               <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
                 Product Team.
@@ -50,7 +50,7 @@ const Services = () => {
           </div>
 
           <div className="animate-fade-in animation-delay-200 space-y-8">
-            <p className="text-zinc-600 text-base sm:text-lg lg:text-xl leading-relaxed max-w-none lg:max-w-sm font-medium">
+            <p className="text-zinc-600 text-sm sm:text-base lg:text-xl leading-relaxed max-w-none lg:max-w-sm font-medium">
               We partner with companies to design and build intelligent systems. From early concept to production, we handle the entire process.
             </p>
 

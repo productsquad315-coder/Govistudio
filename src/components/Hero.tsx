@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
 
       {/* Minimal decorative nodes — static */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.15] z-0 overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none opacity-[0.15] z-0 overflow-hidden hidden sm:block">
         <svg className="absolute w-full h-full" viewBox="0 0 1200 800" fill="none">
           <path
             d="M200 300 L600 400 L1000 350 M600 400 L600 700 M400 550 L600 400 L800 550"
@@ -32,26 +32,26 @@ export default function Hero() {
         <div className="absolute left-[40%] top-[70%] w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_10px_rgba(251,146,60,0.5)]" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center mt-12 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 w-full">
         
         <div className="animate-fade-in animation-delay-200 mb-6">
           <span className="text-[13px] tracking-[0.2em] uppercase text-zinc-500 font-medium">GOVI STUDIO</span>
         </div>
 
-        <h1 className="animate-fade-in-up animation-delay-300 text-[clamp(3.5rem,8vw,5.5rem)] font-bold tracking-tight text-white mb-6 leading-[1.05]">
+        <h1 className="animate-fade-in-up animation-delay-300 text-[clamp(2.2rem,7vw,5.5rem)] font-bold tracking-tight text-white mb-4 sm:mb-6 leading-[1.05]">
           Build AI Systems<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400">That Drive Revenue.</span>
         </h1>
 
-        <p className="animate-fade-in animation-delay-400 mt-6 text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="animate-fade-in animation-delay-400 mt-4 sm:mt-6 text-zinc-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed px-2">
           We build production-ready AI systems that automate operations and unlock new revenue streams.
         </p>
 
-        <div className="animate-fade-in animation-delay-500 mt-10 mb-10 flex flex-col items-center gap-4">
-           <a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-[15px] shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block">
+        <div className="animate-fade-in animation-delay-500 mt-8 sm:mt-10 mb-8 sm:mb-10 flex flex-col items-center gap-3 sm:gap-4">
+           <a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-[14px] sm:text-[15px] shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block">
              Schedule a Discovery Call
            </a>
-           <div className="text-zinc-500 text-sm max-w-sm mx-auto text-center leading-relaxed">
+           <div className="text-zinc-500 text-xs sm:text-sm max-w-sm mx-auto text-center leading-relaxed">
              <p>30-min working session. No pitch. Just clarity.</p>
            </div>
         </div>
@@ -60,7 +60,7 @@ export default function Hero() {
         <div className="animate-scale-in animation-delay-700 w-full max-w-5xl mx-auto flex justify-center">
           <div className="relative w-full rounded-[18px] p-[2px] border-sweep shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)]">
             
-            <div className="bg-[#0F1115] rounded-[16px] border border-white/10 overflow-hidden text-left relative z-10 h-[420px] md:h-auto flex flex-col">
+            <div className="bg-[#0F1115] rounded-[16px] border border-white/10 overflow-hidden text-left relative z-10 h-[320px] sm:h-[380px] md:h-auto flex flex-col">
               
               {/* Fake UI Header */}
               <div className="flex items-center gap-2 px-5 py-3 border-b border-white/[0.04] bg-[#0A0A0B]/80 backdrop-blur-md">
@@ -79,16 +79,16 @@ export default function Hero() {
               <div className="p-6 md:p-8 flex-1 overflow-hidden flex flex-col">
                 
                 {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {[
                     { label: 'System Uptime', val: '99.99%', color: 'text-cyan-400 border-l-cyan-500/50' },
                     { label: 'Ops Automated', val: '+240%', color: 'text-purple-400 border-l-purple-500/50' },
                     { label: 'Revenue Growth', val: '$1.2M', color: 'text-orange-400 border-l-orange-500/50' },
                     { label: 'Active Agents', val: '14/14', color: 'text-green-400 border-l-green-500/50' },
                   ].map((s, i) => (
-                    <div key={i} className={`bg-transparent p-3 border-l-2 ${s.color}`}>
-                      <div className="text-[11px] text-zinc-500 uppercase tracking-widest font-semibold mb-1">{s.label}</div>
-                      <div className="text-xl font-semibold text-white">{s.val}</div>
+                    <div key={i} className={`bg-transparent p-2 sm:p-3 border-l-2 ${s.color}`}>
+                      <div className="text-[9px] sm:text-[11px] text-zinc-500 uppercase tracking-widest font-semibold mb-0.5 sm:mb-1">{s.label}</div>
+                      <div className="text-base sm:text-xl font-semibold text-white">{s.val}</div>
                     </div>
                   ))}
                 </div>

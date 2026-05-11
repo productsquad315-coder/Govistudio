@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import FeatureCard from './FeatureCard';
 
 export default function Authority() {
@@ -10,22 +9,20 @@ export default function Authority() {
       {/* Seamless Grey Depth Overlay */}
       <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(1200px_circle_at_50%_-100px,rgba(0,0,0,0.045),transparent)] z-0" />
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
 
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold tracking-tight text-default leading-[1.1] text-[#111827]"
+        <div className="text-center mb-10 sm:mb-16">
+          <h2
+            className="animate-fade-in-up text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-bold tracking-tight leading-[1.1] text-[#111827]"
           >
             From Manual Workflows<br/>to Intelligent Systems
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="mt-6 text-[#6B7280] max-w-2xl mx-auto text-[16px] leading-[1.6]"
+          <p
+            className="animate-fade-in animation-delay-100 mt-4 sm:mt-6 text-[#6B7280] max-w-2xl mx-auto text-[15px] sm:text-[16px] leading-[1.6] px-2"
           >
             Most companies run on fragmented tools. We replace that with AI systems that think, decide, and act.
-          </motion.p>
+          </p>
         </div>
 
         {/* 

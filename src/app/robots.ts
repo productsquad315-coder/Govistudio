@@ -3,26 +3,16 @@ export default function robots() {
     rules: [
       {
         userAgent: '*',
-        allow: ['/blog', '/api/feed.json', '/rss.xml'],
-        disallow: ['/api/', '/admin'],
-      },
-      {
-        userAgent: 'PerplexityBot',
         allow: '/',
       },
       {
-        userAgent: 'GPTBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Claude-Web',
-        allow: '/',
-      },
-      {
-        userAgent: 'Anthropic-AI',
+        userAgent: ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended'],
         allow: '/',
       },
     ],
-    sitemap: 'https://govistudio.com/sitemap.xml',
+    sitemap: [
+      'https://govistudio.com/sitemap.xml',
+      'https://govistudio.com/ai-sitemap.xml'
+    ],
   };
 }
