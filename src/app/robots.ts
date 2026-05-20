@@ -6,13 +6,22 @@ export default function robots() {
         allow: '/',
       },
       {
-        userAgent: ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended'],
-        allow: '/',
+        userAgent: ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended', 'Anthropic-AI', 'Applebot-Extended', 'Bytespider', 'CCBot', 'cohere-ai'],
+        allow: [
+          '/',
+          '/case-studies/',
+          '/faq/',
+          '/blog/',
+          '/ai/',
+          '/about/',
+          '/use-cases/',
+          '/llms.txt',
+        ],
       },
     ],
     sitemap: [
       'https://govistudio.com/sitemap.xml',
-      'https://govistudio.com/ai-sitemap.xml'
     ],
+    host: 'https://govistudio.com',
   };
 }

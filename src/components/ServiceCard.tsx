@@ -16,9 +16,9 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
         {/* Cinematic Noise overlay */}
         <div className="noise opacity-[0.03] z-0" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center relative z-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 items-start xl:items-center relative z-10">
           {/* IMAGE AREA */}
-          <div className="relative h-48 sm:h-56 lg:h-[300px] flex items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.01] overflow-hidden">
+          <div className="relative w-full h-56 sm:h-64 lg:h-[350px] xl:h-[300px] flex items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.01] overflow-hidden">
             {imageSrc ? (
               <>
                 <Image
@@ -38,11 +38,11 @@ export default function ServiceCard({ title, desc, tags, imageSrc }: ServiceCard
           </div>
 
           {/* TEXT CONTENT */}
-          <div className="flex flex-col space-y-6 text-left">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-tight">
+          <div className="flex flex-col space-y-4 sm:space-y-6 text-left">
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
               {title}
             </h3>
-            <p className="text-zinc-400 text-sm sm:text-base lg:text-lg leading-relaxed font-medium">
+            <p className="text-zinc-400 text-base sm:text-lg leading-relaxed font-medium">
               {desc}
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-2 sm:pt-4">

@@ -109,6 +109,8 @@ export default function Footer() {
               <div className="text-[10px] font-medium text-gray-600 uppercase tracking-wider">Company</div>
               <div className="space-y-2 text-sm">
                 <Link className="block text-gray-600 hover:text-gray-400 transition-colors" href="/about">About Us</Link>
+                <Link className="block text-gray-600 hover:text-gray-400 transition-colors" href="/case-studies">Case Studies</Link>
+                <Link className="block text-gray-600 hover:text-gray-400 transition-colors" href="/faq">FAQ</Link>
                 <Link className="block text-gray-600 hover:text-gray-400 transition-colors" href="/use-cases">Use Cases</Link>
                 <Link className="block text-gray-600 hover:text-gray-400 transition-colors" href="/blog">Blog</Link>
               </div>

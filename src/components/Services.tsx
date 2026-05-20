@@ -33,10 +33,10 @@ const Services = () => {
       ref={containerRef}
       className="relative bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24">
 
         {/* LEFT: STICKY HEADING */}
-        <div className="lg:col-span-5 lg:sticky lg:top-40 h-fit space-y-8 lg:space-y-12 z-20">
+        <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit space-y-8 lg:space-y-12 z-20">
           <div className="space-y-4 lg:space-y-6">
             <p className="animate-fade-in text-blue-600 text-[11px] font-bold uppercase tracking-[0.5em]">
               What We Build
