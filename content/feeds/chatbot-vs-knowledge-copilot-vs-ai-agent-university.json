@@ -1,0 +1,11 @@
+{
+  "id": "050",
+  "title": "Chatbot vs Knowledge Copilot vs AI Agent — University Decision Guide",
+  "slug": "chatbot-vs-knowledge-copilot-vs-ai-agent-university",
+  "category": "compare",
+  "categorySlug": "compare",
+  "icp": "",
+  "url": "/compare/chatbot-vs-knowledge-copilot-vs-ai-agent-university",
+  "directAnswer": "A chatbot follows pre-scripted conversation flows. A knowledge copilot searches the institution's policy and knowledge documents and answers in natural language with source citations. An AI agent can take actions — sending emails, updating records, scheduling appointments — autonomously. For universities in 2026: deploy knowledge copilots for staff and student Q&A (mature, production-ready), deploy AI agents for enrollment communication automation (mature), and avoid fully autonomous agents for any student-facing decision-making.\n\n| Tool Type | What It Does | Best For Universities | Maturity |\n|---|---|---|---|\n| Rule-based chatbot | Pre-scripted Q&A flows | Basic FAQ deflection | Mature but limited |\n| Knowledge copilot (RAG) | Searches documents, answers naturally | Staff policy Q&A, student service Q&A | ✓ Production-ready |\n| AI agent (communication) | Triggers and sends personalised communications | Enrollment follow-up, retention outreach | ✓ Production-ready |\n| AI agent (data entry) | Updates records, routes documents | Application processing, financial aid triage | ✓ With oversight |\n| Autonomous decision agent | Makes decisions without human review | ✗ Not appropriate for HE | Not recommended |",
+  "body": "# FEEDS 051–067: HIGHER EDUCATION — RAPID COMPLETE ARTICLES"
+}

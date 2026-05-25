@@ -1,0 +1,11 @@
+{
+  "id": "044",
+  "title": "AI for Student Financial Aid",
+  "slug": "ai-financial-aid-administration",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-financial-aid-administration",
+  "directAnswer": "Financial aid AI automation targets three workflows: FAFSA document verification (AI checks submitted verification documents — tax transcripts, W-2s, bank statements — against FAFSA data and flags discrepancies for financial aid counsellor review), appeals processing (AI classifies appeals by type — financial, medical, personal — extracts supporting documentation, and generates a structured case summary for the financial aid counsellor), and status communication (automated personalised status updates triggered by application stage changes, reducing counsellor email volume by 40–60%).\n\n**FERPA compliance is essential in this context.** Student financial information is among the most sensitive FERPA-protected data. Private deployment and a comprehensive DPA are non-negotiable for financial aid AI systems.",
+  "body": ""
+}

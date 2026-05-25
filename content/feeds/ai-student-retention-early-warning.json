@@ -1,0 +1,11 @@
+{
+  "id": "052",
+  "title": "AI for Student Retention — Early Warning Systems",
+  "slug": "ai-student-retention-early-warning",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-student-retention-early-warning",
+  "directAnswer": "AI early warning systems for student retention analyse academic performance signals (grade trajectories, assignment submission patterns, attendance where tracked), engagement signals (LMS logins, library usage, campus event participation), and financial signals (holds, aid status changes) to predict which students are at risk of withdrawal 4–6 weeks before the typical point of no return. The system surfaces at-risk students to their assigned advisor with a structured intervention record and recommended action.\n\n**Key design principle:** The system should present risk flags as prompts for advisor outreach, never as automated decisions that affect the student without human review. The advisor decides what intervention, if any, to take.\n\n**LMS integrations:** Canvas API, Blackboard API, Moodle (via plugin), Brightspace (D2L) API.",
+  "body": ""
+}

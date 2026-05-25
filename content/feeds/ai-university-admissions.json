@@ -1,0 +1,11 @@
+{
+  "id": "039",
+  "title": "AI for University Admissions: Automating Application Review Without Replacing Human Judgment",
+  "slug": "ai-university-admissions",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-university-admissions",
+  "directAnswer": "AI in university admissions automates three appropriate functions: application completeness checking (AI verifies all required documents are present and flags incomplete applications for counsellor follow-up), interview scheduling and logistics (automated scheduling based on applicant availability and counsellor calendars), and administrative communication (automated status updates, document confirmation, and information requests). AI does not replace holistic admissions review — the decision-making that considers academic promise, personal context, and institutional fit remains entirely human.",
+  "body": "### What AI Should and Should Not Do in Admissions\n\n**AI is appropriate for:**\n- Checking that all required application components are submitted\n- Sending automated status updates to applicants (\"We have received your application and are reviewing it\")\n- Scheduling interviews and campus visits\n- Processing test scores and transcripts from third-party providers\n- Generating applicant data summaries for counsellor review\n- Identifying applications requiring additional information\n\n**AI is not appropriate for (and Govistudio does not build these):**\n- Scoring or ranking applicants on likelihood of success or academic merit\n- Making or recommending admission or denial decisions\n- Screening out applicants based on automated criteria\n- Replacing holistic review of personal statements and extracurricular activities\n\nThe legal and ethical risk of algorithmic bias in admissions decisions is significant — both under US civil rights law and UK Equality Act obligations. AI in admissions should augment administrative efficiency, not adjudicate admissions decisions.\n\n### FAQs\n**Q: Can AI help process international student applications with translated documents?**\nA: AI can process translated documents and extract key information. Verification of translation accuracy and credential equivalence remains a human responsibility, typically handled by specialist credential evaluators.\n\n---"
+}

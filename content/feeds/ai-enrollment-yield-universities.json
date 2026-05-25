@@ -1,0 +1,11 @@
+{
+  "id": "051",
+  "title": "AI for Enrollment Yield",
+  "slug": "ai-enrollment-yield-universities",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-enrollment-yield-universities",
+  "directAnswer": "AI yield management addresses the period between admission and enrollment deposit — the phase where 20–40% of admitted students at typical institutions choose a competitor. AI models analyse behaviour signals from admitted students (financial aid portal activity, campus visit registration, email engagement, scholarship page visits) and predict deposit probability for each admitted student. Students identified as at-risk receive targeted outreach: personalised financial aid counselling appointment invitation, peer connection, or programme-specific information that addresses their specific hesitation.\n\n**What distinguishes AI yield management from email marketing:** Mass email campaigns send the same message to all admitted students on a fixed schedule. AI yield management sends different messages to different students at different times — triggered by each student's individual behaviour pattern — based on a model trained on which engagement patterns preceded enrollment and which preceded withdrawal in historical data.",
+  "body": ""
+}

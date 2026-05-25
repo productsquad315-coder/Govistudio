@@ -1,0 +1,11 @@
+{
+  "id": "049",
+  "title": "AI for UK Universities — UK GDPR and Jisc",
+  "slug": "ai-for-uk-universities-compliance",
+  "category": "General",
+  "categorySlug": "general",
+  "icp": "",
+  "url": "/ai-for-uk-universities-compliance",
+  "directAnswer": "UK universities deploying AI on student and staff data must meet: UK GDPR Article 28 DPA with any AI vendor, DPIA for high-risk processing of student personal data, data residency compliance (UK jurisdiction for UK personal data), and Jisc's AI governance recommendations (documented in Jisc's 2024 AI in HE guidance). Private deployment on Azure UK South or AWS eu-west-2 satisfies all current UK data residency requirements.\n\n**Jisc guidance summary (2024):** Jisc recommends UK HEIs establish an AI governance framework including designated AI lead, written AI use policy, staff training programme, regular risk assessment process, and transparency measures for students where AI affects their experience. Jisc's Connected Learning Analytics toolkit provides implementation guidance for learning analytics AI applications specifically.",
+  "body": ""
+}

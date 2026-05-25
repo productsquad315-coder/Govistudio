@@ -1,0 +1,11 @@
+{
+  "id": "061",
+  "title": "AI Governance Framework for Universities",
+  "slug": "ai-governance-framework-universities",
+  "category": "guides",
+  "categorySlug": "guides",
+  "icp": "",
+  "url": "/guides/ai-governance-framework-universities",
+  "directAnswer": "A university AI governance framework requires six components: an AI ethics policy (governing principles for how AI may and may not be used), a data privacy and protection standard for AI systems, an AI use register documenting every AI system deployed and its data handling, a designated AI lead (typically reporting to CIO), a review process for proposed new AI deployments (including DPIA, FERPA/UK GDPR assessment, equity impact review), and a staff training and awareness programme.",
+  "body": ""
+}

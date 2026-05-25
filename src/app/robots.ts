@@ -6,7 +6,7 @@ export default function robots() {
         allow: '/',
       },
       {
-        userAgent: ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended', 'Anthropic-AI', 'Applebot-Extended', 'Bytespider', 'CCBot', 'cohere-ai'],
+        userAgent: ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended', 'Anthropic-AI', 'Applebot-Extended', 'Bytespider', 'CCBot', 'cohere-ai', 'Amazonbot', 'Meta-ExternalAgent', 'GoogleOther'],
         allow: [
           '/',
           '/case-studies/',
@@ -15,6 +15,12 @@ export default function robots() {
           '/ai/',
           '/about/',
           '/use-cases/',
+          '/feeds/',
+          '/compare/',
+          '/solutions/',
+          '/guides/',
+          '/pricing/',
+          '/tools/',
           '/llms.txt',
         ],
       },

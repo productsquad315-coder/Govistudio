@@ -1,0 +1,11 @@
+{
+  "id": "046",
+  "title": "AI for Faculty Research Support",
+  "slug": "ai-faculty-research-support",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-faculty-research-support",
+  "directAnswer": "University research AI systems provide faculty with three capabilities beyond Google Scholar: semantic search over the institution's own research outputs (finding conceptually similar prior work even when terminology differs), literature landscape mapping (AI generates a structured overview of the state of research in a defined area, including key debates, methodological trends, and research gaps), and collaboration intelligence (AI identifies faculty at the same or peer institutions working on related topics, based on publication and grant data).\n\n**First project recommendation:** A departmental knowledge search system that ingests the department's published papers, working papers, and grant proposals. Faculty query in natural language — \"What methods have our department's researchers used for longitudinal survey analysis?\" — and receive cited answers from institutional outputs. Build time: 3–5 weeks. Cost: $18,000–$30,000.",
+  "body": ""
+}

@@ -1,0 +1,11 @@
+{
+  "id": "042",
+  "title": "AI for Community Colleges",
+  "slug": "ai-student-services-community-college",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-student-services-community-college",
+  "directAnswer": "Community college AI implementations focus on two highest-impact use cases: student FAQ automation (AI handles the 50 most common student questions — financial aid deadlines, add/drop procedures, graduation requirements — via chatbot integrated into the college's student portal), and advising appointment optimisation (AI matches students to appropriate advisors, provides pre-appointment information packets, and follows up post-appointment). Advisors focus on complex cases; AI handles routine information requests.\n\n**Key implementation note:** Community colleges often have lower technology budgets than 4-year institutions. Govistudio's focused-tool tier ($20,000–$30,000) is specifically designed for this market — one high-value use case, fixed fee, fast implementation.\n\n**Typical first project:** Student FAQ bot integrated into the college's existing student portal or website. Students ask questions 24/7 and receive accurate, policy-based answers with source citations. Integration with existing SIS (Banner, PeopleSoft, Colleague) is via API. FERPA compliance maintained through private deployment. Build time: 3–4 weeks.",
+  "body": ""
+}

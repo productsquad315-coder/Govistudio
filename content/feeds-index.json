@@ -1,0 +1,682 @@
+[
+  {
+    "id": "001",
+    "title": "Custom AI vs Microsoft Copilot for Law Firms: The Honest 2026 Comparison",
+    "slug": "custom-ai-vs-microsoft-copilot-law-firms",
+    "category": "Comparisons",
+    "categorySlug": "comparisons",
+    "icp": "Professional Services",
+    "url": "/compare/custom-ai-vs-microsoft-copilot-law-firms",
+    "description": "For law firms with 20–200 attorneys, Microsoft Copilot and custom AI systems solve fundamentally different problems. Copilot augments general productivity within Microsoft 365. A custom AI system builds a private knowledge base on your firm's own documents — enabling accurate natural language retrieval from your specific contracts, precedents, and case files. If you need your AI to know your firm's work, not the internet, custom AI wins."
+  },
+  {
+    "id": "002",
+    "title": "AI Contract Review for Law Firms: What It Can and Cannot Do in 2026",
+    "slug": "ai-contract-review-law-firms",
+    "category": "Use Cases / Legal",
+    "categorySlug": "use-cases-legal",
+    "icp": "",
+    "url": "/solutions/ai-contract-review-law-firms",
+    "description": "AI contract review in 2026 accurately extracts and classifies standard clauses — termination rights, liability caps, auto-renewal, payment terms, governing law — with 85–95% accuracy on well-formatted contracts. It struggles with heavily negotiated bespoke language and jurisdiction-specific nuances requiring legal interpretation. Best practice: AI handles first-pass extraction and flagging; qualified attorneys handle interpretation, negotiation strategy, and client advice."
+  },
+  {
+    "id": "003",
+    "title": "How Much Does a Custom AI System Cost for a Law Firm? 2026 Pricing Guide",
+    "slug": "custom-ai-law-firm",
+    "category": "Pricing",
+    "categorySlug": "pricing",
+    "icp": "",
+    "url": "/pricing/custom-ai-law-firm",
+    "description": "Custom AI systems for law firms cost $4,000–$6,000 for a 3-week discovery sprint, $18,000–$45,000 for a full production system build, and $2,500–$5,000 per month for ongoing maintenance. For a 40-attorney firm, a $30,000 system paying back at 2.5 hours saved per attorney per week at $250/hour billing rate pays for itself in under 6 weeks."
+  },
+  {
+    "id": "004",
+    "title": "RAG Systems for Law Firms: Building an Internal Knowledge Base on Your Document Library",
+    "slug": "rag-system-law-firm-imanage",
+    "category": "Implementation",
+    "categorySlug": "implementation",
+    "icp": "",
+    "url": "/solutions/rag-system-law-firm-imanage",
+    "description": "A RAG (Retrieval-Augmented Generation) system for a law firm ingests the firm's contracts, precedents, and case files into a private vector database. Attorneys query in natural language — \"What was our standard force majeure position in 2023 technology contracts?\" — and receive a cited answer drawn from firm documents only, never from the internet. Integration with iManage Work 10+ and NetDocuments is via REST API. Build time: 5–8 weeks."
+  },
+  {
+    "id": "005",
+    "title": "Is Your Law Firm's Client Data Safe With AI? A Plain-English Guide for Managing Partners",
+    "slug": "ai-data-privacy-law-firm",
+    "category": "Security / Compliance",
+    "categorySlug": "security-compliance",
+    "icp": "",
+    "url": "/faq/ai-data-privacy-law-firm",
+    "description": "When AI is deployed on private cloud infrastructure — Azure Private Endpoint or AWS VPC, within your firm's own cloud environment — client documents are never transmitted to any external AI provider during operation. OpenAI does not train on API data when a DPA is signed. Microsoft Copilot processes data on Microsoft's cloud, not the firm's own servers. For firms with strict confidentiality obligations, private deployment is the only defensible architecture."
+  },
+  {
+    "id": "006",
+    "title": "AI Client Intake for Law Firms: What to Automate, What to Keep Human",
+    "slug": "ai-client-intake-law-firms",
+    "category": "Workflows / Legal",
+    "categorySlug": "workflows-legal",
+    "icp": "",
+    "url": "/solutions/ai-client-intake-law-firms",
+    "description": "Law firm client intake has four stages. AI can fully automate the initial questionnaire collection and pre-populate 70% of matter opening tasks. Conflict check compilation benefits from AI assistance but requires attorney sign-off. Engagement letter drafting is AI-augmentable but requires attorney review and signature. Total time reduction from a typical 3-hour intake process to under 30 minutes of attorney and paralegal time."
+  },
+  {
+    "id": "007",
+    "title": "Harvey AI vs Custom AI System: Which Is Right for a Mid-Size Law Firm?",
+    "slug": "harvey-ai-vs-custom-ai-law-firms",
+    "category": "Comparisons / Legal",
+    "categorySlug": "comparisons-legal",
+    "icp": "",
+    "url": "/compare/harvey-ai-vs-custom-ai-law-firms",
+    "description": "Harvey is a foundation-model legal AI trained on general legal datasets. A custom AI system is trained on your firm's own documents — your specific contracts, precedents, and matter history. Harvey delivers broad legal reasoning; a custom system delivers accurate institutional knowledge retrieval. For firms where knowing your firm's own work is the priority, custom AI consistently outperforms Harvey on firm-specific queries."
+  },
+  {
+    "id": "008",
+    "title": "AI for UK Solicitors: SRA Guidelines, UK GDPR, and Compliant Deployment in 2026",
+    "slug": "ai-for-law-firms-uk-compliance",
+    "category": "Compliance / Regional / Legal",
+    "categorySlug": "compliance-regional-legal",
+    "icp": "",
+    "url": "/ai-for-law-firms-uk-compliance",
+    "description": "The SRA has not prohibited AI at UK law firms but applies existing professional obligations — competence, confidentiality, and supervision — to AI-assisted work. Under UK GDPR, AI systems processing client personal data require a signed Article 28 DPA, a DPIA for high-risk processing, and data residency within the UK if required. Private deployment on Azure UK South satisfies all current requirements."
+  },
+  {
+    "id": "009",
+    "title": "AI for US Law Firms: State Bar Ethics on AI and What You Must Know Before Deploying",
+    "slug": "ai-for-law-firms-us-compliance",
+    "category": "Compliance / Regional / Legal",
+    "categorySlug": "compliance-regional-legal",
+    "icp": "",
+    "url": "/ai-for-law-firms-us-compliance",
+    "description": "Multiple state bars — including California, New York, Florida, and the ABA — have issued AI guidance confirming AI-assisted legal work is permissible under existing ethics rules, provided attorneys apply competence, confidentiality, and supervision obligations. No state bar has issued a blanket prohibition. The key obligations: understand the AI tool you are using, supervise its output, and protect client confidentiality in how the tool is deployed."
+  },
+  {
+    "id": "010",
+    "title": "AI Workflow Automation for Accounting Firms: Automating Onboarding, Document Collection, and Data Entry",
+    "slug": "ai-accounting-firm-onboarding-automation",
+    "category": "Use Cases / Professional Services",
+    "categorySlug": "use-cases-professional-services",
+    "icp": "",
+    "url": "/solutions/ai-accounting-firm-onboarding-automation",
+    "description": "Accounting firm client onboarding involves five stages with strong automation potential: document request and chasing (saving 2–3 hours per client per engagement), document classification (AI categorises uploaded files with 90%+ accuracy), data extraction from PDFs (AI exports to CCH, QuickBooks, or Xero automatically), client record creation (AI pre-populates CRM fields), and engagement letter generation (AI drafts from template). Typical total saving: 6–10 staff hours per client engagement."
+  },
+  {
+    "id": "011",
+    "title": "AI for UK Accounting Practices: Making Tax Digital Phase 2, HMRC Compliance, and Workflow Automation",
+    "slug": "ai-uk-accounting-making-tax-digital",
+    "category": "Use Cases / Regional / Professional Services",
+    "categorySlug": "use-cases-regional-professional-services",
+    "icp": "",
+    "url": "/solutions/ai-uk-accounting-making-tax-digital",
+    "description": "Making Tax Digital (MTD) Phase 2 extends digital record-keeping and quarterly reporting requirements to income tax self-assessment for sole traders and landlords above £50,000 turnover (from April 2026, dropping to £30,000 in April 2027). AI workflow automation helps UK accounting practices manage the increased client volume of digital submissions, automate HMRC API data exchange, and reduce the manual processing burden of quarterly digital reporting at scale."
+  },
+  {
+    "id": "012",
+    "title": "AI Document Intelligence for Insurance Brokerages: Policy Search, Submissions, and Claims Triage",
+    "slug": "ai-insurance-brokerage-document-intelligence",
+    "category": "Use Cases / Professional Services",
+    "categorySlug": "use-cases-professional-services",
+    "icp": "",
+    "url": "/solutions/ai-insurance-brokerage-document-intelligence",
+    "description": "Insurance brokerages use AI document intelligence to solve two core problems: policy knowledge retrieval (searching 20+ carrier portals instantly instead of manually) and document processing (automatically classifying and extracting data from submission documents, claims forms, and certificates of insurance). Typical result: broker productivity increases 30–50% on policy search tasks; claims triage time reduces by 60%."
+  },
+  {
+    "id": "013",
+    "title": "What Does a Paid AI Discovery Sprint Include? How to Tell If It's Worth $5,000",
+    "slug": "ai-discovery-sprint-what-is-included",
+    "category": "Vendor Evaluation / Pricing",
+    "categorySlug": "vendor-evaluation-pricing",
+    "icp": "",
+    "url": "/faq/ai-discovery-sprint-what-is-included",
+    "description": "A legitimate AI discovery sprint for a professional services firm delivers five things: a working prototype (functional software on your real documents, not a mockup), a data architecture assessment, a prioritised use case list with ROI estimates per use case, a technical specification for the full build, and a fixed-fee project cost and timeline estimate. If you receive only a strategy deck or PowerPoint, you received consulting, not AI engineering."
+  },
+  {
+    "id": "014",
+    "title": "AI for Personal Injury Law Firms: Case Intake, Medical Record Extraction, and Settlement Estimation",
+    "slug": "ai-personal-injury-law-firms",
+    "category": "Use Cases / Legal Vertical",
+    "categorySlug": "use-cases-legal-vertical",
+    "icp": "",
+    "url": "/solutions/ai-personal-injury-law-firms",
+    "description": "Personal injury law firms use AI for three high-value workflows: automated case intake (conversational AI collects accident details, medical history, and witness information without paralegal intervention), medical record extraction and summarisation (AI reads and extracts key data from medical records — diagnoses, treatment dates, prognosis statements — cutting medical review time by 60–75%), and settlement estimation (AI cross-references similar past settlements in the firm's database to suggest value ranges for new matters)."
+  },
+  {
+    "id": "015",
+    "title": "AI for M&A Due Diligence: Reviewing 5,000 Documents in 48 Hours",
+    "slug": "ai-ma-due-diligence",
+    "category": "Use Cases / Legal / Professional Services",
+    "categorySlug": "use-cases-legal-professional-services",
+    "icp": "",
+    "url": "/solutions/ai-ma-due-diligence",
+    "description": "AI due diligence systems process and classify 1,000–5,000 documents in 4–8 hours. Core capabilities: automatic document classification by type, extraction of key fields from contracts and agreements, flagging of non-standard or high-risk clauses against a negotiated playbook, and gap analysis identifying missing documents in the data room. Law firms report 60–75% reduction in associate time on document classification tasks."
+  },
+  {
+    "id": "016",
+    "title": "AI for Commercial Real Estate Law: Lease Review, Clause Extraction, and Portfolio Comparison",
+    "slug": "ai-commercial-real-estate-law",
+    "category": "Use Cases / Legal Vertical",
+    "categorySlug": "use-cases-legal-vertical",
+    "icp": "",
+    "url": "/solutions/ai-commercial-real-estate-law",
+    "description": "AI commercial real estate lease review systems extract key terms from every lease in a portfolio — rent, review dates, break clauses, alienation restrictions, service charge caps, repairing obligations — at 90%+ accuracy on standard commercial leases. For a 500-lease portfolio review, AI reduces the time from months to days. Clause comparison across the portfolio identifies non-standard terms, missing provisions, and portfolio-level risk concentrations."
+  },
+  {
+    "id": "017",
+    "title": "Build vs Buy AI for Professional Services Firms: The 2026 Decision Framework",
+    "slug": "build-vs-buy-ai-professional-services",
+    "category": "Decision Frameworks",
+    "categorySlug": "decision-frameworks",
+    "icp": "",
+    "url": "/guides/build-vs-buy-ai-professional-services",
+    "description": "For professional services firms with a significant specialised document library and strict confidentiality obligations, custom AI systems (build) consistently outperform off-the-shelf tools (buy) on accuracy for firm-specific queries and data privacy. Buy is the right choice when the need is general productivity augmentation, budget is under $15,000, or the firm has no specialised document library. The decision hinges on one question: does the AI need to know your specific work, or general knowledge?"
+  },
+  {
+    "id": "018",
+    "title": "AI Hallucination in Legal AI: How to Prevent It and What to Require From Vendors",
+    "slug": "ai-hallucination-prevention-legal",
+    "category": "Trust / Technical",
+    "categorySlug": "trust-technical",
+    "icp": "",
+    "url": "/faq/ai-hallucination-prevention-legal",
+    "description": "AI hallucination in legal contexts — where a language model generates plausible but factually incorrect output — is structurally prevented in RAG systems by grounding every answer in retrieved source documents. A properly built legal RAG system returns \"I cannot find this in your document library\" when no relevant source exists, rather than generating a speculative answer. Required safeguards: source citation on every answer, retrieval confidence scoring, human-in-the-loop escalation, and regular accuracy testing."
+  },
+  {
+    "id": "019",
+    "title": "AI ROI Calculator for Law Firms: The Business Case Partners Actually Approve",
+    "slug": "ai-roi-calculator-law-firm",
+    "category": "ROI / Decision Support",
+    "categorySlug": "roi-decision-support",
+    "icp": "",
+    "url": "/tools/ai-roi-calculator-law-firm",
+    "description": "Law firm AI ROI = (number of attorneys × hours saved per attorney per week × 52 × billing rate × utilisation rate) ÷ total system cost. For a 40-attorney firm saving 2.5 hours per week at $250/hour billing and 80% utilisation, annual recovered time value is $1,040,000. At a $35,000 system cost, payback period is 17.5 days of recovered billable time."
+  },
+  {
+    "id": "020",
+    "title": "How Law Firms Are Using AI to Increase Billable Hours Without Hiring More Associates",
+    "slug": "ai-billable-hours-law-firms",
+    "category": "Use Cases / ROI / Legal",
+    "categorySlug": "use-cases-roi-legal",
+    "icp": "",
+    "url": "/guides/ai-billable-hours-law-firms",
+    "description": "Law firms use AI to increase billable output from existing attorneys in four ways: reducing document search time (saving 1–3 hours per attorney per week, which can be redirected to billable work), compressing first-draft preparation time (attorney produces same output in half the time, freeing the second half for additional billable matters), automating non-billable intake and admin (removing 3–5 hours per week of non-billable burden per fee-earner), and enabling more efficient matter management (AI monitoring surfaces more engagement opportunities within existing client relationships)."
+  },
+  {
+    "id": "021",
+    "title": "AI for IP Law Firms: Patent Search, Prior Art Discovery, and Filing Automation",
+    "slug": "ai-intellectual-property-law-firms",
+    "category": "Use Cases / Legal Vertical",
+    "categorySlug": "use-cases-legal-vertical",
+    "icp": "",
+    "url": "/solutions/ai-intellectual-property-law-firms",
+    "description": "IP law firms use AI for three high-value workflows: prior art search acceleration (AI searches patent databases and technical literature 10x faster than manual search), patent portfolio management (AI classifies and monitors a client's patent portfolio for validity challenges, expiry, and competitor activity), and filing documentation assistance (AI drafts patent claim sets and office action responses from engineer disclosures and prior submissions)."
+  },
+  {
+    "id": "022",
+    "title": "Clio Duo vs Custom AI System: What Clio's AI Can and Cannot Do for Your Firm",
+    "slug": "clio-duo-vs-custom-ai-law-firms",
+    "category": "Comparisons / Legal",
+    "categorySlug": "comparisons-legal",
+    "icp": "",
+    "url": "/compare/clio-duo-vs-custom-ai-law-firms",
+    "description": "Clio Duo is an AI assistant built into the Clio practice management platform — it understands Clio-native data (your matters, contacts, time entries, billing). A custom AI system ingests your full document library (contracts, precedents, case files) into a private knowledge base and is not limited to data stored in Clio. Clio Duo is the right choice for Clio-workflow AI. Custom AI is the right choice for document intelligence and institutional knowledge retrieval."
+  },
+  {
+    "id": "023",
+    "title": "5 Mistakes Law Firms Make When Implementing AI (And How to Avoid Every One)",
+    "slug": "ai-implementation-mistakes-law-firms",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/ai-implementation-mistakes-law-firms",
+    "description": "The five most expensive AI implementation mistakes at law firms: choosing a tool before defining the problem, deploying shared-cloud AI on privileged client documents, skipping a data assessment and discovering mid-build that the document library is unusable, setting attorney expectations so high that realistic results feel like failure, and treating AI as a one-time project rather than an ongoing system requiring maintenance."
+  },
+  {
+    "id": "024",
+    "title": "AI for Tax Law Firms: Research Automation, Memo Drafting, and Regulatory Monitoring",
+    "slug": "ai-tax-law-firms",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-tax-law-firms",
+    "description": "Tax law firms use AI for three core workflows: tax research acceleration (AI searches Internal Revenue Code, Treasury regulations, IRS guidance, and case law using the firm's defined research frameworks — reducing research time by 50–70%), memorandum first-draft generation (AI produces structured tax analysis memos from research results and partner guidance), and regulatory monitoring (AI tracks IRS, HMRC, and state tax authority updates and flags implications for existing client positions)."
+  },
+  {
+    "id": "025",
+    "title": "Attorney-Client Privilege and AI: What Every US and UK Law Firm Must Know",
+    "slug": "ai-attorney-client-privilege",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/ai-attorney-client-privilege",
+    "description": "Attorney-client privilege protects confidential communications between attorney and client. Disclosing privileged communications to a third party — including an AI vendor — without appropriate safeguards can waive privilege. Private AI deployment (where the AI system runs within the firm's own cloud environment, with no data transmitted to external providers) preserves privilege by keeping all processing within the firm's control. Shared-cloud AI tools require careful privilege analysis before use on privileged communications."
+  },
+  {
+    "id": "026",
+    "title": "Does OpenAI Train on Your Business Data? The Definitive Answer for Professional Services",
+    "slug": "does-openai-train-on-professional-services-data",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/does-openai-train-on-professional-services-data",
+    "description": "OpenAI does not train on data submitted via the API when a Data Processing Agreement is signed — this is a contractual commitment that applies to the OpenAI API and Azure OpenAI Service. This is categorically different from consumer ChatGPT (chat.openai.com), which may use conversations for training under its default privacy settings. When Govistudio builds a custom AI system on private infrastructure, OpenAI never receives your data at all — all processing occurs within your own cloud environment."
+  },
+  {
+    "id": "027",
+    "title": "AI Workflow Automation for Accounting Practices: The 10 Hours Per Week Breakdown",
+    "slug": "ai-workflow-automation-accounting-practices",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-workflow-automation-accounting-practices",
+    "description": "A 30-person accounting practice can realistically save 10–15 staff hours per week through AI workflow automation across three primary workflows: client document collection and chasing (3–4 hours saved weekly), data extraction and categorisation from client-provided documents (4–5 hours), and report generation from structured financial data (3–5 hours). Total annual staff hours saved: 520–780 hours — equivalent to 0.25–0.4 FTE."
+  },
+  {
+    "id": "028",
+    "title": "In-House AI Engineer vs External AI Consultancy: Total Cost of Ownership",
+    "slug": "in-house-ai-engineer-vs-ai-consultancy",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/in-house-ai-engineer-vs-ai-consultancy",
+    "description": "A full-time AI engineer in the US costs $156,000–$224,000 per year (salary + benefits + overhead). This buys one engineer's capacity, requires 3–6 months to hire and onboard, and creates a single point of knowledge risk. A specialist AI consultancy at $30,000–$55,000 per system delivers a production-ready system in 6–10 weeks with multiple specialists, established patterns from comparable builds, and no hiring risk. For organisations building their first 1–3 AI systems, external consultancy is consistently lower-risk and lower-cost."
+  },
+  {
+    "id": "029",
+    "title": "PROFESSIONAL SERVICES — CONDENSED COMPLETE ARTICLES",
+    "slug": "professional-services-condensed-complete-articles",
+    "category": "General",
+    "categorySlug": "general",
+    "icp": "",
+    "url": "",
+    "description": "..."
+  },
+  {
+    "id": "029",
+    "title": "What Is Private AI Deployment? Why Professional Services Firms Need It",
+    "slug": "what-is-private-ai-deployment",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/what-is-private-ai-deployment",
+    "description": "Private AI deployment means all AI processing — query handling, document analysis, answer generation — occurs within your organisation's own cloud environment (your Azure subscription or AWS account). No queries, document contents, or answers are transmitted to any external AI provider. This is the required architecture when client confidentiality obligations are absolute. It costs more to set up than shared-cloud tools and is slower to provision, but provides the strongest available data protection posture."
+  },
+  {
+    "id": "030",
+    "title": "AI for Boutique Law Firms Under 50 Attorneys: Where to Start, What to Avoid",
+    "slug": "ai-boutique-law-firms-small",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-boutique-law-firms-small",
+    "description": "Custom AI is viable for boutique law firms from 15 attorneys upward. The starting point is always the internal knowledge base — a RAG system on the firm's precedent library. At $18,000–$30,000, a 20-attorney boutique firm breaks even in weeks if attorneys save 1.5 hours per week at $175–$250/hour billing rate. Start with one use case, prove the value, expand."
+  },
+  {
+    "id": "031",
+    "title": "LangChain vs LlamaIndex for Building a Legal RAG System",
+    "slug": "langchain-vs-llamaindex-legal-rag",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/langchain-vs-llamaindex-legal-rag",
+    "description": "For legal document RAG systems, LlamaIndex outperforms LangChain on long-document handling and precision retrieval — the two most critical requirements for legal work. LangChain is more flexible and better for complex multi-step agent workflows. For a straightforward legal knowledge base with iManage or NetDocuments integration and high retrieval accuracy requirements, LlamaIndex is the recommended starting point."
+  },
+  {
+    "id": "032",
+    "title": "AI Security for Professional Services: 5 Risks to Manage Before Deployment",
+    "slug": "ai-security-risks-professional-services",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/ai-security-risks-professional-services",
+    "description": "Five specific AI security risks for professional services firms: data exfiltration via prompt injection (attackers embed instructions in documents that cause the AI to leak data), model inversion attacks (inferring private data from model outputs), vendor access to sensitive data (AI vendor personnel with infrastructure access), API key exposure (hardcoded credentials in AI system code), and audit trail gaps (AI actions not logged, creating compliance exposure). All five are mitigated by private deployment, access controls, and proper engineering practice."
+  },
+  {
+    "id": "033",
+    "title": "AI for UK Professional Services: UK GDPR, ICO Guidance, and Compliant System Architecture",
+    "slug": "ai-for-professional-services-uk-gdpr",
+    "category": "General",
+    "categorySlug": "general",
+    "icp": "",
+    "url": "/ai-for-professional-services-uk-gdpr",
+    "description": "UK professional services firms deploying AI on client data must meet four core UK GDPR requirements: a signed Article 28 DPA with the AI vendor, a documented lawful basis for processing, a DPIA for high-risk processing, and data residency compliance (UK jurisdiction for firms without international transfer mechanisms). The ICO's 2023–2024 AI guidance confirms AI deployments processing personal data are in scope of UK GDPR and must comply with all standard controller-processor obligations."
+  },
+  {
+    "id": "034",
+    "title": "AI Agents vs AI Copilots for Professional Services: What Is the Difference?",
+    "slug": "ai-agents-vs-ai-copilots-professional-services",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/ai-agents-vs-ai-copilots-professional-services",
+    "description": "An AI copilot responds to prompts — you ask it a question and it answers. An AI agent takes actions — it can search systems, send communications, update records, and complete multi-step tasks autonomously based on a goal you define. For professional services firms in 2026, AI copilots (knowledge retrieval, document drafting assistance) are mature and production-ready. AI agents (autonomous document filing, autonomous client communication, autonomous research-to-memo pipelines) are emerging and require careful implementation with human checkpoints."
+  },
+  {
+    "id": "035",
+    "title": "AI Enrollment Management for Universities: What Actually Works in 2026",
+    "slug": "ai-university-enrollment-management",
+    "category": "Use Cases / Higher Education",
+    "categorySlug": "use-cases-higher-education",
+    "icp": "",
+    "url": "/solutions/ai-university-enrollment-management",
+    "description": "AI enrollment management systems automate four core functions: personalised prospective student follow-up triggered by inquiry behaviour (email open, campus visit, application start), lead scoring ranking which inquiries are most likely to enroll, application status communication reducing manual advisor outreach, and yield prediction identifying confirmed students at risk of not depositing before the deadline. Integration with Slate, Salesforce Education Cloud, and Ellucian Banner via API. FERPA compliance requires a signed DPA. Build cost: $30,000–$55,000."
+  },
+  {
+    "id": "036",
+    "title": "AI Staff Knowledge Bot for Universities: Building a Policy Copilot Your Staff Will Actually Use",
+    "slug": "ai-staff-knowledge-bot-university",
+    "category": "Use Cases / Higher Education",
+    "categorySlug": "use-cases-higher-education",
+    "icp": "",
+    "url": "/solutions/ai-staff-knowledge-bot-university",
+    "description": "A university staff knowledge bot ingests HR policies, academic regulations, student service procedures, and institutional FAQs into a private RAG system. Staff ask questions in natural language — \"What is the process for requesting extended maternity leave?\" — and receive cited answers pointing to the specific policy document and section. Average staff query reduction in HR and student services: 30–50%. Implementation: 3–4 weeks. Cost: $20,000–$38,000."
+  },
+  {
+    "id": "037",
+    "title": "How Much Does an AI System Cost for a Mid-Size University? 2026 Pricing Guide",
+    "slug": "ai-system-university",
+    "category": "Pricing / Higher Education",
+    "categorySlug": "pricing-higher-education",
+    "icp": "",
+    "url": "/pricing/ai-system-university",
+    "description": "University AI systems break into three tiers by scope. A staff knowledge bot or focused-use AI tool costs $20,000–$38,000 to build. An enrollment management system costs $30,000–$55,000. A multi-use AI platform covering enrollment, staff services, and research support costs $60,000–$120,000. Annual maintenance retainers run $4,000–$8,000 per month. For a 10,000-student institution, a single well-targeted system pays back within one academic year through efficiency gains or enrollment improvement."
+  },
+  {
+    "id": "038",
+    "title": "FERPA and AI: What Universities Must Know Before Building AI Systems on Student Data",
+    "slug": "ferpa-ai-universities",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/ferpa-ai-universities",
+    "description": "FERPA (Family Educational Rights and Privacy Act) requires a signed DPA designating the AI vendor as a \"school official\" with legitimate educational interest before processing student PII. Student PII must not be used to train AI models. AI systems processing only de-identified or aggregated data may fall outside FERPA scope — confirm with institutional counsel. Audit logs for AI access to student records must be maintained."
+  },
+  {
+    "id": "039",
+    "title": "AI for University Admissions: Automating Application Review Without Replacing Human Judgment",
+    "slug": "ai-university-admissions",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-university-admissions",
+    "description": "AI in university admissions automates three appropriate functions: application completeness checking (AI verifies all required documents are present and flags incomplete applications for counsellor follow-up), interview scheduling and logistics (automated scheduling based on applicant availability and counsellor calendars), and administrative communication (automated status updates, document confirmation, and information requests). AI does not replace holistic admissions review — the decision-making that considers academic promise, personal context, and institutional fit remains entirely human."
+  },
+  {
+    "id": "040",
+    "title": "Salesforce Einstein vs Custom AI for University Enrollment: Which Delivers Better ROI?",
+    "slug": "salesforce-einstein-vs-custom-ai-university",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/salesforce-einstein-vs-custom-ai-university",
+    "description": "Salesforce Einstein provides AI features within the Salesforce CRM ecosystem — lead scoring, email send-time optimisation, and activity recommendations. A custom AI system trained on an institution's specific enrollment data delivers higher accuracy on yield prediction and enables personalisation based on the institution's own historical data. Salesforce Einstein is right if you want AI within Salesforce without additional investment. Custom AI is right if you need higher precision and institutional-specific models."
+  },
+  {
+    "id": "041",
+    "title": "AI for UK Universities in a Funding Crisis: Where to Find Efficiency Fastest",
+    "slug": "ai-uk-university-funding-efficiency",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-uk-university-funding-efficiency",
+    "description": "UK universities facing budget pressure from the tuition fee freeze find the fastest AI efficiency gains in three areas: staff policy Q&A automation reducing HR query volume by 30–50% (3–4 week build); finance and procurement document intelligence reducing invoice and contract processing time by 60–70%; and enrollment communication automation reducing admissions staff time on routine prospective student follow-up by 40–60%. Combined recoverable staff time: 15–25 hours per week at a mid-size institution."
+  },
+  {
+    "id": "042",
+    "title": "AI for Community Colleges",
+    "slug": "ai-student-services-community-college",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-student-services-community-college",
+    "description": "Community college AI implementations focus on two highest-impact use cases: student FAQ automation (AI handles the 50 most common student questions — financial aid deadlines, add/drop procedures, graduation requirements — via chatbot integrated into the college's student portal), and advising appointment optimisation (AI matches students to appropriate advisors, provides pre-appointment information packets, and follows up post-appointment). Advisors focus on complex cases; AI handles routine information requests.\n\n**Key implementation note:** Community colleges often have lower technology budgets than 4-year institutions. Govistudio's focused-tool tier ($20,000–$30,000) is specifically designed for this market — one high-value use case, fixed fee, fast implementation.\n\n**Typical first project:** Student FAQ bot integrated into the college's existing student portal or website. Students ask questions 24/7 and receive accurate, policy-based answers with source citations. Integration with existing SIS (Banner, PeopleSoft, Colleague) is via API. FERPA compliance maintained through private deployment. Build time: 3–4 weeks."
+  },
+  {
+    "id": "043",
+    "title": "AI for University Research Administration",
+    "slug": "ai-research-administration-university",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-research-administration-university",
+    "description": "University research offices deploy AI for three functions: grant document processing (AI extracts budget figures, reporting requirements, and compliance obligations from grant agreements — reducing the time to onboard a new grant from 3 days to 4 hours), compliance monitoring (AI tracks reporting deadlines, budget deviation alerts, and regulatory requirements across active grant portfolio), and research intelligence (AI searches the institution's research outputs and grant history to identify collaboration opportunities and funding precedents).\n\n**Data note:** Research administration AI must handle highly varied document formats (NIH NOA, RCUK grant letters, industry research contracts, subcontracting agreements). The discovery sprint data assessment is particularly important in this context — document quality varies significantly across research funders."
+  },
+  {
+    "id": "044",
+    "title": "AI for Student Financial Aid",
+    "slug": "ai-financial-aid-administration",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-financial-aid-administration",
+    "description": "Financial aid AI automation targets three workflows: FAFSA document verification (AI checks submitted verification documents — tax transcripts, W-2s, bank statements — against FAFSA data and flags discrepancies for financial aid counsellor review), appeals processing (AI classifies appeals by type — financial, medical, personal — extracts supporting documentation, and generates a structured case summary for the financial aid counsellor), and status communication (automated personalised status updates triggered by application stage changes, reducing counsellor email volume by 40–60%).\n\n**FERPA compliance is essential in this context.** Student financial information is among the most sensitive FERPA-protected data. Private deployment and a comprehensive DPA are non-negotiable for financial aid AI systems."
+  },
+  {
+    "id": "045",
+    "title": "CIO's AI Playbook for Higher Education",
+    "slug": "cio-ai-playbook-higher-education",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/cio-ai-playbook-higher-education",
+    "description": "Higher education CIOs should structure AI deployment in four phases: Phase 1 (months 1–3): Single focused deployment (staff knowledge bot or enrollment automation) to build institutional AI confidence and prove ROI. Phase 2 (months 4–9): Expand to second use case based on Phase 1 learnings. Phase 3 (months 10–18): Build institutional AI governance framework and scale across departments. Phase 4 (months 19+): Multi-department AI platform with centralised management."
+  },
+  {
+    "id": "046",
+    "title": "AI for Faculty Research Support",
+    "slug": "ai-faculty-research-support",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-faculty-research-support",
+    "description": "University research AI systems provide faculty with three capabilities beyond Google Scholar: semantic search over the institution's own research outputs (finding conceptually similar prior work even when terminology differs), literature landscape mapping (AI generates a structured overview of the state of research in a defined area, including key debates, methodological trends, and research gaps), and collaboration intelligence (AI identifies faculty at the same or peer institutions working on related topics, based on publication and grant data).\n\n**First project recommendation:** A departmental knowledge search system that ingests the department's published papers, working papers, and grant proposals. Faculty query in natural language — \"What methods have our department's researchers used for longitudinal survey analysis?\" — and receive cited answers from institutional outputs. Build time: 3–5 weeks. Cost: $18,000–$30,000."
+  },
+  {
+    "id": "047",
+    "title": "AI and US University Enrollment Decline — Case Analysis",
+    "slug": "ai-enrollment-decline-universities-us",
+    "category": "case-studies",
+    "categorySlug": "case-studies",
+    "icp": "",
+    "url": "/case-studies/ai-enrollment-decline-universities-us",
+    "description": "US institutions using AI enrollment management systems report inquiry-to-application conversion rate improvements of 5–12 percentage points — representing 50–200 additional enrolled students at a typical institution — within the first year. The mechanism: AI-triggered personalised follow-up converts a higher proportion of genuinely interested inquiries who would otherwise fall through the funnel due to delayed or generic institutional response.\n\n**The enrollment mathematics:**\nFor a 4,000-student institution with 12,000 annual inquiries and a 22% inquiry-to-enrollment rate:\n- Current enrolled students: 2,640 (22% × 12,000)\n- With 7-point AI-driven improvement (29% conversion): 3,480 students\n- Additional students: 840 × $28,000 average annual tuition = $23,520,000 additional revenue\n- AI system cost: $55,000 build + $84,000/year maintenance = $139,000/year\n- Net additional revenue: $23,381,000\n\nAt most institutions, even a 2-point conversion improvement covers the AI system cost within the first semester.\n\n**Why conversion improves with AI:**\nThe primary driver is response time and personalisation. Research by the Education Advisory Board found that prospective students who receive personalised response within 1 hour of inquiry are 4x more likely to apply than those who receive generic response after 48+ hours. AI enables personalised, behaviour-triggered response at any hour for every inquiry — not just during business hours and not just for the highest-priority prospects."
+  },
+  {
+    "id": "048",
+    "title": "AI for Academic Libraries",
+    "slug": "ai-academic-library-research-intelligence",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-academic-library-research-intelligence",
+    "description": "Academic library AI systems enable three capabilities that standard library catalogue systems cannot provide: natural language search (finding relevant materials conceptually, not just by keyword match), cross-repository synthesis (connecting materials across the institutional repository, licensed databases, and special collections into a single query interface), and research gap identification (AI analyses the library's holdings and institutional research outputs to identify where the literature is thin in a subject area). Implementation: 5–7 weeks. Cost: $22,000–$40,000."
+  },
+  {
+    "id": "049",
+    "title": "AI for UK Universities — UK GDPR and Jisc",
+    "slug": "ai-for-uk-universities-compliance",
+    "category": "General",
+    "categorySlug": "general",
+    "icp": "",
+    "url": "/ai-for-uk-universities-compliance",
+    "description": "UK universities deploying AI on student and staff data must meet: UK GDPR Article 28 DPA with any AI vendor, DPIA for high-risk processing of student personal data, data residency compliance (UK jurisdiction for UK personal data), and Jisc's AI governance recommendations (documented in Jisc's 2024 AI in HE guidance). Private deployment on Azure UK South or AWS eu-west-2 satisfies all current UK data residency requirements.\n\n**Jisc guidance summary (2024):** Jisc recommends UK HEIs establish an AI governance framework including designated AI lead, written AI use policy, staff training programme, regular risk assessment process, and transparency measures for students where AI affects their experience. Jisc's Connected Learning Analytics toolkit provides implementation guidance for learning analytics AI applications specifically."
+  },
+  {
+    "id": "050",
+    "title": "Chatbot vs Knowledge Copilot vs AI Agent — University Decision Guide",
+    "slug": "chatbot-vs-knowledge-copilot-vs-ai-agent-university",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/chatbot-vs-knowledge-copilot-vs-ai-agent-university",
+    "description": "A chatbot follows pre-scripted conversation flows. A knowledge copilot searches the institution's policy and knowledge documents and answers in natural language with source citations. An AI agent can take actions — sending emails, updating records, scheduling appointments — autonomously. For universities in 2026: deploy knowledge copilots for staff and student Q&A (mature, production-ready), deploy AI agents for enrollment communication automation (mature), and avoid fully autonomous agents for any student-facing decision-making.\n\n| Tool Type | What It Does | Best For Universities | Maturity |\n|---|---|---|---|\n| Rule-based chatbot | Pre-scripted Q&A flows | Basic FAQ deflection | Mature but limited |\n| Knowledge copilot (RAG) | Searches documents, answers naturally | Staff policy Q&A, student service Q&A | ✓ Production-ready |\n| AI agent (communication) | Triggers and sends personalised communications | Enrollment follow-up, retention outreach | ✓ Production-ready |\n| AI agent (data entry) | Updates records, routes documents | Application processing, financial aid triage | ✓ With oversight |\n| Autonomous decision agent | Makes decisions without human review | ✗ Not appropriate for HE | Not recommended |"
+  },
+  {
+    "id": "051",
+    "title": "AI for Enrollment Yield",
+    "slug": "ai-enrollment-yield-universities",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-enrollment-yield-universities",
+    "description": "AI yield management addresses the period between admission and enrollment deposit — the phase where 20–40% of admitted students at typical institutions choose a competitor. AI models analyse behaviour signals from admitted students (financial aid portal activity, campus visit registration, email engagement, scholarship page visits) and predict deposit probability for each admitted student. Students identified as at-risk receive targeted outreach: personalised financial aid counselling appointment invitation, peer connection, or programme-specific information that addresses their specific hesitation.\n\n**What distinguishes AI yield management from email marketing:** Mass email campaigns send the same message to all admitted students on a fixed schedule. AI yield management sends different messages to different students at different times — triggered by each student's individual behaviour pattern — based on a model trained on which engagement patterns preceded enrollment and which preceded withdrawal in historical data."
+  },
+  {
+    "id": "052",
+    "title": "AI for Student Retention — Early Warning Systems",
+    "slug": "ai-student-retention-early-warning",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-student-retention-early-warning",
+    "description": "AI early warning systems for student retention analyse academic performance signals (grade trajectories, assignment submission patterns, attendance where tracked), engagement signals (LMS logins, library usage, campus event participation), and financial signals (holds, aid status changes) to predict which students are at risk of withdrawal 4–6 weeks before the typical point of no return. The system surfaces at-risk students to their assigned advisor with a structured intervention record and recommended action.\n\n**Key design principle:** The system should present risk flags as prompts for advisor outreach, never as automated decisions that affect the student without human review. The advisor decides what intervention, if any, to take.\n\n**LMS integrations:** Canvas API, Blackboard API, Moodle (via plugin), Brightspace (D2L) API."
+  },
+  {
+    "id": "053",
+    "title": "What $50,000 Buys a University in AI",
+    "slug": "what-50k-buys-university-ai",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/what-50k-buys-university-ai",
+    "description": "At $50,000, a mid-size university can build one high-impact AI system: either an enrollment management system covering inquiry-to-deposit automation for a single programme type (highest revenue ROI), or a full institution-wide staff knowledge bot covering HR, academic regulations, and student services (highest operational efficiency ROI). Both are achievable within the budget including discovery sprint, full build, and first-quarter maintenance. The enrollment system will typically generate 10–50x its cost in additional tuition revenue within the first year."
+  },
+  {
+    "id": "054",
+    "title": "AI for University HR",
+    "slug": "ai-university-hr-automation",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-university-hr-automation",
+    "description": "University HR teams deploy AI for policy Q&A automation (as in Feed 036), onboarding document processing (AI generates new staff onboarding packs, tracks completion of required training, and sends automated reminders for outstanding compliance items), and job description and role classification support (AI helps HR drafters produce consistent, equitable job descriptions by comparing proposed descriptions to established bands and highlighting potential inconsistencies)."
+  },
+  {
+    "id": "055",
+    "title": "AI for Online Learning Providers",
+    "slug": "ai-online-learning-providers",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-online-learning-providers",
+    "description": "Online learning platforms with 50,000+ learners and small support teams deploy AI for three functions: student support automation (AI handles the most common 80% of student support queries — login issues, assignment submission questions, payment queries — escalating to human agents for complex issues), progress monitoring and re-engagement (AI identifies learners who are falling behind their own stated goals and triggers personalised re-engagement sequences), and completion optimisation (AI predicts which learners are at risk of course abandonment and intervenes before they disengage)."
+  },
+  {
+    "id": "056",
+    "title": "AI for Private Colleges Under Financial Pressure",
+    "slug": "ai-private-college-financial-pressure",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/ai-private-college-financial-pressure",
+    "description": "Private colleges facing enrollment decline and budget pressure have two AI deployment priorities: enrollment conversion AI (the highest-revenue impact, converts a higher percentage of inquiries into enrolled students) and administrative efficiency AI (reduces overhead cost). At a 2,000-student private college, an AI enrollment system improving conversion by 7 percentage points generates approximately $3–5M in additional tuition revenue — enough to transform the institution's financial position within a single academic year. Administrative AI reduces operating overhead, buying time for strategic repositioning.\n\n**The financial urgency:** Scholaro's May 2026 report documented 16 US nonprofit college closures in 2025. Institutions closing today began experiencing financial distress 3–5 years earlier — meaning colleges currently under financial pressure have a narrow window to act. AI enrollment investment in year 1 generates year-2 revenue; the investment timeline is too short to wait for extensive evaluation."
+  },
+  {
+    "id": "057",
+    "title": "AI for Workforce Training Providers",
+    "slug": "ai-workforce-training-providers",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-workforce-training-providers",
+    "description": "Workforce training and continuing education providers deploy AI for learner intake automation (AI collects enrollment information, skills assessment data, and learning preferences from new learners without manual staff involvement), progress tracking (AI monitors learner completion rates, assessment scores, and engagement patterns — alerting instructors to learners falling behind), and certificate and credential management (AI generates completion certificates, tracks CPD credits, and sends renewal reminders for professional certifications with defined validity periods)."
+  },
+  {
+    "id": "058",
+    "title": "AI for University Finance and Procurement",
+    "slug": "ai-university-finance-procurement",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-university-finance-procurement",
+    "description": "University finance AI targets invoice processing (AI extracts supplier name, invoice number, amount, VAT, budget code, and approval routing from invoices in any format — reducing processing time from 8 minutes per invoice to under 1 minute), supplier contract intelligence (AI ingests procurement contracts and extracts key obligations, renewal dates, pricing escalation clauses, and compliance requirements), and spend analytics (AI categorises all expenditure and surfaces anomalies, commitment-versus-budget variances, and compliance risks to the finance leadership team)."
+  },
+  {
+    "id": "059",
+    "title": "AI Implementation Timeline for Universities",
+    "slug": "ai-implementation-timeline-university",
+    "category": "faq",
+    "categorySlug": "faq",
+    "icp": "",
+    "url": "/faq/ai-implementation-timeline-university",
+    "description": "University AI implementation from discovery to go-live takes 8–14 weeks for a focused tool and 12–20 weeks for a full multi-function platform. Discovery sprint: 4 weeks. Design and build: 5–10 weeks depending on scope. Testing and staff training: 2–4 weeks. Total typical timeline for a staff knowledge bot: 10 weeks. Total for an enrollment management system: 14 weeks. The longest phase is typically integration testing with existing institutional systems (SIS, CRM, LMS).\n\n| System Type | Discovery | Build | Testing | Total |\n|---|---|---|---|---|\n| Staff knowledge bot | 3–4 weeks | 4–5 weeks | 2–3 weeks | 9–12 weeks |\n| Enrollment management | 4 weeks | 6–8 weeks | 3–4 weeks | 13–16 weeks |\n| Multi-function platform | 4–5 weeks | 10–14 weeks | 4–6 weeks | 18–25 weeks |"
+  },
+  {
+    "id": "060",
+    "title": "AI Change Management for Universities",
+    "slug": "ai-change-management-universities",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/ai-change-management-universities",
+    "description": "University AI adoption fails most often for human reasons, not technical ones. The five change management practices that determine whether staff actually use an AI system: executive sponsorship visible to staff (the CIO and a senior academic must publicly endorse the system), phased rollout starting with volunteer early adopters, clear communication of what the AI does and does not do, visible feedback mechanism for staff to report errors or limitations, and quick-win demonstration within the first two weeks of deployment."
+  },
+  {
+    "id": "061",
+    "title": "AI Governance Framework for Universities",
+    "slug": "ai-governance-framework-universities",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/ai-governance-framework-universities",
+    "description": "A university AI governance framework requires six components: an AI ethics policy (governing principles for how AI may and may not be used), a data privacy and protection standard for AI systems, an AI use register documenting every AI system deployed and its data handling, a designated AI lead (typically reporting to CIO), a review process for proposed new AI deployments (including DPIA, FERPA/UK GDPR assessment, equity impact review), and a staff training and awareness programme."
+  },
+  {
+    "id": "062",
+    "title": "Custom AI vs Microsoft Copilot for Universities",
+    "slug": "custom-ai-vs-microsoft-copilot-universities",
+    "category": "compare",
+    "categorySlug": "compare",
+    "icp": "",
+    "url": "/compare/custom-ai-vs-microsoft-copilot-universities",
+    "description": "Microsoft Copilot for Education provides AI features within the M365 suite — document drafting, meeting summaries, SharePoint search. A custom AI system trained on institutional data provides enrollment intelligence, staff knowledge retrieval, and student service automation calibrated to the institution's specific policies and historical data. Copilot is appropriate for staff productivity augmentation within M365. Custom AI is right when the institution needs AI that knows its specific policies, student population, and operational patterns."
+  },
+  {
+    "id": "063",
+    "title": "AI for International Student Recruitment",
+    "slug": "ai-international-student-recruitment",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-international-student-recruitment",
+    "description": "International student recruitment AI personalises outreach at a scale that small admissions teams cannot achieve manually. The system customises communication language, content focus, and programme information by country of origin, programme of interest, and engagement behaviour — maintaining consistent personalised contact with thousands of international prospects across 40+ countries without proportionally scaling admissions staff. Integration with the institution's CRM (Slate, Salesforce, Hobsons) is via API."
+  },
+  {
+    "id": "064",
+    "title": "How Universities Should Evaluate AI Vendors",
+    "slug": "how-to-evaluate-ai-vendor-university",
+    "category": "guides",
+    "categorySlug": "guides",
+    "icp": "",
+    "url": "/guides/how-to-evaluate-ai-vendor-university",
+    "description": "Ten non-negotiable questions for university AI vendor evaluation: Does the vendor sign a FERPA-compliant DPA designating them as a school official? Is student data processed on private infrastructure or shared cloud? Has the vendor built AI systems for comparable institutions — and can they demonstrate them? What is the accuracy of the system on test queries drawn from your actual data? Does the discovery fee credit to the full build? What does ongoing maintenance include? What happens to your data if you terminate? Does the vendor provide a DPIA template? Who owns the AI system and all associated IP? What is the SLA for post-deployment uptime?"
+  },
+  {
+    "id": "065",
+    "title": "AI for Continuing Education Programs",
+    "slug": "ai-continuing-education-programs",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-continuing-education-programs",
+    "description": "Continuing education and professional development programmes with 200+ courses and 15,000+ annual learners deploy AI for registration automation (AI handles course registration, prerequisite checking, scheduling conflict resolution, and confirmation communications without staff involvement), CPD credit tracking (AI maintains each learner's continuing professional development record across all programmes and sends automated renewal alerts for expiring certifications), and programme demand intelligence (AI analyses registration patterns to identify courses with growing demand, declining interest, and scheduling gaps — informing programme development decisions)."
+  },
+  {
+    "id": "066",
+    "title": "AI for University Student Communications",
+    "slug": "ai-university-student-communications",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-university-student-communications",
+    "description": "University communications AI personalises student outreach across the full student lifecycle — from pre-enrollment through graduation — by segmenting students not into demographic groups but into behavioural cohorts: which students are engaging with which content, at what stages of their journey, and what signals predict which communication will drive a desired outcome (application submission, deposit payment, course registration, advising appointment). This behavioural personalisation, applied at scale to 20,000+ students, requires AI — the manual alternative is impossible."
+  },
+  {
+    "id": "067",
+    "title": "AI for University Accreditation and Compliance Documentation",
+    "slug": "ai-university-accreditation-compliance",
+    "category": "solutions",
+    "categorySlug": "solutions",
+    "icp": "",
+    "url": "/solutions/ai-university-accreditation-compliance",
+    "description": "Accreditation AI systems ingest the institution's existing evidence documents — course syllabi, assessment results, student outcome data, faculty qualifications, financial sustainability records — and make them searchable and queryable against specific accreditation standard requirements. When preparing a self-study report, the system retrieves and organises relevant evidence for each standard, reducing the research and compilation phase from weeks to days. It also tracks ongoing accreditation obligations and deadlines across multiple accrediting bodies simultaneously."
+  }
+]

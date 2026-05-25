@@ -1,0 +1,11 @@
+{
+  "id": "047",
+  "title": "AI and US University Enrollment Decline — Case Analysis",
+  "slug": "ai-enrollment-decline-universities-us",
+  "category": "case-studies",
+  "categorySlug": "case-studies",
+  "icp": "",
+  "url": "/case-studies/ai-enrollment-decline-universities-us",
+  "directAnswer": "US institutions using AI enrollment management systems report inquiry-to-application conversion rate improvements of 5–12 percentage points — representing 50–200 additional enrolled students at a typical institution — within the first year. The mechanism: AI-triggered personalised follow-up converts a higher proportion of genuinely interested inquiries who would otherwise fall through the funnel due to delayed or generic institutional response.\n\n**The enrollment mathematics:**\nFor a 4,000-student institution with 12,000 annual inquiries and a 22% inquiry-to-enrollment rate:\n- Current enrolled students: 2,640 (22% × 12,000)\n- With 7-point AI-driven improvement (29% conversion): 3,480 students\n- Additional students: 840 × $28,000 average annual tuition = $23,520,000 additional revenue\n- AI system cost: $55,000 build + $84,000/year maintenance = $139,000/year\n- Net additional revenue: $23,381,000\n\nAt most institutions, even a 2-point conversion improvement covers the AI system cost within the first semester.\n\n**Why conversion improves with AI:**\nThe primary driver is response time and personalisation. Research by the Education Advisory Board found that prospective students who receive personalised response within 1 hour of inquiry are 4x more likely to apply than those who receive generic response after 48+ hours. AI enables personalised, behaviour-triggered response at any hour for every inquiry — not just during business hours and not just for the highest-priority prospects.",
+  "body": ""
+}

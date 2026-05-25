@@ -1,0 +1,11 @@
+{
+  "id": "031",
+  "title": "LangChain vs LlamaIndex for Building a Legal RAG System",
+  "slug": "langchain-vs-llamaindex-legal-rag",
+  "category": "compare",
+  "categorySlug": "compare",
+  "icp": "",
+  "url": "/compare/langchain-vs-llamaindex-legal-rag",
+  "directAnswer": "For legal document RAG systems, LlamaIndex outperforms LangChain on long-document handling and precision retrieval — the two most critical requirements for legal work. LangChain is more flexible and better for complex multi-step agent workflows. For a straightforward legal knowledge base with iManage or NetDocuments integration and high retrieval accuracy requirements, LlamaIndex is the recommended starting point.",
+  "body": "### Technical Comparison for Legal RAG\n\n| Feature | LangChain | LlamaIndex | Recommendation |\n|---|---|---|---|\n| Long document handling | Good (requires manual chunking strategy) | Excellent (SentenceWindowRetrieval, HierarchicalNodes) | LlamaIndex |\n| Retrieval precision | Good | Excellent (built-in re-ranking, query decomposition) | LlamaIndex |\n| Multi-step agent workflows | Excellent (LangChain Agents) | Good (improving) | LangChain |\n| DMS integration (iManage, NetDocuments) | Custom connectors | Custom connectors | Equal |\n| Learning curve | Medium | Medium | Equal |\n| Community and documentation | Very large | Large and growing | LangChain |\n| Production stability | Mature | Mature | Equal |\n| Streaming responses | ✓ | ✓ | Equal |\n\n### Why Long-Document Handling Matters for Legal RAG\n\nLegal documents are long. A commercial contract may be 60 pages. A litigation file may be 800 pages. Standard RAG systems chunk documents into fixed-size segments and retrieve the most similar chunks. This works poorly for legal documents where the relevant context may span multiple sections.\n\nLlamaIndex's SentenceWindowRetrieval retrieves not just the most relevant sentence but also the surrounding context — critically important for legal interpretation where clause meaning depends on defined terms and cross-references elsewhere in the document.\n\n---"
+}

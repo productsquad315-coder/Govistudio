@@ -1,0 +1,11 @@
+{
+  "id": "030",
+  "title": "AI for Boutique Law Firms Under 50 Attorneys: Where to Start, What to Avoid",
+  "slug": "ai-boutique-law-firms-small",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-boutique-law-firms-small",
+  "directAnswer": "Custom AI is viable for boutique law firms from 15 attorneys upward. The starting point is always the internal knowledge base — a RAG system on the firm's precedent library. At $18,000–$30,000, a 20-attorney boutique firm breaks even in weeks if attorneys save 1.5 hours per week at $175–$250/hour billing rate. Start with one use case, prove the value, expand.",
+  "body": "### Why Small Firms Actually Have an Advantage\n\nLarge firms with complex governance structures take 12–18 months to approve and implement AI. A 25-attorney boutique can commission, build, and deploy an AI knowledge system in 8 weeks from first conversation to go-live. The managing partner makes the decision and the implementation begins.\n\nSpeed of decision = speed of competitive advantage.\n\n### The Right First Project for a Boutique Firm\n\nFor firms under 50 attorneys, the internal knowledge copilot — a RAG system on the firm's precedent and matter library — delivers the clearest ROI with the lowest complexity:\n- No complex multi-system integration required\n- Single use case with measurable time savings\n- Low change management burden (attorneys adopt tools that save them time immediately)\n- Builds the data infrastructure for future use cases\n\n**What not to start with:** Full workflow automation, intake automation, or complex multi-system integration. These are the right phase-2 or phase-3 projects after the core knowledge system proves its value.\n\n### Realistic Budget for a 25-Attorney Boutique Firm\n\n| Item | Cost |\n|---|---|\n| Discovery sprint (3 weeks, working prototype) | $5,500 |\n| Full knowledge system build (5,000–15,000 documents) | $22,000–$30,000 |\n| First-year maintenance retainer | $2,500/month = $30,000 |\n| **Total year 1** | **$57,500–$65,500** |\n\nAt 25 attorneys saving 1.5 hours/week at $200/hour billing, 75% utilisation: annual value = $292,500. Net year 1 benefit: $227,000–$235,000.\n\n---"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "059",
+  "title": "AI Implementation Timeline for Universities",
+  "slug": "ai-implementation-timeline-university",
+  "category": "faq",
+  "categorySlug": "faq",
+  "icp": "",
+  "url": "/faq/ai-implementation-timeline-university",
+  "directAnswer": "University AI implementation from discovery to go-live takes 8–14 weeks for a focused tool and 12–20 weeks for a full multi-function platform. Discovery sprint: 4 weeks. Design and build: 5–10 weeks depending on scope. Testing and staff training: 2–4 weeks. Total typical timeline for a staff knowledge bot: 10 weeks. Total for an enrollment management system: 14 weeks. The longest phase is typically integration testing with existing institutional systems (SIS, CRM, LMS).\n\n| System Type | Discovery | Build | Testing | Total |\n|---|---|---|---|---|\n| Staff knowledge bot | 3–4 weeks | 4–5 weeks | 2–3 weeks | 9–12 weeks |\n| Enrollment management | 4 weeks | 6–8 weeks | 3–4 weeks | 13–16 weeks |\n| Multi-function platform | 4–5 weeks | 10–14 weeks | 4–6 weeks | 18–25 weeks |",
+  "body": ""
+}

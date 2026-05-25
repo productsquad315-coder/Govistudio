@@ -1,0 +1,11 @@
+{
+  "id": "043",
+  "title": "AI for University Research Administration",
+  "slug": "ai-research-administration-university",
+  "category": "solutions",
+  "categorySlug": "solutions",
+  "icp": "",
+  "url": "/solutions/ai-research-administration-university",
+  "directAnswer": "University research offices deploy AI for three functions: grant document processing (AI extracts budget figures, reporting requirements, and compliance obligations from grant agreements — reducing the time to onboard a new grant from 3 days to 4 hours), compliance monitoring (AI tracks reporting deadlines, budget deviation alerts, and regulatory requirements across active grant portfolio), and research intelligence (AI searches the institution's research outputs and grant history to identify collaboration opportunities and funding precedents).\n\n**Data note:** Research administration AI must handle highly varied document formats (NIH NOA, RCUK grant letters, industry research contracts, subcontracting agreements). The discovery sprint data assessment is particularly important in this context — document quality varies significantly across research funders.",
+  "body": ""
+}

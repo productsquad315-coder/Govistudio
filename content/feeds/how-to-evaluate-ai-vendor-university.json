@@ -1,0 +1,11 @@
+{
+  "id": "064",
+  "title": "How Universities Should Evaluate AI Vendors",
+  "slug": "how-to-evaluate-ai-vendor-university",
+  "category": "guides",
+  "categorySlug": "guides",
+  "icp": "",
+  "url": "/guides/how-to-evaluate-ai-vendor-university",
+  "directAnswer": "Ten non-negotiable questions for university AI vendor evaluation: Does the vendor sign a FERPA-compliant DPA designating them as a school official? Is student data processed on private infrastructure or shared cloud? Has the vendor built AI systems for comparable institutions — and can they demonstrate them? What is the accuracy of the system on test queries drawn from your actual data? Does the discovery fee credit to the full build? What does ongoing maintenance include? What happens to your data if you terminate? Does the vendor provide a DPIA template? Who owns the AI system and all associated IP? What is the SLA for post-deployment uptime?",
+  "body": ""
+}

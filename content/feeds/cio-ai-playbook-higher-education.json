@@ -1,0 +1,11 @@
+{
+  "id": "045",
+  "title": "CIO's AI Playbook for Higher Education",
+  "slug": "cio-ai-playbook-higher-education",
+  "category": "guides",
+  "categorySlug": "guides",
+  "icp": "",
+  "url": "/guides/cio-ai-playbook-higher-education",
+  "directAnswer": "Higher education CIOs should structure AI deployment in four phases: Phase 1 (months 1–3): Single focused deployment (staff knowledge bot or enrollment automation) to build institutional AI confidence and prove ROI. Phase 2 (months 4–9): Expand to second use case based on Phase 1 learnings. Phase 3 (months 10–18): Build institutional AI governance framework and scale across departments. Phase 4 (months 19+): Multi-department AI platform with centralised management.",
+  "body": "### The CIO's Four-Phase AI Roadmap\n\n**Phase 1: Prove it**\nSingle use case. Clear success metrics defined in advance. Executive sponsor identified. Target: visible efficiency gain within 3 months of deployment. Recommended: staff knowledge bot (fastest build, lowest risk, immediate staff-visible value) or enrollment automation (highest revenue impact but 6–10 week build).\n\n**Phase 2: Expand it**\nUse Phase 1 learnings to scope the second deployment. The data architecture built in Phase 1 (the document ingestion pipeline, the private cloud environment, the integration patterns) significantly reduces Phase 2 build time and cost.\n\n**Phase 3: Govern it**\nAs AI spreads across departments, governance becomes essential: a written AI use policy, a review process for new AI deployments (data privacy assessment, FERPA review, equity impact review), a defined data stewardship structure, and staff training requirements.\n\n**Phase 4: Scale it**\nBy year 2, institutions with Phases 1–3 complete are ready for a multi-department AI platform — a shared private AI infrastructure that individual departments deploy approved use cases against, reducing duplicated vendor relationships and infrastructure costs.\n\n---"
+}

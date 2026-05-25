@@ -1,0 +1,11 @@
+{
+  "id": "040",
+  "title": "Salesforce Einstein vs Custom AI for University Enrollment: Which Delivers Better ROI?",
+  "slug": "salesforce-einstein-vs-custom-ai-university",
+  "category": "compare",
+  "categorySlug": "compare",
+  "icp": "",
+  "url": "/compare/salesforce-einstein-vs-custom-ai-university",
+  "directAnswer": "Salesforce Einstein provides AI features within the Salesforce CRM ecosystem — lead scoring, email send-time optimisation, and activity recommendations. A custom AI system trained on an institution's specific enrollment data delivers higher accuracy on yield prediction and enables personalisation based on the institution's own historical data. Salesforce Einstein is right if you want AI within Salesforce without additional investment. Custom AI is right if you need higher precision and institutional-specific models.",
+  "body": "### Side-by-Side Comparison\n\n| Feature | Salesforce Einstein | Custom AI System |\n|---|---|---|\n| Training data | Salesforce aggregate data across all clients | Your institution's specific historical data |\n| Yield prediction accuracy | General (not calibrated to your institution) | High (calibrated to your student population) |\n| Works without Salesforce | ✗ | ✓ (any CRM) |\n| FERPA compliance | Salesforce BAA | Custom DPA |\n| Customisation for your programme mix | Limited | ✓ Fully customisable |\n| Cost | Included in higher Einstein tier (£75–£150/user/month) | $30,000–$55,000 build + maintenance |\n| Setup time | Days–weeks | 6–10 weeks |\n| Insights surfaced to counsellors | Standard Salesforce fields | Custom fields + narrative alerts |\n\n### Which Institutions Should Choose Each\n\n**Choose Salesforce Einstein if:** Your institution runs all enrollment on Salesforce, your CRM budget already covers the Einstein tier, and your enrollment team's primary need is basic lead scoring and email optimisation.\n\n**Choose custom AI if:** Your institution's enrollment patterns are specific enough that generic lead scoring underperforms (common for specialist institutions — conservatories, agricultural colleges, professional graduate programs), or if you need yield prediction calibrated to your specific historical data rather than Salesforce's aggregate model.\n\n---"
+}
