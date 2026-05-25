@@ -336,9 +336,20 @@ function run() {
 
   for (let idx = 0; idx < feedHeaderIndices.length; idx++) {
     const currentHeader = feedHeaderIndices[idx];
-    const nextHeader = feedHeaderIndices[idx + 1];
     
-    const feedLines = lines.slice(currentHeader.lineNum, nextHeader ? nextHeader.lineNum : lines.length);
+    let nextHeaderLineNum = lines.length;
+    if (feedHeaderIndices[idx + 1]) {
+      nextHeaderLineNum = feedHeaderIndices[idx + 1].lineNum;
+    } else {
+      for (let j = currentHeader.lineNum; j < lines.length; j++) {
+        if (lines[j].trim().includes('> **SITE AUDIT FINDING')) {
+          nextHeaderLineNum = j;
+          break;
+        }
+      }
+    }
+    
+    const feedLines = lines.slice(currentHeader.lineNum, nextHeaderLineNum);
     
     // Parse metadata
     let feedId = '';
