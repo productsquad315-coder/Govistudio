@@ -493,13 +493,14 @@ function run() {
     });
 
     // Generate Route files
-    if (categoryFolder && categoryFolder !== 'feeds') {
-      // Nested route (e.g. /compare/[slug]/page.tsx)
+    if (categoryFolder) {
       const folderPath = path.join(APP_DIR, categoryFolder, '[slug]');
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
       }
-      fs.writeFileSync(path.join(folderPath, 'page.tsx'), getPageTemplate(categoryFolder, false));
+      if (categoryFolder !== 'case-studies') {
+        fs.writeFileSync(path.join(folderPath, 'page.tsx'), getPageTemplate(categoryFolder, false));
+      }
       generatedRoutes.push(`/${categoryFolder}/[slug]`);
     } else {
       // Root route (e.g. /ai-for-law-firms-uk-compliance/page.tsx)
