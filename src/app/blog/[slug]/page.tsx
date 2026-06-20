@@ -431,7 +431,7 @@ export default async function BlogArticlePage({
         );
       })()}
 
-      <section className="mt-20 p-10 rounded-3xl border border-blue-500/20 bg-blue-500/[0.02] backdrop-blur-md relative overflow-hidden group" data-type="insight">
+      <section className="mt-20 p-4 sm:p-6 md:p-10 rounded-3xl border border-blue-500/20 bg-blue-500/[0.02] backdrop-blur-md relative overflow-hidden group" data-type="insight">
         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
           <Bot className="w-32 h-32" />
         </div>
@@ -447,7 +447,7 @@ export default async function BlogArticlePage({
       <footer className="mt-12 text-center py-12">
         <h4 className="text-white text-2xl font-bold mb-4">Ready to Apply This?</h4>
         <p className="text-[#8B949E] text-sm mb-8">Request a blueprint tailored to your workflows.</p>
-        <Link href="https://calendly.com/vijay-01" className="bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-gray-200 transition-all">
+        <Link href="https://calendly.com/vijay-01" className="bg-white text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold hover:bg-gray-200 transition-all">
           Request a System Blueprint
         </Link>
       </footer>

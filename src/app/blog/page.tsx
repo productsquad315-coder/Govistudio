@@ -19,7 +19,7 @@ export default async function BlogIndexPage() {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-purple-500/30">
-      <nav className="fixed top-0 w-full z-50 px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
+      <nav className="fixed top-0 w-full z-50 px-4 sm:px-6 md:px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Logo showText={false} />
           <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-gray-500">
@@ -32,13 +32,13 @@ export default async function BlogIndexPage() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-8 pt-32 pb-24">
+      <main className="max-w-7xl mx-auto px-4 sm:px-8 pt-24 sm:pt-32 pb-16 sm:pb-24">
         <div className="mb-24">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] uppercase tracking-[0.2em] font-bold mb-6">
             <BookOpen className="w-3 h-3" />
             Insights & Strategy
           </div>
-          <h1 className="text-6xl font-bold tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-8">
             The Business of AI
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
@@ -59,7 +59,7 @@ export default async function BlogIndexPage() {
           ))}
         </div>
 
-        <section className="mt-20 p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02]">
+        <section className="mt-20 p-4 sm:p-6 md:p-10 rounded-3xl border border-white/[0.08] bg-white/[0.02]">
           <h2 className="text-2xl font-bold mb-4">Subscribe to AI Updates</h2>
           <p className="text-gray-400 mb-6 max-w-lg">
             Get the latest AI systems insights delivered to your feed reader. Subscribe via RSS or JSON Feed.

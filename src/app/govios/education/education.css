@@ -1,0 +1,114 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   GoviStudio Education Page — Self-contained Design System
+   Scoped under .govios-edu to avoid polluting the main site.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Scoped Design Tokens ── */
+.govios-edu {
+  --radius: 0.5rem;
+
+  /* Govi enterprise palette */
+  --background: #05070A;
+  --surface: #0C1117;
+  --surface-2: #11171F;
+  --border: #1C2430;
+  --border-strong: #2A3444;
+  --foreground: #FFFFFF;
+  --primary: #FFFFFF;
+  --primary-foreground: #05070A;
+  --secondary: #94A3B8;
+  --muted: #0C1117;
+  --muted-foreground: #64748B;
+  --accent: #22D3EE;
+  --accent-foreground: #05070A;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --critical: #EF4444;
+
+  /* Map to Tailwind-style tokens for the component */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+
+  /* Typography */
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.govios-edu ::selection {
+  background-color: color-mix(in oklab, var(--accent) 30%, transparent);
+  color: var(--foreground);
+}
+
+.govios-edu * {
+  border-color: var(--border);
+}
+
+/* ── Typography Utilities ── */
+.govios-edu .text-display {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.govios-edu .text-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.govios-edu .numeric {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.govios-edu .hairline {
+  background-image: linear-gradient(90deg, transparent, var(--border-strong) 20%, var(--border-strong) 80%, transparent);
+  height: 1px;
+}
+
+.govios-edu .surface-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ── Keyframes ── */
+@keyframes govi-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes govi-flow {
+  0% { transform: translateX(-100%); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes govi-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
