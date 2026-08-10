@@ -1,6 +1,3 @@
-'use client';
-
-import { useRef } from 'react';
 import ServiceCard from './ServiceCard';
 
 const services = [
@@ -25,12 +22,10 @@ const services = [
 ];
 
 const Services = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <section
       id="services"
-      ref={containerRef}
       className="relative bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24">

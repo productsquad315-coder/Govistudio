@@ -1,5 +1,3 @@
-'use client';
-
 const FinalCTA = () => (
   <section id="contact" className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-black flex flex-col items-center justify-center">
 
