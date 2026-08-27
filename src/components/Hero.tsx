@@ -36,7 +36,10 @@ export default function Hero() {
           <span className="text-[13px] tracking-[0.2em] uppercase text-zinc-500 font-medium">GOVISTUDIO</span>
         </div>
 
-        <h1 className="animate-fade-in-up animation-delay-300 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] font-extrabold tracking-tighter text-white mb-6 leading-[1.05]">
+        <h1 
+          className="animate-fade-in-up animation-delay-300 font-bold tracking-tight text-white mb-6"
+          style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)", lineHeight: "1.05" }}
+        >
           We build AI systems that<br className="hidden lg:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400"> drive revenue for your clinic.</span>
         </h1>

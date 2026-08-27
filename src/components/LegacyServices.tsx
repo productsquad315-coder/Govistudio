@@ -41,6 +41,17 @@ const LegacyServices = () => {
             </h2>
           </div>
 
+          <div className="animate-fade-in animation-delay-200 border border-zinc-200 bg-white rounded-2xl p-6 lg:p-8 shadow-sm max-w-sm">
+            <div className="flex items-center gap-3 mb-3">
+               <div className="w-2 h-2 rounded-full bg-orange-500" />
+               <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-500">Not a clinic?</span>
+            </div>
+            <p className="text-zinc-900 font-bold text-xl mb-3">We build for all industries.</p>
+            <p className="text-zinc-600 text-[15px] font-medium leading-relaxed">
+              While we specialize in healthcare, we design and build AI systems and custom software for growing businesses across all sectors.
+            </p>
+          </div>
+
         </div>
 
         {/* RIGHT: CARDS */}
