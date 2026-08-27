@@ -1,10 +1,10 @@
 import FeatureCard from './FeatureCard';
 
 const processSteps = [
-  { number: '01', title: 'Discovery', desc: 'Identify high-impact opportunities' },
-  { number: '02', title: 'System Design', desc: 'Design workflows and architecture' },
-  { number: '03', title: 'Development', desc: 'Build with modern AI infrastructure' },
-  { number: '04', title: 'Deployment', desc: 'Launch and ensure reliability' },
+  { number: '01', title: 'Understand', desc: 'We learn how your clinic actually operates.' },
+  { number: '02', title: 'Find', desc: "We identify where you're losing time, patients or money." },
+  { number: '03', title: 'Build', desc: 'We design and build the right solution around your existing workflow.' },
+  { number: '04', title: 'Improve', desc: 'We keep improving the system as your clinic and its needs change.' },
 ];
 
 const stepColors = [
@@ -27,17 +27,17 @@ const ProcessSection = () => {
 
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="animate-fade-in-up text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-bold tracking-tight text-white mb-4 leading-[1.1]">
-            From Idea to Production
+            From a problem to<br />a system that works.
           </h2>
 
           <p className="animate-fade-in animation-delay-100 text-zinc-400 text-[15px] sm:text-[16px] max-w-2xl mx-auto leading-relaxed px-2">
-            Every system is built for real-world use — not demos.
+            Every system starts with understanding. Not technology.
           </p>
         </div>
 
         {/* ── Mock Pipeline UI (Hero FeatureCard) ── */}
         <div className="animate-fade-in-up animation-delay-300 w-full max-w-4xl mx-auto mb-10 sm:mb-14 lg:mb-16">
-          {/* Mobile/tablet: dedicated layout (prevents overlap + faster) */}
+          {/* Mobile/tablet: dedicated layout */}
           <div className="lg:hidden">
             <div className="relative rounded-2xl border border-white/[0.08] bg-[#09090B] overflow-hidden">
               <div className="p-4 sm:p-5">
@@ -45,7 +45,7 @@ const ProcessSection = () => {
                   <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px]" />
                   <div className="relative h-full w-full p-3 sm:p-4 pb-6 sm:pb-8">
                     <div className="grid grid-cols-4 gap-1.5 sm:gap-2 mb-4">
-                      {['Disc', 'Design', 'Dev', 'Deploy'].map((stage, i) => (
+                      {['Understand', 'Find', 'Build', 'Improve'].map((stage, i) => (
                         <div
                           key={stage}
                           className={`text-center py-1.5 sm:py-2 rounded-md text-[8px] sm:text-[9px] uppercase tracking-widest font-bold ${
@@ -66,11 +66,11 @@ const ProcessSection = () => {
                     <div className="rounded-lg border border-white/[0.05] bg-black/30 p-2.5 sm:p-3 font-mono text-[10px] leading-relaxed text-zinc-500">
                       <div className="flex gap-3">
                         <span className="text-zinc-700">❯</span>
-                        <span className="text-blue-400/80">Deploying API core…</span>
+                        <span className="text-blue-400/80">Connecting WhatsApp integration...</span>
                       </div>
                       <div className="flex gap-3 mt-2">
                         <span className="text-zinc-700">❯</span>
-                        <span className="text-emerald-500/80">✓ Systems initialized</span>
+                        <span className="text-emerald-500/80">✓ Patient follow-up system live</span>
                       </div>
                     </div>
                   </div>
@@ -78,9 +78,9 @@ const ProcessSection = () => {
                 </div>
 
                 <div className="mt-5 sm:mt-6">
-                  <h3 className="text-white text-lg sm:text-xl font-semibold">Pipeline Deployments.</h3>
+                  <h3 className="text-white text-lg sm:text-xl font-semibold">Clinic System Deployment.</h3>
                   <p className="mt-2 text-white/60 text-sm leading-relaxed">
-                    Track every stage of development in real-time.
+                    Track every stage from understanding to live system.
                   </p>
                 </div>
               </div>
@@ -90,14 +90,14 @@ const ProcessSection = () => {
           {/* Desktop: existing FeatureCard */}
           <div className="hidden lg:block">
             <FeatureCard
-              title="Pipeline Deployments."
-              description="Track every stage of development in real-time."
+              title="Clinic System Deployment."
+              description="Track every stage from understanding to live system."
               className="h-auto pb-24"
               mockUI={
                 <div className="w-full h-full flex flex-col p-6 bg-[#09090B]">
                   {/* Pipeline Stages */}
                   <div className="grid grid-cols-4 gap-3 mb-8">
-                    {['Discovery', 'Design', 'Development', 'Deployment'].map((stage, i) => (
+                    {['Understand', 'Find', 'Build', 'Improve'].map((stage, i) => (
                       <div key={i} className={`text-center py-3 rounded-lg text-[10px] uppercase tracking-widest font-bold transition-all ${i === 2
                           ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-[inset_0_0_15px_rgba(59,130,246,0.1)]'
                           : i < 2
@@ -118,15 +118,15 @@ const ProcessSection = () => {
                   <div className="bg-black/40 rounded-xl border border-white/[0.05] p-4 font-mono text-[11px] leading-relaxed text-zinc-500 relative overflow-hidden">
                     <div className="flex gap-4 mb-2">
                       <span className="text-zinc-700">❯</span>
-                      <span className="text-blue-400/80">Deploying API core...</span>
+                      <span className="text-blue-400/80">Connecting WhatsApp integration...</span>
                     </div>
                     <div className="flex gap-4 mb-2">
                       <span className="text-zinc-700">❯</span>
-                      <span className="text-emerald-500/80">✓ Systems initialized</span>
+                      <span className="text-emerald-500/80">✓ Patient follow-up system live</span>
                     </div>
                     <div className="flex gap-4 mb-2 opacity-40">
                       <span className="text-zinc-700">❯</span>
-                      <span className="text-zinc-500 animate-pulse">Running health checks...</span>
+                      <span className="text-zinc-500 animate-pulse">Running recall campaign test...</span>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0A0A0B] text-white py-24 flex flex-col items-center justify-center">
@@ -14,7 +13,7 @@ export default function Hero() {
         <div className="absolute w-full h-full bg-gradient-to-r from-cyan-500/30 via-purple-500/20 to-orange-500/30 blur-[120px] opacity-50" />
       </div>
 
-      {/* Minimal decorative nodes — static */}
+      {/* Beautiful decorative nodes — static SVG paths and dots */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.15] z-0 overflow-hidden hidden sm:block">
         <svg className="absolute w-full h-full" viewBox="0 0 1200 800" fill="none">
           <path
@@ -31,31 +30,29 @@ export default function Hero() {
         <div className="absolute left-[40%] top-[70%] w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_10px_rgba(251,146,60,0.5)]" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 w-full">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-12 w-full">
         
         <div className="animate-fade-in animation-delay-200 mb-6">
-          <span className="text-[13px] tracking-[0.2em] uppercase text-zinc-500 font-medium">GOVI STUDIO</span>
+          <span className="text-[13px] tracking-[0.2em] uppercase text-zinc-500 font-medium">GOVISTUDIO</span>
         </div>
 
-        <h1 className="animate-fade-in-up animation-delay-300 text-[clamp(2.2rem,7vw,5.5rem)] font-bold tracking-tight text-white mb-4 sm:mb-6 leading-[1.05]">
-          Build AI Systems<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400">That Drive Revenue.</span>
+        <h1 className="animate-fade-in-up animation-delay-300 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] font-extrabold tracking-tighter text-white mb-6 leading-[1.05]">
+          We build AI systems that<br className="hidden lg:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400"> drive revenue for your clinic.</span>
         </h1>
 
-        <p className="animate-fade-in animation-delay-400 mt-4 sm:mt-6 text-zinc-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed px-2">
-          We build production-ready AI systems that automate operations and unlock new revenue streams.
-        </p>
-
-        <div className="animate-fade-in animation-delay-500 mt-8 sm:mt-10 mb-8 sm:mb-10 flex flex-col items-center gap-3 sm:gap-4">
-           <a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-[14px] sm:text-[15px] shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block">
-             Schedule a Discovery Call
-           </a>
-           <div className="text-zinc-500 text-xs sm:text-sm max-w-sm mx-auto text-center leading-relaxed">
-             <p>30-min working session. No pitch. Just clarity.</p>
+        <div className="animate-fade-in animation-delay-500 mt-12 mb-16 flex flex-col items-center gap-4">
+           <div className="flex flex-col sm:flex-row items-center gap-4">
+             <a href="https://calendly.com/vijay-01" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-[15px] shadow-[0_0_30px_rgba(255,255,255,0.1)] inline-block">
+               Tell Us What&apos;s Slowing You Down
+             </a>
+             <a href="/#solutions" className="text-zinc-300 hover:text-white transition-colors text-[15px] font-medium px-4 py-2">
+               See What We Build &rarr;
+             </a>
            </div>
         </div>
 
-        {/* Mock UI */}
+        {/* Mock UI - Restored to the full detailed version */}
         <div className="animate-scale-in animation-delay-700 w-full max-w-5xl mx-auto flex justify-center">
           <div className="relative w-full rounded-[18px] p-[2px] border-sweep shadow-[0_0_40px_rgba(0,212,255,0.1),0_0_60px_rgba(123,97,255,0.1),0_0_80px_rgba(255,122,0,0.05)]">
             
@@ -70,7 +67,7 @@ export default function Hero() {
                 </div>
                 <div className="ml-4 flex items-center bg-white/5 rounded-md px-3 py-1 text-[11px] text-zinc-500 font-mono w-64 border border-white/[0.05]">
                   <svg className="w-3 h-3 mr-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                  Search projects...
+                  Search clinic systems...
                 </div>
               </div>
 
@@ -80,10 +77,10 @@ export default function Hero() {
                 {/* Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {[
-                    { label: 'System Uptime', val: '99.99%', color: 'text-cyan-400 border-l-cyan-500/50' },
-                    { label: 'Ops Automated', val: '+240%', color: 'text-purple-400 border-l-purple-500/50' },
-                    { label: 'Revenue Growth', val: '$1.2M', color: 'text-orange-400 border-l-orange-500/50' },
-                    { label: 'Active Agents', val: '14/14', color: 'text-green-400 border-l-green-500/50' },
+                    { label: 'Enquiries Recovered', val: '94%', color: 'text-cyan-400 border-l-cyan-500/50' },
+                    { label: 'Follow-ups Automated', val: '1,200+', color: 'text-purple-400 border-l-purple-500/50' },
+                    { label: 'Hours Saved Weekly', val: '47hrs', color: 'text-orange-400 border-l-orange-500/50' },
+                    { label: 'Systems Connected', val: '8/8', color: 'text-green-400 border-l-green-500/50' },
                   ].map((s, i) => (
                     <div key={i} className={`bg-transparent p-2 sm:p-3 border-l-2 ${s.color}`}>
                       <div className="text-[9px] sm:text-[11px] text-zinc-500 uppercase tracking-widest font-semibold mb-0.5 sm:mb-1">{s.label}</div>
@@ -96,25 +93,25 @@ export default function Hero() {
                 <div className="bg-[#12141A] rounded-xl border border-white/[0.04] overflow-hidden flex-1 flex flex-col">
                   <div className="px-5 py-2.5 border-b border-white/[0.04] flex items-center gap-2">
                      <svg className="w-4 h-4 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                     <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">In Progress — 4</span>
+                     <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">Active Systems — 4</span>
                   </div>
                   <div className="flex-1 overflow-auto">
                     {[
-                      { icon: '◉', title: 'Automated Lead Qualification Pipeline', badge: 'MVP', bg: 'bg-cyan-500/20 text-cyan-400', date: 'Just now' },
-                      { icon: '◐', title: 'Customer Support LLM RAG Agent', badge: 'PreMVP', bg: 'bg-purple-500/20 text-purple-400', date: '2 hrs ago' },
-                      { icon: '○', title: 'Internal Operations Dashboard', badge: 'Marketing', bg: 'bg-orange-500/20 text-orange-400', date: 'Yesterday' },
-                      { icon: '◉', title: 'Revenue Engine Integration', badge: 'MVP', bg: 'bg-cyan-500/20 text-cyan-400', date: '2 days ago' },
+                      { icon: '◉', title: 'Patient Intake & Booking Pipeline', badge: 'Active', bg: 'bg-cyan-500/20 text-cyan-400', date: 'Just now' },
+                      { icon: '◐', title: 'Missed Call Recovery System', badge: 'Running', bg: 'bg-purple-500/20 text-purple-400', date: '2 hrs ago' },
+                      { icon: '○', title: 'WhatsApp Follow-up Automation', badge: 'Building', bg: 'bg-orange-500/20 text-orange-400', date: 'Yesterday' },
+                      { icon: '◉', title: 'Recall Campaign Engine', badge: 'Active', bg: 'bg-cyan-500/20 text-cyan-400', date: '2 days ago' },
                     ].map((row, i) => (
                       <div key={i} className="flex items-center px-5 py-3 border-b border-white/[0.02] last:border-0 hover:bg-white/[0.02] transition-colors cursor-pointer group">
                         <span className={`text-[10px] mr-3 ${i === 0 || i === 3 ? 'text-cyan-400' : i === 1 ? 'text-purple-400' : 'text-zinc-600'}`}>{row.icon}</span>
                         <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">{row.title}</span>
                         
                         <div className="ml-auto flex items-center gap-4">
-                          <div className={`px-2.5 py-1 rounded-[4px] text-[10px] font-bold tracking-wide uppercase ${row.bg}`}>
+                          <div className={`px-2.5 py-1 rounded-[4px] text-[10px] font-bold tracking-wide uppercase hidden sm:block ${row.bg}`}>
                             {row.badge}
                           </div>
-                          <div className="text-[12px] text-zinc-600 flex items-center gap-1.5 w-20 justify-end">
-                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                          <div className="text-[12px] text-zinc-600 flex items-center gap-1.5 w-16 sm:w-20 justify-end">
+                            <svg className="w-3.5 h-3.5 hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             {row.date}
                           </div>
                         </div>

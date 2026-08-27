@@ -10,11 +10,10 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const links = [
-    { label: 'Services', href: '/#services' },
-    { label: 'Process', href: '/#process' },
+    { label: 'How We Help', href: '/#problems' },
+    { label: 'What We Build', href: '/#solutions' },
+    { label: 'How It Works', href: '/#process' },
     { label: 'About', href: '/about' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/#contact' },
   ];
 
@@ -45,7 +44,7 @@ export default function Navigation() {
             rel="noopener noreferrer" 
             className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm font-medium border border-white/10 text-white hover:bg-white/5 transition-all whitespace-nowrap"
           >
-            Schedule a Call
+            Tell Us Your Problem
           </a>
 
           {/* Mobile Menu Button - hidden on md and above */}

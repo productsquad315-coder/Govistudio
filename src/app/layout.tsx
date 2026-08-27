@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { getOrganizationSchema, getWebSiteSchema, getServiceSchemas } from "@/lib/schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,45 +17,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GOVI STUDIO — AI Systems & Product Engineering Studio",
+  title: "Govistudio — Personalized Business Systems for Growing Clinics",
   description:
-    "GOVI STUDIO is an AI systems engineering studio that designs, builds, and deploys production-ready AI automation systems, custom sales configurator software, school management platforms, and revenue-generating AI products for traditional businesses. We specialize in custom AI workflow automation, B2B AI automation engines, and EdTech workflow automation.",
+    "Govistudio helps growing clinics improve the way they attract, communicate with, follow up with, and manage patients — by building technology around the way your clinic actually works. Custom AI systems, automation, integrations and software for dental, cosmetic, dermatology and specialty clinics.",
   keywords: [
-    "AI systems engineering studio",
-    "custom AI workflow automation",
-    "AI automation for business",
-    "custom sales quoting software",
-    "custom school management system",
-    "B2B AI automation",
-    "AI product development",
-    "production AI systems",
-    "GOVI STUDIO",
+    "custom software for clinics",
+    "clinic automation",
+    "AI automation for clinics",
+    "clinic business automation",
+    "healthcare workflow automation",
+    "custom technology for clinics",
+    "AI systems for clinics",
+    "dental practice automation",
+    "clinic software solutions",
+    "AI receptionist for clinics",
+    "patient follow-up automation",
+    "clinic management systems",
     "Govistudio",
-    "custom software development",
-    "AI lead qualification",
-    "sales configurator system",
-    "EdTech workflow automation",
-    "LLM orchestration",
-    "Retool development",
   ],
   metadataBase: new URL("https://govistudio.com"),
   alternates: {
     canonical: "https://govistudio.com",
   },
   openGraph: {
-    title: "GOVI STUDIO — AI Systems & Product Engineering Studio",
+    title: "Govistudio — Personalized Business Systems for Growing Clinics",
     description:
-      "We build production-ready AI systems that automate operations and unlock new revenue streams for traditional businesses.",
+      "Your clinic isn't like everyone else. Your systems shouldn't be either. We build personalized business systems for growing clinics.",
     url: "https://govistudio.com",
-    siteName: "GOVI STUDIO",
+    siteName: "Govistudio",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GOVI STUDIO — AI Systems & Product Engineering",
+    title: "Govistudio — Business Systems for Growing Clinics",
     description:
-      "Production-ready AI systems for traditional businesses. Custom AI automation, sales configurators, and school management platforms.",
+      "Personalized business systems for growing clinics — built around the way they actually work.",
   },
   robots: {
     index: true,
@@ -73,35 +69,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const orgSchema = getOrganizationSchema();
-  const webSchema = getWebSiteSchema();
-  const serviceSchemas = getServiceSchemas();
-
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/Govilogo2.jpeg" as="image" type="image/jpeg" />
-
-        {/* JSON-LD: Organization Schema — Primary Entity Definition */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-        {/* JSON-LD: WebSite Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSchema) }}
-        />
-        {/* JSON-LD: Service Schemas */}
-        {serviceSchemas.map((schema, i) => (
-          <script
-            key={i}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
-        ))}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}

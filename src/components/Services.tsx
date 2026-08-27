@@ -2,32 +2,40 @@ import ServiceCard from './ServiceCard';
 
 const services = [
   {
-    title: "AI Automation Systems",
-    desc: "Automate workflows using intelligent systems. Less manual work. More leverage.",
-    tags: ["Lead Qualification", "Support Assistants", "Document Processing"],
-    imageSrc: "/assets/7103b75b603e23539f701668b063b434.webp",
+    title: 'Get more enquiries converted',
+    desc: '',
+    tags: ['AI Receptionist', 'Voice AI', 'Lead Follow-up', 'WhatsApp'],
   },
   {
-    title: "AI Product Development",
-    desc: "Build AI-powered products users can interact with. Launch faster. Validate sooner.",
-    tags: ["AI SaaS Tools", "AI Copilots", "Analytics Assistants"],
-    imageSrc: "/assets/original-e96b095e300586ab5eee3c039288f628.webp",
+    title: 'Give your team time back',
+    desc: '',
+    tags: ['Admin Automation', 'Reminders', 'AI Assistants'],
   },
   {
-    title: "Custom Software Development",
-    desc: "Design and build scalable software systems. Reliable systems built to scale.",
-    tags: ["SaaS Platforms", "Internal Tools", "Web Applications"],
-    imageSrc: "/assets/original-df7180b18e97f8487d50bd65cba0a013.webp",
-  }
+    title: 'Keep your schedule full',
+    desc: '',
+    tags: ['No-show Prevention', 'Recall Campaigns', 'Reactivation'],
+  },
+  {
+    title: 'Connect the systems you already use',
+    desc: '',
+    tags: ['PMS Integration', 'CRM', 'Custom APIs'],
+  },
+  {
+    title: 'Custom problem?',
+    desc: '',
+    tags: ['Custom Software', 'Bespoke Systems'],
+  },
 ];
 
 const Services = () => {
 
   return (
     <section
-      id="services"
+      id="solutions"
       className="relative bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24"
     >
+      <div id="services" className="absolute -top-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24">
 
         {/* LEFT: STICKY HEADING */}
@@ -37,29 +45,13 @@ const Services = () => {
               What We Build
             </p>
             <h2 className="animate-fade-in-up animation-delay-100 text-3xl sm:text-4xl lg:text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-zinc-900 leading-[1.05] -ml-1">
-              Your External AI<br />
+              What can we build<br />
               <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
-                Product Team.
+                for your clinic?
               </span>
             </h2>
           </div>
 
-          <div className="animate-fade-in animation-delay-200 space-y-8">
-            <p className="text-zinc-600 text-sm sm:text-base lg:text-xl leading-relaxed max-w-none lg:max-w-sm font-medium">
-              We partner with companies to design and build intelligent systems. From early concept to production, we handle the entire process.
-            </p>
-
-            <div className="flex flex-col gap-6 border-t border-zinc-200 pt-8">
-              <div className="flex items-center gap-4 group">
-                <div className="w-1 h-1 rounded-full bg-blue-600 group-hover:scale-150 transition-transform" />
-                <span className="text-sm font-semibold text-zinc-500 uppercase tracking-widest">We don&apos;t build prototypes.</span>
-              </div>
-              <div className="flex items-center gap-4 group">
-                <div className="w-1 h-1 rounded-full bg-purple-600 group-hover:scale-150 transition-transform" />
-                <span className="text-sm font-semibold text-zinc-500 uppercase tracking-widest">We build systems that run inside your business.</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* RIGHT: CARDS */}
@@ -76,7 +68,6 @@ const Services = () => {
                   title={service.title}
                   desc={service.desc}
                   tags={service.tags}
-                  imageSrc={service.imageSrc}
                 />
               </div>
             ))}

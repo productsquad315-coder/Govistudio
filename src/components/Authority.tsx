@@ -1,64 +1,54 @@
 import FeatureCard from './FeatureCard';
 
-export default function Authority() {
+export default function Problems() {
   return (
-    <section id="authority" className="bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 relative overflow-hidden">
-
+    <section id="problems" className="bg-[#F4F4F5] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 relative overflow-hidden">
       {/* Seamless Grey Depth Overlay */}
       <div className="absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(1200px_circle_at_50%_-100px,rgba(0,0,0,0.045),transparent)] z-0" />
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
-
-        <div className="text-center mb-10 sm:mb-16">
-          <h2
-            className="animate-fade-in-up text-[28px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-bold tracking-tight leading-[1.1] text-[#111827]"
-          >
-            From Manual Workflows<br/>to Intelligent Systems
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="animate-fade-in-up text-[32px] sm:text-[40px] md:text-[52px] lg:text-[60px] font-bold tracking-tight leading-[1.05] text-[#111827]">
+            Your clinic is growing.<br/>Your systems haven't caught up.
           </h2>
-
-          <p
-            className="animate-fade-in animation-delay-100 mt-4 sm:mt-6 text-[#6B7280] max-w-2xl mx-auto text-[15px] sm:text-[16px] leading-[1.6] px-2"
-          >
-            Most companies run on fragmented tools. We replace that with AI systems that think, decide, and act.
-          </p>
         </div>
 
-        {/* 
-          Huly Grid Layout: 
-          Row 1: Card 1 (Normal), Card 2 (Wide)
-          Row 2: Card 3 (Wide), Card 4 (Normal) 
-          Using a 5-column grid to achieve the asymmetrical 2:3 and 3:2 ratio 
-        */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-
           {/* Card 1: Normal (Span 2) */}
           <FeatureCard
             className="md:col-span-2"
-            title="AI Is Not a Feature. It’s Infrastructure."
-            description="Companies that win with AI don’t experiment with tools. They build systems that automate decisions and create compounding leverage."
+            title="Calls get missed"
+            description="Your team is helping patients while new enquiries are coming in."
             mockUI={
-              <div className="w-full h-full flex items-start justify-center pt-8 px-4">
-                {/* Spotlight glow behind mock search box */}
-                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/40 blur-3xl rounded-full" />
-
-                <div className="w-full max-w-[280px] bg-[#12141A] rounded-xl border border-white/5 shadow-2xl overflow-hidden relative z-10">
+              <div className="w-full h-full flex items-start justify-center pt-8 px-4 relative">
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-red-500/30 blur-3xl rounded-full" />
+                <div className="w-full max-w-[280px] bg-[#12141A] rounded-xl border border-white/5 shadow-2xl overflow-hidden relative z-10 flex flex-col">
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-white/[0.04]">
-                    <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    <span className="text-[13px] text-zinc-500 font-mono">Run command...</span>
+                    <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    <span className="text-[13px] text-zinc-400 font-medium">Recent Calls</span>
                   </div>
-                  <div className="p-2 space-y-1">
-                    <div className="text-[10px] text-zinc-600 px-2 py-1 font-bold uppercase tracking-widest">Actions</div>
-                    {['Mark Task as Done', 'Open To-Do List', 'Switch to Timeline View'].map((item, i) => (
-                      <div key={i} className={`flex items-center justify-between px-3 py-2 rounded-lg text-[13px] ${i === 0 ? 'bg-white/5 text-white' : 'text-zinc-400 hover:bg-white/[0.02]'}`}>
-                        <span>{item}</span>
-                        <span className="text-[11px] text-zinc-600 border border-white/5 rounded px-1 min-w-[16px] text-center bg-[#0F1115]">
-                          {i === 0 ? 'D' : i === 1 ? 'L' : 'V'}
-                        </span>
+                  <div className="p-3 space-y-2">
+                    <div className="flex items-center justify-between p-2 rounded-lg bg-red-500/5 border border-red-500/10">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500" />
+                        <span className="text-[12px] text-zinc-300">New patient enquiry</span>
                       </div>
-                    ))}
-                  </div>
-                  <div className="px-4 py-3 bg-[#0A0A0B] border-t border-white/5 flex gap-1 justify-center">
-                    {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map(k => <div key={k} className="w-6 h-6 rounded bg-[#1A1C23] border border-white/5 flex items-center justify-center text-[10px] text-zinc-500">{k}</div>)}
+                      <span className="text-[10px] text-red-400 font-medium">Missed</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 rounded-lg bg-orange-500/5 border border-orange-500/10">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-orange-500" />
+                        <span className="text-[12px] text-zinc-300">Follow-up call</span>
+                      </div>
+                      <span className="text-[10px] text-orange-400 font-medium">Missed</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 rounded-lg bg-green-500/5 border border-green-500/10">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                        <span className="text-[12px] text-zinc-300">Booking request</span>
+                      </div>
+                      <span className="text-[10px] text-green-400 font-medium">Answered</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -68,58 +58,44 @@ export default function Authority() {
           {/* Card 2: Wide (Span 3) */}
           <FeatureCard
             className="md:col-span-3"
-            title="Where Most AI Initiatives Fail."
-            description="Experiments that never ship. Workflows that don’t scale. AI doesn’t fail. Execution does."
+            title="Follow-ups get forgotten"
+            description="Someone enquires, doesn't book immediately, and nobody gets back to them."
             mockUI={
-              <div className="w-full h-full flex flex-col pt-8 px-8 gap-4 relative">
-                {/* Spotlight glow behind mock search box */}
-                <div className="absolute top-0 left-1/3 w-64 h-32 bg-cyan-400/20 blur-3xl rounded-full" />
-
-                <div className="flex gap-4 relative z-10 w-[120%]">
-                  {/* Column 1 */}
-                  <div className="w-64 flex-shrink-0 flex flex-col gap-3 opacity-40">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-zinc-400 mb-1">
-                      <span>Yesterday</span>
-                      <div className="w-4 h-4 rounded bg-white/5 flex items-center justify-center"><svg className="w-3 h-3 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg></div>
+              <div className="w-full h-full flex flex-col pt-8 px-6 gap-4 relative">
+                <div className="absolute top-0 left-1/3 w-64 h-32 bg-orange-400/20 blur-3xl rounded-full" />
+                <div className="flex gap-4 relative z-10 w-full overflow-hidden">
+                  <div className="w-48 flex-shrink-0 flex flex-col gap-2">
+                    <div className="text-[11px] font-bold text-zinc-400 mb-1 flex items-center justify-between">
+                      Enquired <span className="bg-white/10 px-1.5 rounded text-[10px]">3</span>
                     </div>
-                    <div className="bg-[#12141A] rounded-xl border border-white/5 p-4 shadow-xl mb-24">
-                      <div className="text-[10px] text-zinc-500 uppercase font-bold tracking-widest mb-2 flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-orange-500" /> Update hero section</div>
-                      <p className="text-[13px] text-zinc-300 font-medium">Align the hero section with the latest designs from the client</p>
+                    <div className="bg-[#12141A] rounded-lg border border-red-500/30 p-3 shadow-xl relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-8 h-8 bg-red-500/20 blur-xl" />
+                      <div className="text-[12px] text-white font-medium mb-1">Sarah M.</div>
+                      <p className="text-[10px] text-zinc-400">Website Form - Dental Implant</p>
+                      <div className="mt-2 text-[9px] text-red-400 flex items-center gap-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 3 days ago</div>
                     </div>
-                  </div>
-
-                  {/* Column 2 (Active) */}
-                  <div className="w-72 flex-shrink-0 flex flex-col gap-3 -mt-4">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-white mb-1">
-                      <span>Today</span>
-                      <div className="w-4 h-4 rounded bg-white/10 flex items-center justify-center"><span className="text-white">+</span></div>
-                    </div>
-                    <div className="bg-white rounded-xl p-4 shadow-xl">
-                      <div className="text-[10px] text-red-500 uppercase font-bold tracking-widest mb-2 px-1.5 py-0.5 bg-red-500/10 rounded w-max">High</div>
-                      <p className="text-[13px] text-black font-semibold mb-3">Implement new features according to project requirements</p>
-                      <div className="flex items-center justify-between text-[11px] text-zinc-400">
-                        <span className="flex items-center gap-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> Apr 11</span>
-                        <div className="flex -space-x-1"><div className="w-4 h-4 rounded-full bg-blue-500 border border-white" /><div className="w-4 h-4 rounded-full bg-purple-500 border border-white" /></div>
-                      </div>
-                    </div>
-                    <div className="bg-[#1A1C23] rounded-xl border border-white/5 p-4 shadow-xl">
-                      <div className="text-[10px] text-orange-400 uppercase font-bold tracking-widest mb-2 px-1.5 py-0.5 bg-orange-500/10 rounded w-max">Medium</div>
-                      <p className="text-[13px] text-zinc-300 font-medium mb-3">Code Review & MVP Testing</p>
-                      <div className="flex items-center justify-between text-[11px] text-zinc-500">
-                        <span className="flex items-center gap-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> Apr 12</span>
-                        <div className="w-4 h-4 rounded-full bg-green-500 border border-[#1A1C23]" />
-                      </div>
+                    <div className="bg-[#12141A] rounded-lg border border-white/5 p-3 shadow-xl">
+                      <div className="text-[12px] text-zinc-300 font-medium mb-1">James T.</div>
+                      <p className="text-[10px] text-zinc-500">WhatsApp - Whitening</p>
+                      <div className="mt-2 text-[9px] text-zinc-500 flex items-center gap-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 2 hours ago</div>
                     </div>
                   </div>
-
-                  {/* Column 3 */}
-                  <div className="w-64 flex-shrink-0 flex flex-col gap-3">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-zinc-400 mb-1">
-                      <span>Create New Task</span>
+                  <div className="w-48 flex-shrink-0 flex flex-col gap-2 opacity-50">
+                    <div className="text-[11px] font-bold text-zinc-400 mb-1 flex items-center justify-between">
+                      Contacted <span className="bg-white/10 px-1.5 rounded text-[10px]">1</span>
                     </div>
-                    <div className="bg-[#0A0A0B] rounded-xl border border-white/5 p-4 py-8 shadow-xl opacity-60">
-                      <div className="text-zinc-600 text-[13px] mb-8">What is the task?</div>
-                      <div className="flex justify-end"><div className="h-6 w-16 bg-blue-600 rounded-full" /></div>
+                    <div className="bg-[#12141A] rounded-lg border border-white/5 p-3 shadow-xl">
+                      <div className="text-[12px] text-zinc-300 font-medium mb-1">Emma R.</div>
+                      <p className="text-[10px] text-zinc-500">Left voicemail</p>
+                    </div>
+                  </div>
+                  <div className="w-48 flex-shrink-0 flex flex-col gap-2">
+                    <div className="text-[11px] font-bold text-zinc-400 mb-1 flex items-center justify-between">
+                      Lost <span className="bg-white/10 px-1.5 rounded text-[10px]">12</span>
+                    </div>
+                    <div className="bg-[#12141A] rounded-lg border border-white/5 p-3 shadow-xl opacity-60">
+                      <div className="text-[12px] text-zinc-500 font-medium mb-1 line-through">Michael B.</div>
+                      <p className="text-[10px] text-zinc-600">No response after 4 weeks</p>
                     </div>
                   </div>
                 </div>
@@ -130,67 +106,52 @@ export default function Authority() {
           {/* Card 3: Wide (Span 3) */}
           <FeatureCard
             className="md:col-span-3"
-            title="Most Teams Build Features. We Build Systems."
-            description="Product strategy + AI architecture + engineering execution. Systems that work in production and deliver measurable impact."
+            title="Patients fall through the cracks"
+            description="No-shows, cancellations, inactive patients and unfinished treatment plans quietly cost you revenue."
             mockUI={
-              <div className="w-full h-full p-8 relative flex gap-6 z-10 overflow-hidden">
-                {/* Left Column Calendar */}
-                <div className="w-16 flex flex-col gap-6 text-[10px] text-zinc-600 font-medium text-right mt-1 opacity-50">
+              <div className="w-full h-full p-6 relative flex gap-4 z-10 overflow-hidden">
+                <div className="w-12 flex flex-col gap-8 text-[10px] text-zinc-500 font-medium text-right mt-2">
                   <div>9 AM</div>
                   <div>10 AM</div>
                   <div>11 AM</div>
                   <div>12 PM</div>
-                  <div>1 PM</div>
-                  <div>2 PM</div>
                 </div>
-
-                {/* Calendar Grid area */}
-                <div className="flex-1 relative border-l border-white/5 pl-6 flex gap-4 w-[150%]">
-
-                  {/* Column 1 */}
+                <div className="flex-1 relative border-l border-white/5 pl-4 flex gap-3">
                   <div className="flex-1 relative">
-                    {/* Active Card */}
-                    <div className="absolute top-8 left-0 w-64 bg-white rounded-xl shadow-2xl p-5 z-20">
-                      <h4 className="text-black font-bold text-[14px] mb-1">Design meeting</h4>
-                      <span className="text-zinc-500 text-[11px] block mb-4">03:00 - 04:00 pm<br />Weekly on Monday</span>
-                      <p className="text-zinc-800 text-[12px] leading-relaxed mb-4">Weekly review and refinement of project prototypes.</p>
-                      <button className="bg-blue-50 text-blue-600 text-[11px] font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1 mb-4"><span className="text-lg leading-none">+</span> Join Meeting</button>
-
-                      <div className="flex items-center gap-2 mb-4">
-                        <svg className="w-4 h-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                        <span className="text-[11px] text-zinc-500">10 minutes before</span>
-                      </div>
-
-                      <div className="flex items-center justify-between border-t border-zinc-100 pt-3">
-                        <span className="text-[11px] text-zinc-500 font-medium">Going?</span>
-                        <div className="flex gap-1">
-                          <button className="px-2 py-0.5 border border-zinc-200 rounded text-[10px] text-zinc-600 hover:bg-zinc-50">Yes</button>
-                          <button className="px-2 py-0.5 border border-zinc-200 rounded text-[10px] text-zinc-600 hover:bg-zinc-50">No</button>
-                          <button className="px-2 py-0.5 border border-zinc-200 rounded text-[10px] text-zinc-600 hover:bg-zinc-50">Maybe</button>
+                    <div className="absolute top-0 left-0 w-full bg-white/5 rounded-lg border border-white/10 p-3 h-20">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="text-zinc-300 font-medium text-[12px]">Consultation</h4>
+                          <span className="text-zinc-500 text-[10px]">09:00 - 10:00</span>
                         </div>
+                        <span className="px-1.5 py-0.5 bg-green-500/20 text-green-400 text-[9px] rounded">Arrived</span>
+                      </div>
+                    </div>
+                    <div className="absolute top-24 left-0 w-full bg-red-500/10 rounded-lg border border-red-500/20 p-3 h-20">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="text-red-300 font-medium text-[12px]">Root Canal (Follow-up)</h4>
+                          <span className="text-red-400/70 text-[10px]">10:00 - 11:00</span>
+                        </div>
+                        <span className="px-1.5 py-0.5 bg-red-500/20 text-red-400 text-[9px] rounded font-bold">No-Show</span>
+                      </div>
+                    </div>
+                    {/* Gap in schedule */}
+                    <div className="absolute top-48 left-0 w-full rounded-lg border border-dashed border-white/10 flex items-center justify-center h-20 bg-white/[0.02]">
+                      <span className="text-[10px] text-zinc-600">Empty Slot</span>
+                    </div>
+                  </div>
+                  <div className="flex-1 relative opacity-60">
+                    <div className="absolute top-8 left-0 w-full bg-orange-500/10 rounded-lg border border-orange-500/20 p-3 h-20">
+                       <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="text-orange-300 font-medium text-[12px]">Checkup</h4>
+                          <span className="text-orange-400/70 text-[10px]">09:30 - 10:30</span>
+                        </div>
+                        <span className="px-1.5 py-0.5 bg-orange-500/20 text-orange-400 text-[9px] rounded">Cancelled</span>
                       </div>
                     </div>
                   </div>
-
-                  {/* Column 2 */}
-                  <div className="flex-1 relative opacity-50">
-                    <div className="absolute top-0 left-0 w-56 bg-[#1A1C23] border border-white/5 rounded-xl p-3 h-16">
-                      <h4 className="text-zinc-300 font-medium text-[12px] mb-1">Prototypes</h4>
-                      <div className="flex -space-x-1"><div className="w-4 h-4 rounded-full bg-blue-500 border border-white" /><div className="w-4 h-4 rounded-full bg-purple-500 border border-white" /></div>
-                    </div>
-
-                    <div className="absolute top-24 left-0 w-56 bg-[#1A1C23] border border-orange-500/20 shadow-[0_0_15px_rgba(255,140,0,0.1)] rounded-xl p-4 h-24">
-                      <h4 className="text-white font-medium text-[12px] mb-1 leading-tight">Discuss detailed project plans outlining tasks</h4>
-                      <span className="text-zinc-500 text-[10px] block mb-3">11:30 - 01:00 pm</span>
-                      <div className="flex gap-1"><div className="w-4 h-4 rounded-full bg-orange-500 border border-[#1A1C23]" /><div className="w-4 h-4 rounded-full bg-yellow-500 border border-[#1A1C23]" /><span className="text-[10px] text-zinc-500 ml-1">+2</span></div>
-                    </div>
-
-                    <div className="absolute top-56 left-12 w-48 bg-[#1A1C23] border border-white/5 rounded-xl p-3 h-16">
-                      <h4 className="text-zinc-300 font-medium text-[12px] mb-1">Design meeting</h4>
-                      <span className="text-zinc-500 text-[10px] block">03:00 - 04:00 pm</span>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             }
@@ -199,31 +160,36 @@ export default function Authority() {
           {/* Card 4: Normal (Span 2) */}
           <FeatureCard
             className="md:col-span-2"
-            title="Who This Is For."
-            description="For companies serious about AI — ready to automate, build products, and move beyond experimentation."
+            title="Your software doesn't work together"
+            description="Your phone, WhatsApp, website, calendar, CRM and practice software all hold different pieces of the patient journey."
             mockUI={
-              <div className="w-full h-full flex items-center justify-center relative overflow-hidden pt-8">
-                {/* Glowing overlapping rings representing a speaker/notification pulse */}
-                <div className="absolute w-64 h-64 rounded-full border-[12px] border-blue-500/10 blur-[2px]" />
-                <div className="absolute w-48 h-48 rounded-full border-[10px] border-indigo-500/20 blur-[1px]" />
-                <div className="absolute w-32 h-32 rounded-full border-[8px] border-orange-500/40" />
-
-                {/* Intense center glow */}
-                <div className="absolute w-16 h-16 bg-gradient-to-br from-black to-zinc-900 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(255,140,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.1)] z-10 border border-white/5">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                  {/* Badge */}
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center text-[9px] font-bold text-white border-2 border-zinc-900">27</div>
+              <div className="w-full h-full flex items-center justify-center relative overflow-hidden pt-4">
+                <div className="absolute w-64 h-64 rounded-full border-[1px] border-dashed border-white/10 animate-[spin_20s_linear_infinite]" />
+                <div className="absolute w-40 h-40 rounded-full border-[1px] border-dashed border-white/20 animate-[spin_15s_linear_infinite_reverse]" />
+                
+                {/* Center Hub */}
+                <div className="absolute w-14 h-14 bg-gradient-to-br from-zinc-800 to-black rounded-full flex items-center justify-center shadow-2xl z-10 border border-white/10">
+                  <svg className="w-5 h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
                 </div>
+                
+                {/* Disconnected Nodes */}
+                <div className="absolute top-[20%] left-[20%] w-10 h-10 bg-[#12141A] rounded-lg border border-red-500/30 flex items-center justify-center text-[9px] text-zinc-400 shadow-lg">CRM</div>
+                <div className="absolute bottom-[20%] left-[15%] w-10 h-10 bg-[#12141A] rounded-lg border border-green-500/30 flex items-center justify-center text-[9px] text-zinc-400 shadow-lg">Wa.me</div>
+                <div className="absolute top-[15%] right-[20%] w-10 h-10 bg-[#12141A] rounded-lg border border-blue-500/30 flex items-center justify-center text-[9px] text-zinc-400 shadow-lg">PMS</div>
+                <div className="absolute bottom-[25%] right-[15%] w-10 h-10 bg-[#12141A] rounded-lg border border-purple-500/30 flex items-center justify-center text-[9px] text-zinc-400 shadow-lg">Cal</div>
 
-                {/* Horizontal light slash */}
-                <div className="absolute top-1/2 left-0 w-full h-[1px] -translate-y-1/2 bg-gradient-to-r from-transparent via-orange-400 to-transparent blur-[1px] opacity-60 z-20" />
+                {/* Broken lines */}
+                <svg className="absolute inset-0 w-full h-full z-0 opacity-20" style={{ pointerEvents: 'none' }}>
+                  <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
+                  <line x1="50%" y1="50%" x2="20%" y2="75%" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
+                  <line x1="50%" y1="50%" x2="75%" y2="20%" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
+                  <line x1="50%" y1="50%" x2="80%" y2="70%" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
+                </svg>
               </div>
             }
           />
-
         </div>
-
       </div>
     </section>
-  )
+  );
 }
