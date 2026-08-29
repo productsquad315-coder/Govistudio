@@ -21,7 +21,7 @@ const ProcessSection = () => {
       {/* Subtle grid dot overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:24px_24px] z-0 pointer-events-none" />
       {/* GPU glow for premium dark feel */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] sm:w-[700px] lg:w-[800px] h-[360px] sm:h-[460px] lg:h-[500px] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-transparent blur-[120px] opacity-40 pointer-events-none" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] sm:w-[700px] lg:w-[800px] h-[360px] sm:h-[460px] lg:h-[500px] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-transparent blur-[64px] opacity-40 pointer-events-none" />
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10 w-full">
 

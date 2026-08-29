@@ -11,23 +11,22 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
-  generateEtags: false,
   headers: async () => [
-    {
-      source: '/:path*',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
+    // Public folder assets (logos, images) aren't content-hashed, so
+    // updating a file's contents without renaming it must still reach
+    // visitors in a reasonable time — a short max-age with
+    // stale-while-revalidate, not a year-long immutable lock.
+    // (Next.js already applies its own correct long-cache immutable
+    // headers to hashed /_next/static/* build assets automatically —
+    // that must never be overridden by a blanket rule here, which
+    // previously also caught every HTML page and forced browsers to
+    // serve a fully cached, non-revalidated page for up to a year.)
     {
       source: '/assets/:path*',
       headers: [
         {
           key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
+          value: 'public, max-age=3600, stale-while-revalidate=86400',
         },
       ],
     },

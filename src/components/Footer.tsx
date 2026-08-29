@@ -16,7 +16,10 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.05] bg-black overflow-hidden">
       {/* Subtle background glow, consistent with the rest of the site */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[300px] bg-cyan-500/[0.06] blur-[120px] rounded-full pointer-events-none transform-gpu will-change-transform" />
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[300px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(closest-side, rgba(6,182,212,0.08), transparent 70%)' }}
+      />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* CTA banner */}
