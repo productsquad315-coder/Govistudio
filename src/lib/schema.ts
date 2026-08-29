@@ -1,4 +1,4 @@
-/**
+﻿/**
  * JSON-LD Structured Data for Generative Engine Optimization (GEO)
  * 
  * These schemas build the "knowledge graph" that AI engines (Perplexity, ChatGPT,
@@ -14,11 +14,11 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
-    "@id": "https://govistudio.com/#organization",
+    "@id": "https://www.govistudio.com/#organization",
     name: "GOVI STUDIO",
     alternateName: ["Govistudio", "GOVISTUDIO", "Govi Studio"],
-    url: "https://govistudio.com",
-    logo: "https://govistudio.com/assets/Govilogo2.jpeg",
+    url: "https://www.govistudio.com",
+    logo: "https://www.govistudio.com/assets/Govilogo2.jpeg",
     description:
       "GOVI STUDIO is an AI systems engineering studio that designs, builds, and deploys production-ready AI automation systems and custom software for traditional businesses. We specialize in custom sales configurator systems, B2B AI automation engines, EdTech workflow automation, and revenue-generating AI products.",
     foundingDate: "2024",
@@ -26,7 +26,7 @@ export function getOrganizationSchema() {
       "@type": "Person",
       name: "Vijay",
       jobTitle: "Founder & Lead Engineer",
-      url: "https://govistudio.com/about",
+      url: "https://www.govistudio.com/about",
     },
     address: {
       "@type": "PostalAddress",
@@ -40,7 +40,7 @@ export function getOrganizationSchema() {
       availableLanguage: ["English"],
     },
     sameAs: [
-      "https://govistudio.com",
+      "https://www.govistudio.com",
     ],
     knowsAbout: [
       "Artificial Intelligence Systems",
@@ -175,13 +175,13 @@ export function getWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://govistudio.com/#website",
-    url: "https://govistudio.com",
+    "@id": "https://www.govistudio.com/#website",
+    url: "https://www.govistudio.com",
     name: "GOVI STUDIO",
     description:
       "AI Systems Engineering Studio — We build production-ready AI systems that automate operations and unlock new revenue streams for traditional businesses.",
     publisher: {
-      "@id": "https://govistudio.com/#organization",
+      "@id": "https://www.govistudio.com/#organization",
     },
     inLanguage: "en-US",
   };
@@ -192,9 +192,9 @@ export function getServiceSchemas() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": "https://govistudio.com/#ai-automation",
+      "@id": "https://www.govistudio.com/#ai-automation",
       name: "AI Automation Systems",
-      provider: { "@id": "https://govistudio.com/#organization" },
+      provider: { "@id": "https://www.govistudio.com/#organization" },
       description:
         "GOVI STUDIO designs and deploys AI automation systems that replace manual business workflows. Our systems handle lead qualification, customer support, document processing, and operational automation — delivering measurable ROI from day one.",
       serviceType: "AI Systems Engineering",
@@ -213,9 +213,9 @@ export function getServiceSchemas() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": "https://govistudio.com/#ai-products",
+      "@id": "https://www.govistudio.com/#ai-products",
       name: "AI Product Development",
-      provider: { "@id": "https://govistudio.com/#organization" },
+      provider: { "@id": "https://www.govistudio.com/#organization" },
       description:
         "Full-stack AI product engineering — from ideation and architecture through MVP and production deployment. GOVI STUDIO builds AI-powered SaaS tools, AI copilots, and analytics assistants that users interact with directly.",
       serviceType: "Product Engineering",
@@ -224,9 +224,9 @@ export function getServiceSchemas() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": "https://govistudio.com/#custom-software",
+      "@id": "https://www.govistudio.com/#custom-software",
       name: "Custom Software Development",
-      provider: { "@id": "https://govistudio.com/#organization" },
+      provider: { "@id": "https://www.govistudio.com/#organization" },
       description:
         "GOVI STUDIO builds custom SaaS platforms, internal tools, and web applications. Specialties include custom sales quoting software, school management systems, ERP dashboards, and B2B operational tools — engineered for scale and reliability.",
       serviceType: "Software Engineering",
@@ -261,17 +261,17 @@ export function getCaseStudySchema(caseStudy: {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `https://govistudio.com/case-studies/${caseStudy.slug}`,
+    "@id": `https://www.govistudio.com/case-studies/${caseStudy.slug}`,
     headline: caseStudy.title,
     description: caseStudy.description,
-    author: { "@id": "https://govistudio.com/#organization" },
-    publisher: { "@id": "https://govistudio.com/#organization" },
+    author: { "@id": "https://www.govistudio.com/#organization" },
+    publisher: { "@id": "https://www.govistudio.com/#organization" },
     about: {
       "@type": "Thing",
       name: caseStudy.industry,
     },
     keywords: caseStudy.technologies.join(", "),
-    mainEntityOfPage: `https://govistudio.com/case-studies/${caseStudy.slug}`,
+    mainEntityOfPage: `https://www.govistudio.com/case-studies/${caseStudy.slug}`,
   };
 }
 

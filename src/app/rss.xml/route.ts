@@ -1,4 +1,4 @@
-import { getAllPosts, getPostMeta } from '@/lib/blog';
+﻿import { getAllPosts, getPostMeta } from '@/lib/blog';
 import fs from 'fs';
 import path from 'path';
 
@@ -21,7 +21,7 @@ function getPostContent(slug: string): string {
 
 export async function GET() {
   const posts = getAllPosts();
-  const baseUrl = 'https://govistudio.com';
+  const baseUrl = 'https://www.govistudio.com';
   
   const items = posts.map(post => {
     const content = getPostContent(post.slug);

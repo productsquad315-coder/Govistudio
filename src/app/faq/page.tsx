@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { geoFaqs, getFaqsByCategory, getAllFaqCategories } from '@/lib/geo-faqs';
@@ -9,7 +9,7 @@ export const metadata = {
   description:
     'Get answers to the most common questions about custom AI workflow automation, sales quoting software, school management systems, AI costs, ROI, and working with GOVI STUDIO. Detailed, data-rich answers for B2B decision-makers.',
   alternates: {
-    canonical: 'https://govistudio.com/faq',
+    canonical: 'https://www.govistudio.com/faq',
   },
 };
 
@@ -23,8 +23,8 @@ export default function FAQPage() {
   }));
 
   const breadcrumbData = [
-    { name: 'GOVI STUDIO', url: 'https://govistudio.com' },
-    { name: 'FAQ', url: 'https://govistudio.com/faq' },
+    { name: 'GOVI STUDIO', url: 'https://www.govistudio.com' },
+    { name: 'FAQ', url: 'https://www.govistudio.com/faq' },
   ];
 
   return (

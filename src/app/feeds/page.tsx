@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'AI Systems Insight Engine | GOVI STUDIO',
   description: '67+ deep-dive research feeds on private AI systems, custom workflow automation, and enterprise compliance architectures for traditional businesses.',
-  alternates: { canonical: 'https://govistudio.com/feeds' },
+  alternates: { canonical: 'https://www.govistudio.com/feeds' },
 };
 
 // Define dynamic to make sure it can build statically or dynamically
@@ -48,7 +48,7 @@ export default async function FeedsPage() {
     "itemListElement": feeds.map((feed: any, index: number) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "url": `https://govistudio.com${feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : `/feeds/${feed.slug}`}`,
+      "url": `https://www.govistudio.com${feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : `/feeds/${feed.slug}`}`,
       "name": feed.title
     }))
   };

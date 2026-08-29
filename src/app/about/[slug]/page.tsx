@@ -4,6 +4,35 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Target, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import type { Metadata } from 'next';
+import { extractTitle, extractDescription, slugArrayToTitleFallback } from '@/lib/content-meta';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const targetPath = path.join(process.cwd(), 'content', 'about', slug + '.md');
+  const url = `https://www.govistudio.com/about/${slug}`;
+
+  if (!fs.existsSync(targetPath)) {
+    return { title: 'Not Found | GOVI Studio', alternates: { canonical: url } };
+  }
+
+  const content = fs.readFileSync(targetPath, 'utf8');
+  const title = extractTitle(content, slugArrayToTitleFallback([slug]));
+  const description = extractDescription(content);
+  const fullTitle = `${title} | GOVI Studio`;
+
+  return {
+    title: fullTitle,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: fullTitle, description, url, type: 'article', siteName: 'GOVI Studio' },
+    twitter: { card: 'summary_large_image', title: fullTitle, description },
+  };
+}
 
 export default async function Page({
   params

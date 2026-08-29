@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import Navigation from '@/components/Navigation';
@@ -20,12 +20,12 @@ export default function AIAgentVsParalegalUK() {
     "author": {
       "@type": "Organization",
       "name": "GOVI STUDIO",
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "GOVI STUDIO",
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     }
   };
 

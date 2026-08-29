@@ -7,8 +7,12 @@ import Logo from '@/components/Logo';
 export default async function AIIndexPage() {
   const links = getAllAiFeeds();
 
+  const clinicVerticals = ['/ai/dental', '/ai/dermatology', '/ai/physiotherapy', '/ai/cosmetic'];
+  const isClinicPath = (p: string) => clinicVerticals.some(v => p === v || p.startsWith(`${v}/`));
+
   const categories = {
-    'Industries': links.filter(l => l.path.includes('/industries/')),
+    'Clinics': links.filter(l => isClinicPath(l.path)),
+    'Industries': links.filter(l => !isClinicPath(l.path) && l.path.includes('/industries/')),
     'Use Cases': links.filter(l => l.path.includes('/use-cases/') || l.path.includes('/usecases/')),
     'Implementation': links.filter(l => l.path.includes('/implementation/')),
     'Comparisons': links.filter(l => l.path.includes('/comparisons/')),

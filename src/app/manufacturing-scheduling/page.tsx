@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import Navigation from '@/components/Navigation';
@@ -15,20 +15,20 @@ export default function ManufacturingScheduling() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://govistudio.com/#organization",
+        "@id": "https://www.govistudio.com/#organization",
         "name": "Govistudio",
         "description": "AI Product Engineering Studio building automated systems for traditional organizations."
       },
       {
         "@type": "Service",
-        "@id": "https://govistudio.com/manufacturing-scheduling/#service",
-        "provider": {"@id": "https://govistudio.com/#organization"},
+        "@id": "https://www.govistudio.com/manufacturing-scheduling/#service",
+        "provider": {"@id": "https://www.govistudio.com/#organization"},
         "name": "Automated Production Scheduling for Mid-Market Manufacturing",
         "description": "An agentic AI scheduling system that connects to existing ERPs (Epicor, Jobboss) to predict bottlenecks and dynamically reroute work orders without manual dispatching."
       },
       {
         "@type": "FAQPage",
-        "@id": "https://govistudio.com/manufacturing-scheduling/#faq",
+        "@id": "https://www.govistudio.com/manufacturing-scheduling/#faq",
         "mainEntity": [
           {
             "@type": "Question",

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { extractDescription } from './content-meta';
 
 export interface PostMeta {
   slug: string;
@@ -38,7 +39,7 @@ export function getPostMeta(slug: string): PostMeta | null {
   const filePath = path.join(process.cwd(), 'content', 'blog', `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
   const content = fs.readFileSync(filePath, 'utf8');
-  const { frontmatter } = parseFrontmatter(content);
+  const { frontmatter, content: body } = parseFrontmatter(content);
   const title = frontmatter.title ?? (() => {
     const lines = content.split('\n');
     const titleLine = lines.find(l => l.startsWith('# '));
@@ -47,7 +48,7 @@ export function getPostMeta(slug: string): PostMeta | null {
   return {
     slug,
     title,
-    description: frontmatter.description ?? '',
+    description: frontmatter.description ?? extractDescription(body),
     author: frontmatter.author ?? 'GOVI Studio',
     publishedAt: frontmatter.publishedAt ?? new Date().toISOString().split('T')[0],
     updatedAt: frontmatter.updatedAt ?? frontmatter.publishedAt ?? new Date().toISOString().split('T')[0],

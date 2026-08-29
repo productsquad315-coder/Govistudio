@@ -1,4 +1,4 @@
-export default function robots() {
+﻿export default function robots() {
   return {
     rules: [
       {
@@ -26,8 +26,8 @@ export default function robots() {
       },
     ],
     sitemap: [
-      'https://govistudio.com/sitemap.xml',
+      'https://www.govistudio.com/sitemap.xml',
     ],
-    host: 'https://govistudio.com',
+    host: 'https://www.govistudio.com',
   };
 }

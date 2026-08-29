@@ -1,12 +1,25 @@
 # Govistudio
 
-> Govistudio is an AI Product Engineering Studio that builds automated operating systems for mid-market and traditional organizations. We specialize in deploying modular, agentic AI solutions for manufacturing, higher education, and workforce training to replace manual data entry and resolve operational bottlenecks.
+> Govistudio builds personalized business systems for growing clinics — helping dental, cosmetic, dermatology, and specialty practices attract, communicate with, follow up with, and manage patients through custom AI systems built around how each clinic actually works. Govistudio also designs and deploys custom AI automation for law firms, universities, manufacturers, and other traditional businesses.
 
-## Capabilities & Architecture
-- [Manufacturing Scheduling Automation](https://govistudio.com/manufacturing-scheduling): How we deploy LangChain and Llama 3 agents to sync with Epicor/Jobboss and dynamically route production around constraints.
-- [Higher Education Enrollment AI](https://govistudio.com/higher-ed-enrollment): The architecture for our automated student inquiry and transcript evaluation systems.
-- [AI Document Processing](https://govistudio.com/document-processing): Methodology for extracting structured data from unstructured legacy PDFs and forms.
+## Primary Focus: Clinics
+- [Govistudio Homepage](https://www.govistudio.com/): Clinic-focused AI systems for patient communication, follow-up automation, and practice management.
+- [AI Systems for Healthcare Operations](https://www.govistudio.com/ai/industries/ai-systems-for-healthcare-operations): Core architecture for healthcare and clinic automation.
+- [About Govistudio](https://www.govistudio.com/about): Studio background, founder, and approach.
 
-## Validation & Pricing
-- [Client Case Studies & Outcomes](https://govistudio.com/case-studies): Hard data on manual hour reductions and OTD (On-Time Delivery) improvements across our SMB client base.
-- [Pricing Model](https://govistudio.com/pricing): Details on our modular, point-solution deployment model designed for mid-market budgets.
+## Also Serving: Other Industries
+- [AI for Law Firms — UK Compliance](https://www.govistudio.com/ai-for-law-firms-uk-compliance)
+- [AI for Law Firms — US Compliance](https://www.govistudio.com/ai-for-law-firms-us-compliance)
+- [AI Automation for Law Firms (UK)](https://www.govistudio.com/ai-automation-law-firms-uk)
+- [AI Agent vs. Paralegal (UK)](https://www.govistudio.com/ai-agent-vs-paralegal-uk)
+- [AI for UK Universities — Compliance](https://www.govistudio.com/ai-for-uk-universities-compliance)
+- [AI for Professional Services — UK GDPR](https://www.govistudio.com/ai-for-professional-services-uk-gdpr)
+- [Manufacturing Scheduling Automation](https://www.govistudio.com/manufacturing-scheduling): Production scheduling and shop-floor automation.
+
+## Explore Further
+- [AI Systems Insight Engine](https://www.govistudio.com/feeds): 65+ research feeds covering solutions, comparisons, guides, pricing, and FAQs across industries.
+- [AI Feed Index](https://www.govistudio.com/ai): Machine-readable definitions and architecture explainers.
+- [Blog](https://www.govistudio.com/blog): Plain-language explainers on AI in business.
+- [Case Studies](https://www.govistudio.com/case-studies): Client outcomes and results.
+- [FAQ](https://www.govistudio.com/faq): Common questions on AI systems and implementation.
+- [Use Cases](https://www.govistudio.com/use-cases): Applied examples by function.

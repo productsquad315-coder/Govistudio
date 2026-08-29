@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${cs.title} | GOVI STUDIO Blueprint`,
       description: cs.subtitle + '. ' + cs.results.slice(0, 3).map(r => `${r.metric}: ${r.value}`).join('. ') + '.',
       alternates: {
-        canonical: `https://govistudio.com/case-studies/${cs.slug}`,
+        canonical: `https://www.govistudio.com/case-studies/${cs.slug}`,
       },
       openGraph: {
         title: cs.title,
         description: cs.subtitle,
         type: 'article',
-        url: `https://govistudio.com/case-studies/${cs.slug}`,
+        url: `https://www.govistudio.com/case-studies/${cs.slug}`,
       },
     };
   }
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (fs.existsSync(targetPath)) {
     const feed = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
     const description = feed.directAnswer || feed.description || feed.title;
-    const url = 'https://govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
+    const url = 'https://www.govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
     
     return {
       title: feed.title + ' | GOVI STUDIO AI Systems',
@@ -77,9 +77,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     });
 
     const breadcrumbData = [
-      { name: 'GOVI STUDIO', url: 'https://govistudio.com' },
-      { name: 'Solution Blueprints', url: 'https://govistudio.com/case-studies' },
-      { name: cs.industry, url: `https://govistudio.com/case-studies/${cs.slug}` },
+      { name: 'GOVI STUDIO', url: 'https://www.govistudio.com' },
+      { name: 'Solution Blueprints', url: 'https://www.govistudio.com/case-studies' },
+      { name: cs.industry, url: `https://www.govistudio.com/case-studies/${cs.slug}` },
     ];
 
     const stepColors = [
@@ -229,15 +229,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const targetPath = path.join(process.cwd(), 'content', 'feeds', slug + '.json');
   if (fs.existsSync(targetPath)) {
     const feed = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-    const url = 'https://govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
+    const url = 'https://www.govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
     
     const articleJsonLd = {
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": feed.title,
       "description": feed.directAnswer || feed.description || feed.title,
-      "author": { "@type": "Organization", "name": "GOVI STUDIO", "url": "https://govistudio.com" },
-      "publisher": { "@type": "Organization", "name": "GOVI STUDIO", "url": "https://govistudio.com" },
+      "author": { "@type": "Organization", "name": "GOVI STUDIO", "url": "https://www.govistudio.com" },
+      "publisher": { "@type": "Organization", "name": "GOVI STUDIO", "url": "https://www.govistudio.com" },
       "mainEntityOfPage": { "@type": "WebPage", "@id": url },
       "articleSection": feed.category || "General Insights"
     };
@@ -246,8 +246,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Feeds", "item": "https://govistudio.com/feeds" },
-        { "@type": "ListItem", "position": 2, "name": feed.category || "General", "item": "https://govistudio.com/feeds" },
+        { "@type": "ListItem", "position": 1, "name": "Feeds", "item": "https://www.govistudio.com/feeds" },
+        { "@type": "ListItem", "position": 2, "name": feed.category || "General", "item": "https://www.govistudio.com/feeds" },
         { "@type": "ListItem", "position": 3, "name": feed.title, "item": url }
       ]
     };

@@ -7,7 +7,53 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Clock, Bot } from 'lucide-react';
 import ArticleLayout from '@/components/ArticleLayout';
 import { extractToc, slugify } from '@/lib/markdown';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts, getPostMeta } from '@/lib/blog';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostMeta(slug);
+  const url = `https://www.govistudio.com/blog/${slug}`;
+
+  if (!post) {
+    return { title: 'Post Not Found | GOVI Studio', alternates: { canonical: url } };
+  }
+
+  const fullTitle = `${post.title} | GOVI Studio`;
+
+  return {
+    title: fullTitle,
+    description: post.description,
+    keywords: post.tags,
+    authors: [{ name: post.author }],
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url,
+      type: 'article',
+      siteName: 'GOVI Studio',
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [post.author],
+      section: post.category,
+      tags: post.tags,
+      images: ['https://www.govistudio.com/og-image.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: ['https://www.govistudio.com/og-image.png'],
+      site: '@govistudio',
+      creator: '@govistudio',
+    },
+  };
+}
 
 export default async function BlogArticlePage({
   params,
@@ -103,7 +149,7 @@ export default async function BlogArticlePage({
   const updatedAt = frontmatter.updatedAt ?? publishedAt;
   const category = frontmatter.category ?? 'AI Systems';
   const tags = (frontmatter.tags ?? '').split(',').map(t => t.trim()).filter(Boolean);
-  const canonicalUrl = `https://govistudio.com/blog/${slug}`;
+  const canonicalUrl = `https://www.govistudio.com/blog/${slug}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -113,12 +159,12 @@ export default async function BlogArticlePage({
     "author": {
       "@type": "Organization",
       "name": author,
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": author,
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     },
     "datePublished": publishedAt,
     "dateModified": updatedAt,
@@ -126,7 +172,7 @@ export default async function BlogArticlePage({
       "@type": "WebPage",
       "@id": canonicalUrl
     },
-    "image": "https://govistudio.com/og-image.png",
+    "image": "https://www.govistudio.com/og-image.png",
     "articleSection": category,
     "keywords": tags.join(', '),
     "wordCount": markdownContent.split(/\s+/).filter(Boolean).length,
@@ -197,33 +243,7 @@ export default async function BlogArticlePage({
 
   return (
     <>
-      {/* SEO Meta Tags */}
-      <title>{title} | GOVI Studio</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={tags.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="article" />
-      <meta property="og:site_name" content="GOVI Studio" />
-      <meta property="og:image" content="https://govistudio.com/og-image.png" />
-      <meta property="article:author" content={author} />
-      <meta property="article:published_time" content={publishedAt} />
-      <meta property="article:modified_time" content={updatedAt} />
-      <meta property="article:section" content={category} />
-      {tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://govistudio.com/og-image.png" />
-      <meta name="twitter:site" content="@govistudio" />
-      <meta name="twitter:creator" content="@govistudio" />
-
+      {/* Title/description/canonical/OG/Twitter tags are handled by generateMetadata above. */}
       <Script
         id="blog-article-jsonld"
         type="application/ld+json"

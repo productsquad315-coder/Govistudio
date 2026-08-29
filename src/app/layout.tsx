@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
     "clinic management systems",
     "Govistudio",
   ],
-  metadataBase: new URL("https://govistudio.com"),
+  metadataBase: new URL("https://www.govistudio.com"),
   alternates: {
-    canonical: "https://govistudio.com",
+    canonical: "https://www.govistudio.com",
   },
   openGraph: {
     title: "Govistudio — Personalized Business Systems for Growing Clinics",
     description:
       "Your clinic isn't like everyone else. Your systems shouldn't be either. We build personalized business systems for growing clinics.",
-    url: "https://govistudio.com",
+    url: "https://www.govistudio.com",
     siteName: "Govistudio",
     type: "website",
     locale: "en_US",

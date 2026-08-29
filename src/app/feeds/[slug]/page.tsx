@@ -23,7 +23,7 @@ export async function generateMetadata({
   
   const feed = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
   const description = feed.directAnswer || feed.description || feed.title;
-  const url = 'https://govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
+  const url = 'https://www.govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
   
   return {
     title: feed.title + ' | GOVI STUDIO AI Systems',
@@ -64,7 +64,7 @@ export default async function FeedPage({
   }
   
   const feed = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-  const url = 'https://govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
+  const url = 'https://www.govistudio.com' + (feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : '/feeds/' + feed.slug);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -74,12 +74,12 @@ export default async function FeedPage({
     "author": {
       "@type": "Organization",
       "name": "GOVI STUDIO",
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "GOVI STUDIO",
-      "url": "https://govistudio.com"
+      "url": "https://www.govistudio.com"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -96,13 +96,13 @@ export default async function FeedPage({
         "@type": "ListItem",
         "position": 1,
         "name": "Feeds",
-        "item": "https://govistudio.com/feeds"
+        "item": "https://www.govistudio.com/feeds"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": feed.category || "General",
-        "item": "https://govistudio.com/feeds"
+        "item": "https://www.govistudio.com/feeds"
       },
       {
         "@type": "ListItem",
