@@ -10,7 +10,7 @@ export default function Hero() {
 
       {/* GPU Blur Glow Behind Frame */}
       <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] pointer-events-none z-0">
-        <div className="absolute w-full h-full bg-gradient-to-r from-cyan-500/30 via-purple-500/20 to-orange-500/30 blur-[120px] opacity-50" />
+        <div className="absolute w-full h-full bg-gradient-to-r from-cyan-500/30 via-purple-500/20 to-orange-500/30 blur-[120px] opacity-50 transform-gpu will-change-transform" />
       </div>
 
       {/* Beautiful decorative nodes — static SVG paths and dots */}

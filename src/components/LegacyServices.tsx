@@ -77,7 +77,7 @@ const LegacyServices = () => {
       </div>
 
       {/* Subtle Background Lighting for Grey Section */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-500/[0.03] -z-0 blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-500/[0.03] -z-0 blur-[150px] transform-gpu will-change-transform pointer-events-none" />
     </section>
   );
 };
