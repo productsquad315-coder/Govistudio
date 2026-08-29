@@ -7,8 +7,12 @@ import Logo from '@/components/Logo';
 export default async function AIIndexPage() {
   const links = getAllAiFeeds();
 
+  const clinicVerticals = ['/ai/dental', '/ai/dermatology', '/ai/physiotherapy', '/ai/cosmetic'];
+  const isClinicPath = (p: string) => clinicVerticals.some(v => p === v || p.startsWith(`${v}/`));
+
   const categories = {
-    'Industries': links.filter(l => l.path.includes('/industries/')),
+    'Clinics': links.filter(l => isClinicPath(l.path)),
+    'Industries': links.filter(l => !isClinicPath(l.path) && l.path.includes('/industries/')),
     'Use Cases': links.filter(l => l.path.includes('/use-cases/') || l.path.includes('/usecases/')),
     'Implementation': links.filter(l => l.path.includes('/implementation/')),
     'Comparisons': links.filter(l => l.path.includes('/comparisons/')),
@@ -19,8 +23,14 @@ export default async function AIIndexPage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-purple-500/30">
       <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-40">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full" />
+        <div
+          className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full"
+          style={{ background: 'radial-gradient(closest-side, rgba(88,28,135,0.35), transparent 70%)' }}
+        />
+        <div
+          className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full"
+          style={{ background: 'radial-gradient(closest-side, rgba(30,58,138,0.18), transparent 70%)' }}
+        />
       </div>
 
       <nav className="fixed top-0 w-full z-50 px-8 py-4 backdrop-blur-xl border-b border-white/[0.06] bg-black/60">

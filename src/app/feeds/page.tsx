@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'AI Systems Insight Engine | GOVI STUDIO',
   description: '67+ deep-dive research feeds on private AI systems, custom workflow automation, and enterprise compliance architectures for traditional businesses.',
-  alternates: { canonical: 'https://govistudio.com/feeds' },
+  alternates: { canonical: 'https://www.govistudio.com/feeds' },
 };
 
 // Define dynamic to make sure it can build statically or dynamically
@@ -48,7 +48,7 @@ export default async function FeedsPage() {
     "itemListElement": feeds.map((feed: any, index: number) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "url": `https://govistudio.com${feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : `/feeds/${feed.slug}`}`,
+      "url": `https://www.govistudio.com${feed.url ? (feed.url.startsWith('/') ? feed.url : '/' + feed.url) : `/feeds/${feed.slug}`}`,
       "name": feed.title
     }))
   };
@@ -65,8 +65,14 @@ export default async function FeedsPage() {
       {/* Hero Section */}
       <section className="relative pt-36 pb-20 sm:pt-44 sm:pb-28 overflow-hidden">
         {/* Glow Effects */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-orange-500/10 rounded-full blur-[100px] sm:blur-[150px] pointer-events-none" />
-        <div className="absolute top-10 right-10 w-[250px] h-[250px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+        <div
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] rounded-full pointer-events-none"
+          style={{ background: 'radial-gradient(closest-side, rgba(249,115,22,0.14), transparent 70%)' }}
+        />
+        <div
+          className="absolute top-10 right-10 w-[250px] h-[250px] rounded-full pointer-events-none"
+          style={{ background: 'radial-gradient(closest-side, rgba(59,130,246,0.08), transparent 70%)' }}
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-semibold rounded-full uppercase tracking-wider mb-6 sm:mb-8 animate-fade-in">

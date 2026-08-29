@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { BookOpen, Rss } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { getAllPosts } from '@/lib/blog';
@@ -9,7 +9,7 @@ export const metadata = {
   description: 'AI Systems & Product Engineering insights for traditional businesses. Learn about automation, AI integration, and workflow optimization.',
   alternates: {
     types: {
-      'application/rss+xml': 'https://govistudio.com/rss.xml',
+      'application/rss+xml': 'https://www.govistudio.com/rss.xml',
     },
   },
 };

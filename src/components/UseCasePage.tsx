@@ -20,7 +20,7 @@ interface UseCasePageProps {
 export default function UseCasePage({ data }: UseCasePageProps) {
   return (
     <article className="min-h-screen bg-black text-white selection:bg-blue-500/30">
-      <nav className="fixed top-0 w-full z-50 px-8 py-5 flex justify-between items-center backdrop-blur-2xl border-b border-white/[0.06] bg-black/60">
+      <nav className="fixed top-0 w-full z-50 px-8 py-5 flex justify-between items-center backdrop-blur-lg border-b border-white/[0.06] bg-black/60">
         <Logo showText={false} />
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-400 font-medium">
           <a href="/#services" className="hover:text-white transition-colors">Services</a>

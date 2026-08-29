@@ -28,6 +28,10 @@ const DEFAULT_FEATURED_BLOG_SLUGS = [
 ];
 
 const DEFAULT_FEATURED_AI_PATHS = [
+  "/ai/dental",
+  "/ai/dermatology",
+  "/ai/physiotherapy",
+  "/ai/cosmetic",
   "/ai/core/what-are-ai-systems-for-traditional-businesses",
   "/ai/core/what-is-ai-automation",
   "/ai/core/what-is-ai-integration",
@@ -96,9 +100,12 @@ function slugFromAiPath(aiPath: string): string {
   return aiPath.replace(/^\/ai\//, "").trim();
 }
 
+const CLINIC_VERTICALS = new Set(["dental", "dermatology", "physiotherapy", "cosmetic"]);
+
 function tagFromAiPath(aiPath: string): string {
   const parts = aiPath.split("/").filter(Boolean);
   const section = parts[1] ?? "ai";
+  if (CLINIC_VERTICALS.has(section)) return "Clinic";
   if (section === "core") return "Core";
   if (section === "industries") return "Industry";
   if (section === "use-cases") return "Use Case";

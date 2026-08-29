@@ -21,7 +21,7 @@ export default function Problems() {
             description="Your team is helping patients while new enquiries are coming in."
             mockUI={
               <div className="w-full h-full flex items-start justify-center pt-8 px-4 relative">
-                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-red-500/30 blur-3xl rounded-full" />
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-red-500/30 blur-3xl rounded-full transform-gpu will-change-transform pointer-events-none" />
                 <div className="w-full max-w-[280px] bg-[#12141A] rounded-xl border border-white/5 shadow-2xl overflow-hidden relative z-10 flex flex-col">
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-white/[0.04]">
                     <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
@@ -62,14 +62,14 @@ export default function Problems() {
             description="Someone enquires, doesn't book immediately, and nobody gets back to them."
             mockUI={
               <div className="w-full h-full flex flex-col pt-8 px-6 gap-4 relative">
-                <div className="absolute top-0 left-1/3 w-64 h-32 bg-orange-400/20 blur-3xl rounded-full" />
+                <div className="absolute top-0 left-1/3 w-64 h-32 bg-orange-400/20 blur-3xl rounded-full transform-gpu will-change-transform pointer-events-none" />
                 <div className="flex gap-4 relative z-10 w-full overflow-hidden">
                   <div className="w-48 flex-shrink-0 flex flex-col gap-2">
                     <div className="text-[11px] font-bold text-zinc-400 mb-1 flex items-center justify-between">
                       Enquired <span className="bg-white/10 px-1.5 rounded text-[10px]">3</span>
                     </div>
                     <div className="bg-[#12141A] rounded-lg border border-red-500/30 p-3 shadow-xl relative overflow-hidden">
-                      <div className="absolute top-0 right-0 w-8 h-8 bg-red-500/20 blur-xl" />
+                      <div className="absolute top-0 right-0 w-8 h-8 bg-red-500/20 blur-xl transform-gpu will-change-transform pointer-events-none" />
                       <div className="text-[12px] text-white font-medium mb-1">Sarah M.</div>
                       <p className="text-[10px] text-zinc-400">Website Form - Dental Implant</p>
                       <div className="mt-2 text-[9px] text-red-400 flex items-center gap-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 3 days ago</div>

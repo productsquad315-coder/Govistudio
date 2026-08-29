@@ -5,6 +5,50 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Terminal, Bot, ChevronRight } from 'lucide-react';
 import React from 'react';
+import type { Metadata } from 'next';
+import { extractTitle, extractDescription, slugArrayToTitleFallback } from '@/lib/content-meta';
+
+function readAIFeedFile(slugArray: string[]): string | null {
+  const targetPath = path.join(process.cwd(), 'content', 'ai', ...slugArray) + '.md';
+  if (!fs.existsSync(targetPath)) return null;
+  return fs.readFileSync(targetPath, 'utf8');
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+  const { slug: slugArray } = await params;
+  const content = readAIFeedFile(slugArray);
+  const url = `https://www.govistudio.com/ai/${slugArray.join('/')}`;
+
+  if (!content) {
+    return { title: 'AI Feed Not Found | GOVI Studio', alternates: { canonical: url } };
+  }
+
+  const title = extractTitle(content, slugArrayToTitleFallback(slugArray));
+  const description = extractDescription(content);
+  const fullTitle = `${title} | GOVI Studio AI Feed`;
+
+  return {
+    title: fullTitle,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url,
+      type: 'article',
+      siteName: 'GOVI Studio',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description,
+    },
+  };
+}
 
 export default async function AISystemPage({
   params,

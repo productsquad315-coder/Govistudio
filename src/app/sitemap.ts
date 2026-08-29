@@ -1,12 +1,17 @@
-import { getAllPosts } from '@/lib/blog';
+﻿import { getAllPosts } from '@/lib/blog';
 import { getAllCaseStudySlugs } from '@/lib/case-studies';
+import { getAllAiFeeds } from '@/lib/content';
 import fs from 'fs';
 import path from 'path';
 
+const CLINIC_AI_PREFIXES = ['/ai/dental', '/ai/dermatology', '/ai/physiotherapy', '/ai/cosmetic'];
+const isClinicAiPath = (p: string) => CLINIC_AI_PREFIXES.some((v) => p === v || p.startsWith(`${v}/`));
+
 export default function sitemap() {
-  const baseUrl = 'https://govistudio.com';
+  const baseUrl = 'https://www.govistudio.com';
   const posts = getAllPosts();
   const caseStudySlugs = getAllCaseStudySlugs();
+  const aiFeeds = getAllAiFeeds();
 
   // Load feeds
   const feedsPath = path.join(process.cwd(), 'content', 'feeds-index.json');
@@ -22,6 +27,7 @@ export default function sitemap() {
   const urls = [
     { url: baseUrl, lastModified: new Date(), priority: 1 },
     { url: `${baseUrl}/about`, lastModified: new Date(), priority: 0.8 },
+    { url: `${baseUrl}/privacy`, lastModified: new Date(), priority: 0.3 },
     { url: `${baseUrl}/case-studies`, lastModified: new Date(), priority: 0.9 },
     { url: `${baseUrl}/faq`, lastModified: new Date(), priority: 0.9 },
     { url: `${baseUrl}/use-cases`, lastModified: new Date(), priority: 0.8 },
@@ -47,6 +53,13 @@ export default function sitemap() {
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(post.updatedAt),
       priority: 0.7,
+    })),
+    // AI Feed pages — clinic verticals (primary ICP) get top priority,
+    // the rest of the /ai catalogue is included at a lower tier.
+    ...aiFeeds.map(feed => ({
+      url: `${baseUrl}${feed.path}`,
+      lastModified: new Date(),
+      priority: isClinicAiPath(feed.path) ? 0.95 : 0.5,
     })),
   ];
 

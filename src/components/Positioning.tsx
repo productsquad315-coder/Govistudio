@@ -6,7 +6,10 @@ export default function Positioning() {
     <section id="positioning" className="bg-[#0A0A0B] py-20 sm:py-28 lg:py-32 relative overflow-hidden">
       {/* Background Grid & Glow */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[500px] bg-cyan-500/10 blur-[120px] rounded-full mix-blend-screen" />
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(closest-side, rgba(6,182,212,0.12), transparent 70%)' }}
+      />
       
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
         

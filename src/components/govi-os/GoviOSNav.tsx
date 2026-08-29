@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function GoviOSNav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 py-4 px-6 backdrop-blur-2xl bg-black/60 border-b border-white/[0.06]">
+    <nav className="fixed top-0 left-0 right-0 z-50 py-4 px-6 backdrop-blur-lg bg-black/60 border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Wordmark */}
         <Link

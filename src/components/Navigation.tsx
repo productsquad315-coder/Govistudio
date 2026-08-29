@@ -19,7 +19,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex justify-between items-center backdrop-blur-2xl border-b border-white/[0.06] bg-black/60">
+      <nav className="fixed top-0 w-full z-50 px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex justify-between items-center backdrop-blur-lg border-b border-white/[0.06] bg-black/60">
         <Logo showText={false} />
         
         {/* Desktop Links - hidden on smaller than md */}
@@ -62,7 +62,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Dropdown */}
       <div 
-        className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl transition-all duration-300 ease-in-out md:hidden flex flex-col justify-center ${
+        className={`fixed inset-0 z-40 bg-black/95 transition-all duration-300 ease-in-out md:hidden flex flex-col justify-center ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >

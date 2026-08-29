@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { caseStudies } from '@/lib/case-studies';
@@ -9,14 +9,14 @@ export const metadata = {
   description:
     'Detailed technical blueprints showing how GOVI STUDIO would build AI systems for schools, colleges, and traditional businesses. See our proposed architectures for enrollment automation, fee collection, and operations visibility.',
   alternates: {
-    canonical: 'https://govistudio.com/case-studies',
+    canonical: 'https://www.govistudio.com/case-studies',
   },
 };
 
 export default function CaseStudiesPage() {
   const breadcrumbData = [
-    { name: 'GOVI STUDIO', url: 'https://govistudio.com' },
-    { name: 'Solution Blueprints', url: 'https://govistudio.com/case-studies' },
+    { name: 'GOVI STUDIO', url: 'https://www.govistudio.com' },
+    { name: 'Solution Blueprints', url: 'https://www.govistudio.com/case-studies' },
   ];
 
   return (
