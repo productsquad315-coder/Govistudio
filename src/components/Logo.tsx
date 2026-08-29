@@ -11,13 +11,13 @@ export default function Logo({ href = "/", className = "", showText = true }: Lo
   const logoContent = (
     <div className={`flex items-center gap-3 ${className}`}>
       <Image
-        src="/assets/Govilogo2.jpeg"
+        src="/assets/govi-mark-square.png"
         alt="Govistudio Logo"
-        className="h-10 w-auto"
+        className="h-10 w-10 rounded-md"
         width={40}
         height={40}
         priority
-        quality={85}
+        quality={90}
       />
       {showText && (
         <div className="font-bold text-xl tracking-tight">
