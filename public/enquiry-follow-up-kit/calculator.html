@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Missed Enquiry Cost Calculator — GoviStudio
+  Copyright (c) 2026 GoviStudio
+  Licensed under the MIT License (see docs/LICENSE in this kit).
+
+  Original implementation for CLINIC-001 free MVP.
+  Assumptions and outputs are ILLUSTRATIVE only — not measured GoviStudio facts.
+-->
+<title>Missed Enquiry Cost Calculator — GoviStudio</title>
+<style>
+  :root {
+    --bg: #f4f7f5;
+    --card: #ffffff;
+    --ink: #1a2e28;
+    --muted: #5a6f68;
+    --accent: #0d7a5f;
+    --accent-soft: #e6f5f0;
+    --border: #d5e3de;
+    --warn: #8a5a00;
+    --warn-bg: #fff6e5;
+    --radius: 12px;
+    --shadow: 0 1px 3px rgba(26, 46, 40, 0.08), 0 8px 24px rgba(26, 46, 40, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    padding: 1.25rem;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 1.25rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 0.65rem;
+    padding: 0.25rem 0.6rem;
+    background: var(--warn-bg);
+    color: var(--warn);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .card h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  .field:last-child { margin-bottom: 0; }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  .hint {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fafcfb;
+    color: var(--ink);
+  }
+
+  input[type="number"]:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent);
+    background: #fff;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    .results { grid-template-columns: 1fr; }
+  }
+
+  .stat {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .stat .label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .stat .value {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 0.2rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat.hours {
+    grid-column: 1 / -1;
+    background: #f0f2f1;
+  }
+
+  .stat.hours .value { color: var(--ink); font-size: 1.2rem; }
+
+  .math {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .math code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    background: #eef2f0;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+  }
+
+  footer {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Missed Enquiry Cost Calculator</h1>
+      <p>Estimate revenue at risk when clinic enquiries go unanswered or get a late reply.</p>
+      <span class="badge">Illustrative estimates — not GoviStudio measured facts</span>
+    </header>
+
+    <section class="card" aria-labelledby="inputs-heading">
+      <h2 id="inputs-heading">Your numbers</h2>
+
+      <div class="field">
+        <label for="enquiries">Enquiries per week</label>
+        <input type="number" id="enquiries" min="0" step="1" value="40" inputmode="numeric">
+        <span class="hint">Synthetic default. Replace with your typical weekly volume.</span>
+      </div>
+
+      <div class="field">
+        <label for="missedPct">% unanswered or late</label>
+        <input type="number" id="missedPct" min="0" max="100" step="1" value="25" inputmode="decimal">
+        <span class="hint">Illustrative — share of enquiries with no timely first reply.</span>
+      </div>
+
+      <div class="field">
+        <label for="avgRevenue">Avg revenue per booking (₹)</label>
+        <input type="number" id="avgRevenue" min="0" step="50" value="1500" inputmode="decimal">
+        <span class="hint">Illustrative average ticket if an enquiry becomes a booking.</span>
+      </div>
+
+      <div class="field">
+        <label for="staffHours">Staff hours on chase-ups / week <em style="font-weight:400;color:var(--muted)">(optional)</em></label>
+        <input type="number" id="staffHours" min="0" step="0.5" value="6" inputmode="decimal">
+        <span class="hint">Optional. Hours spent chasing late replies — illustrative only.</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="outputs-heading" aria-live="polite">
+      <h2 id="outputs-heading">Estimated impact</h2>
+      <div class="results">
+        <div class="stat">
+          <div class="label">Weekly revenue at risk</div>
+          <div class="value" id="weeklyRisk">₹0</div>
+        </div>
+        <div class="stat">
+          <div class="label">Monthly revenue at risk</div>
+          <div class="value" id="monthlyRisk">₹0</div>
+        </div>
+        <div class="stat hours" id="hoursBlock">
+          <div class="label">Staff time on chase-ups</div>
+          <div class="value" id="hoursLabel">—</div>
+        </div>
+      </div>
+      <div class="math">
+        <strong>Transparent math (illustrative):</strong><br>
+        Missed ≈ enquiries × (% / 100)<br>
+        Weekly risk ≈ missed × avg revenue<br>
+        Monthly risk ≈ weekly × 4.3<br>
+        <span id="formulaLive"></span>
+      </div>
+    </section>
+
+    <footer>
+      GoviStudio CLINIC-001 free kit · MIT License · Synthetic defaults only<br>
+      Open this file locally in any browser — no account, no tracking.
+    </footer>
+  </div>
+
+<script>
+(function () {
+  "use strict";
+
+  var enquiriesEl = document.getElementById("enquiries");
+  var missedPctEl = document.getElementById("missedPct");
+  var avgRevenueEl = document.getElementById("avgRevenue");
+  var staffHoursEl = document.getElementById("staffHours");
+  var weeklyEl = document.getElementById("weeklyRisk");
+  var monthlyEl = document.getElementById("monthlyRisk");
+  var hoursEl = document.getElementById("hoursLabel");
+  var formulaEl = document.getElementById("formulaLive");
+
+  function num(el) {
+    var v = parseFloat(el.value);
+    return isFinite(v) && v >= 0 ? v : 0;
+  }
+
+  function formatInr(n) {
+    try {
+      return "₹" + Math.round(n).toLocaleString("en-IN");
+    } catch (e) {
+      return "₹" + Math.round(n);
+    }
+  }
+
+  function recalc() {
+    var enquiries = num(enquiriesEl);
+    var pct = Math.min(100, num(missedPctEl));
+    var avg = num(avgRevenueEl);
+    var hours = num(staffHoursEl);
+
+    var missed = enquiries * (pct / 100);
+    var weekly = missed * avg;
+    var monthly = weekly * 4.3;
+
+    weeklyEl.textContent = formatInr(weekly);
+    monthlyEl.textContent = formatInr(monthly);
+
+    if (hours > 0) {
+      hoursEl.textContent =
+        hours.toLocaleString("en-IN", { maximumFractionDigits: 1 }) +
+        " hrs/week (~" +
+        (hours * 4.3).toLocaleString("en-IN", { maximumFractionDigits: 0 }) +
+        " hrs/month) — illustrative";
+    } else {
+      hoursEl.textContent = "Not entered (optional)";
+    }
+
+    formulaEl.innerHTML =
+      "<code>" +
+      enquiries +
+      " × " +
+      pct +
+      "% × ₹" +
+      avg +
+      " = " +
+      formatInr(weekly) +
+      "/week</code> (illustrative)";
+  }
+
+  ["input", "change"].forEach(function (evt) {
+    [enquiriesEl, missedPctEl, avgRevenueEl, staffHoursEl].forEach(function (el) {
+      el.addEventListener(evt, recalc);
+    });
+  });
+
+  recalc();
+})();
+</script>
+</body>
+</html>
