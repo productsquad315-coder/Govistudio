@@ -89,6 +89,15 @@ const nextConfig: NextConfig = {
         },
       ],
     },
+    {
+      source: '/api/checklist',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'no-store',
+        },
+      ],
+    },
   ],
 };
 
