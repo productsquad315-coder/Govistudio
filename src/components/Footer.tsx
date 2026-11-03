@@ -2,7 +2,11 @@ import Link from 'next/link';
 import { getLatestBlogs, pickTopAiInsights, type BlogMeta } from '@/lib/content';
 import Logo from '@/components/Logo';
 
-export default function Footer() {
+export default function Footer({
+  tagline = 'Personalized business systems for growing clinics.',
+}: {
+  tagline?: string;
+}) {
   // Limit to 3 items each to keep the footer compact
   const latest = getLatestBlogs(3);
   const aiInsights = pickTopAiInsights({ limit: 3 });
@@ -16,7 +20,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Logo href="/" showText={true} />
             <p className="text-sm leading-relaxed text-zinc-500 max-w-xs">
-              Personalized business systems for growing clinics.
+              {tagline}
             </p>
             <div className="pt-2">
               <a href="mailto:hello@govistudio.com" className="text-sm text-zinc-400 hover:text-white transition-colors">

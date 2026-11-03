@@ -21,6 +21,7 @@ export default function robots() {
           '/guides/',
           '/pricing/',
           '/tools/',
+          '/checklist',
           '/llms.txt',
         ],
       },

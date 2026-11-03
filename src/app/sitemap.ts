@@ -21,6 +21,7 @@ export default function sitemap() {
 
   const urls = [
     { url: baseUrl, lastModified: new Date(), priority: 1 },
+    { url: `${baseUrl}/checklist`, lastModified: new Date(), priority: 0.9 },
     { url: `${baseUrl}/about`, lastModified: new Date(), priority: 0.8 },
     { url: `${baseUrl}/case-studies`, lastModified: new Date(), priority: 0.9 },
     { url: `${baseUrl}/faq`, lastModified: new Date(), priority: 0.9 },
